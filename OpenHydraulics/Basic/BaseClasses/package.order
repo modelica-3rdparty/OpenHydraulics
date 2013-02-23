@@ -1,0 +1,14 @@
+RestrictionInterface
+PartialPressureLoss
+PartialLaminarRestriction
+LossFactorData
+massFlowRate_dp
+massFlowRate_dp_and_Re
+massFlowRate_dp_WallFriction
+pressureLoss_m_flow
+pressureLoss_m_flow_and_Re
+pressureLoss_m_flow_WallFriction
+lossConstant_D_zeta
+ReynoldsNumber_m_flow
+PartialPumpMotor
+PumpMotorInterface
