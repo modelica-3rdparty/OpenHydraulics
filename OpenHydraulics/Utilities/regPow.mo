@@ -1,6 +1,7 @@
 within OpenHydraulics.Utilities;
 function regPow
   "Anti-symmetric power approximation with non-zero derivative in the origin"
+  extends Modelica.Icons.Function;
 
   input Real x;
   input Real a;

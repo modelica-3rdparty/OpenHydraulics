@@ -3,7 +3,7 @@ model ShuttleValveTest
 
   extends OpenHydraulics.Interfaces.PartialFluidCircuit;
 
-  Components.Valves.ShuttleValve shuttleValve(timeConstant=.01)         annotation (Placement(
+  Components.Valves.ShuttleValve shuttleValve(timeConstant=0.01)        annotation (Placement(
         transformation(extent={{-10,10},{10,30}}, rotation=0)));
   Basic.ConstPressureSource tank2
     annotation (Placement(transformation(extent={{-10,-40},{10,-20}},
@@ -20,7 +20,7 @@ model ShuttleValveTest
     offset=101325,
     startTime=0.5)
     annotation (Placement(transformation(extent={{70,-20},{50,0}}, rotation=0)));
-  OpenHydraulics.Basic.GenericPressureLoss genericPressureLoss(D_a=.001, D_b=.001)
+  OpenHydraulics.Basic.GenericPressureLoss genericPressureLoss(D_a=0.001,D_b=0.001)
     annotation (Placement(transformation(
         origin={0,-4},
         extent={{-10,-10},{10,10}},

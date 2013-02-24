@@ -13,7 +13,7 @@ model PressureCompensatedLoadSensing
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
                 annotation (Placement(transformation(extent={{44,30},{64,50}},
@@ -24,7 +24,7 @@ model PressureCompensatedLoadSensing
   Modelica.Blocks.Sources.Sine sine(amplitude=1,
     startTime=1,
     phase=0,
-    freqHz=.1)
+    freqHz=0.1)
     annotation (Placement(transformation(extent={{10,-82},{30,-62}}, rotation=
            0)));
   OpenHydraulics.Components.MotorsPumps.PCLSPump PCLSPump(Dmax=0.00004)
@@ -41,7 +41,7 @@ model PressureCompensatedLoadSensing
     portB(p(start=101325, fixed=false)),
     portP(p(start=101325)),
     P2B(table=[-1,0.001; 0,0; 1,0]),
-    P2A(table=[0,0; 1,.001]))
+    P2A(table=[0,0; 1,0.001]))
     annotation (Placement(transformation(
         origin={36,-20},
         extent={{-10,-10},{10,10}},

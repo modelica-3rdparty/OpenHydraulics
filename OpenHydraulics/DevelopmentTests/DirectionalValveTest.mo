@@ -35,7 +35,7 @@ model DirectionalValveTest
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Modelica.Blocks.Sources.Sine sinusoid1(
-    freqHz=.5,
+    freqHz=0.5,
     amplitude=1,
     startTime=0)
     annotation (Placement(transformation(

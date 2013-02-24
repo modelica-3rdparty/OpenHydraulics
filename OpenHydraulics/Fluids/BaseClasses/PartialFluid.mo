@@ -17,12 +17,15 @@ partial model PartialFluid "Partial fluid model for FluidPower library"
   end density;
 
   replaceable function dynamicViscosity
+    extends Modelica.Icons.Function;
     input SI.AbsolutePressure p;
     output SI.DynamicViscosity eta;
   end dynamicViscosity;
 
   replaceable function approxBulkModulus
     "Bulk modulus to be used in approximate calculation; otherwise use density"
+    extends Modelica.Icons.Function;
+
     input SI.AbsolutePressure p;
     output SI.BulkModulus B;
   algorithm

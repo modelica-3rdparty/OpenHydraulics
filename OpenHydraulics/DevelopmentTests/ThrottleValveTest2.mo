@@ -19,8 +19,8 @@ model ThrottleValveTest2
     annotation (Placement(transformation(extent={{50,-40},{70,-20}}, rotation=
            0)));
   Basic.GenericPressureLoss restriction(
-    D_a=.1,
-    D_b=.1,
+    D_a=0.1,
+    D_b=0.1,
     Re_turbulent=3000,
     use_Re=true)
          annotation (Placement(

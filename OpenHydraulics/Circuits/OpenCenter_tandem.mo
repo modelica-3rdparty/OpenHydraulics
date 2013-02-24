@@ -14,7 +14,7 @@ model OpenCenter_tandem
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
                 annotation (Placement(transformation(extent={{-68,48},{-48,68}},
@@ -31,7 +31,7 @@ model OpenCenter_tandem
     startTime=0,
     amplitude=1,
     offset=0,
-    freqHz=.1)
+    freqHz=0.1)
     annotation (Placement(transformation(
         origin={-10,88},
         extent={{-10,-10},{10,10}},
@@ -66,7 +66,7 @@ model OpenCenter_tandem
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
                 annotation (Placement(transformation(extent={{20,48},{40,68}},
@@ -79,7 +79,7 @@ model OpenCenter_tandem
   Modelica.Mechanics.Translational.Components.Mass slidingMass1(
                                                            m=1000)
     annotation (Placement(transformation(extent={{44,48},{64,68}}, rotation=0)));
-  Modelica.Blocks.Sources.Constant const(k=.5)
+  Modelica.Blocks.Sources.Constant const(k=0.5)
     annotation (Placement(transformation(
         origin={70,90},
         extent={{-10,-10},{10,10}},

@@ -3,7 +3,7 @@ model ServoValveMeteringTest "test of Servovalve metering curve"
     extends OpenHydraulics.Interfaces.PartialFluidCircuit;
 
   OpenHydraulics.Basic.VariableRestriction VR30(
-    table=[0,0; 10,0; 25,0; 30,.03; 40,.12; 50,.25; 60,.36; 70,.52; 80,.68; 90,.84;
+    table=[0,0; 10,0; 25,0; 30,0.03;40,0.12;50,0.25;60,0.36;70,0.52;80,0.68;90,0.84;
         100,1],
     max_contr=100,
     D_nom=D_nom,
@@ -22,7 +22,7 @@ model ServoValveMeteringTest "test of Servovalve metering curve"
     p_const=11e5)      annotation (Placement(transformation(extent={{-60,60},
             {-40,80}}, rotation=0)));
   OpenHydraulics.Basic.VariableRestriction VR10(
-    table=[0,0; 10,0; 25,0; 30,.03; 40,.12; 50,.25; 60,.36; 70,.52; 80,.68; 90,.84;
+    table=[0,0; 10,0; 25,0; 30,0.03;40,0.12;50,0.25;60,0.36;70,0.52;80,0.68;90,0.84;
         100,1],
     max_contr=100,
     D_nom=D_nom,
@@ -33,7 +33,7 @@ model ServoValveMeteringTest "test of Servovalve metering curve"
     p_const=100e5)     annotation (Placement(transformation(extent={{-60,-80},
             {-40,-60}}, rotation=0)));
   OpenHydraulics.Basic.VariableRestriction VR100(
-    table=[0,0; 10,0; 25,0; 30,.03; 40,.12; 50,.25; 60,.36; 70,.52; 80,.68; 90,.84;
+    table=[0,0; 10,0; 25,0; 30,0.03;40,0.12;50,0.25;60,0.36;70,0.52;80,0.68;90,0.84;
         100,1],
     max_contr=100,
     D_nom=D_nom,
@@ -42,7 +42,7 @@ model ServoValveMeteringTest "test of Servovalve metering curve"
           extent={{-10,-48},{10,-72}}, rotation=0)));
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=4)
     annotation (Placement(transformation(extent={{28,10},{48,30}}, rotation=0)));
-  parameter Real D_nom=.001 "nominal diameter for all valves";
+  parameter Real D_nom=0.001 "nominal diameter for all valves";
   parameter Real zeta_nom=2 "nominal loss factor for all valves";
   parameter Real q_nom=7 "nominal flow through all valves in L/sec";
 equation

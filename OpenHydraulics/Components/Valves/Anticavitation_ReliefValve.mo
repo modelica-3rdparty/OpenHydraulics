@@ -3,7 +3,7 @@ model Anticavitation_ReliefValve
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
-  OpenHydraulics.Components.Valves.CheckValve checkValve(q_nom=.1)
+  OpenHydraulics.Components.Valves.CheckValve checkValve(q_nom=0.1)
               annotation (Placement(transformation(
           extent={{0,-30},{20,-10}}, rotation=0)));
   OpenHydraulics.Components.Valves.ReliefValve reliefValve(q_nom=0.01)

@@ -1,6 +1,7 @@
 within OpenHydraulics.Utilities;
 function regSquare2
   "Anti-symmetric approximation of square with discontinuous factor so that the first derivative is non-zero and is continuous"
+  extends Modelica.Icons.Function;
 
   input Real x "abscissa value";
   input Real x_small(min=0)=0.01 "approximation of function for |x| <= x_small";

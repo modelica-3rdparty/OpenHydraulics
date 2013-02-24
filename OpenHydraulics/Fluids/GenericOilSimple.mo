@@ -13,6 +13,8 @@ model GenericOilSimple "Template for Fluid Model"
    */
   redeclare final function extends density
     "Return density as a function of p and T"
+    extends Modelica.Icons.Function;
+
   algorithm
     //   for some reason OpenModelica doesn't like this expression... will try to make it constant
     d := 870 + 5e-7*(p-p0);
@@ -21,6 +23,8 @@ model GenericOilSimple "Template for Fluid Model"
   end density;
 
   redeclare final function extends dynamicViscosity
+    extends Modelica.Icons.Function;
+
   algorithm
     eta := 0.036;
     annotation (smoothOrder=2);

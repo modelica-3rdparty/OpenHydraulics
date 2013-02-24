@@ -24,9 +24,9 @@ model FVController
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Modelica.Blocks.Tables.CombiTable1Ds VelocityProfile(table=[0.0,0; 1,0; 2,0;
-        3,.01; 4,.03; 5,.1; 6,.04; 7,.0; 8,.0; 9,-.01; 10,-.02; 11,-.02; 12,-.025;
-              13,-.015; 14,-.05; 15,0; 16,0; 17,.11; 18,.14; 19,.13; 20,0; 21,-.01;
-             22,-.01; 23,0; 24,0], smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative)
+        3,0.01;4,0.03;5,0.1;6,0.04;7,0.0;8,0.0;9,-0.01;10,-0.02;11,-0.02;12,-0.025;
+              13,-0.015;14,-0.05;15,0; 16,0; 17,0.11;18,0.14;19,0.13;20,0; 21,-0.01;
+             22,-0.01;23,0; 24,0], smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative)
     annotation (                                      Dialog, Placement(
         transformation(
         origin={20,-14},
@@ -35,7 +35,7 @@ model FVController
   Modelica.Blocks.Continuous.LimPID PID(
     Td=Td,
     k=k,
-    Ti=.1,
+    Ti=0.1,
     controllerType=Modelica.Blocks.Types.SimpleController.P)
           annotation (Placement(transformation(extent={{2,-56},{-18,-76}},
           rotation=0)));

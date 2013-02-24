@@ -5,7 +5,7 @@ model SV6_3OCParallel "Sectional valve "
     //parameters
   parameter Integer sizeOfInputs=1 "Size of input array";
   parameter Integer inputIndex=1 "Index of command for this valve";
-  parameter Real q_nom=.001 "Nominal Flow through Valve";
+  parameter Real q_nom=0.001 "Nominal Flow through Valve";
 
     //ports
   OpenHydraulics.Interfaces.FluidPort P1_in
