@@ -209,14 +209,14 @@ model MechanicsBody_noFriction
   MB.Parts.FixedTranslation base(
     lengthDirection={1,0,0},
     r={0,1.70,0},
-    shapeType="4",
+    shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/base.stl",
     color={0,0,0}) "object model for the base of the excavator"
     annotation (Placement(transformation(
         origin={-110,-129},
         extent={{-11,-13},{11,13}},
         rotation=90)));
   MB.Parts.FixedTranslation carriage(
-    shapeType="1",
+    shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/carriage.stl",
     lengthDirection={1,0,0},
     widthDirection={0,1,0},
     r_shape={0,0,0},
@@ -226,7 +226,9 @@ model MechanicsBody_noFriction
         origin={-141.5,-23},
         extent={{-26,-13.5},{26,13.5}},
         rotation=90)));
-  MB.Parts.FixedTranslation boom(       r={7.11,0,0}, shapeType="2",
+  MB.Parts.FixedTranslation boom(
+    r={7.11,0,0},
+    shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/boom.stl",
     color={155,0,0}) "object model for the boom of the excavator"
     annotation (Placement(transformation(extent={{-79,7},{-20,37}},
           rotation=0)));
@@ -277,7 +279,8 @@ model MechanicsBody_noFriction
     r={3.654,0,0},
     animation=true,
     color={0,180,0},
-    shapeType="3") "object model for the arm of the excavator"
+    shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/arm.stl")
+    "object model for the arm of the excavator"
     annotation (Placement(transformation(extent={{86,11},{129,33}},
           rotation=0)));
   MB.Parts.FixedTranslation arm1Link(
@@ -303,7 +306,7 @@ model MechanicsBody_noFriction
     width=0.1,
     r={0.52,
            0.07,0},
-    shapeType="5") annotation (Placement(transformation(
+    shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/bucket.stl") annotation (Placement(transformation(
         origin={231,7.5},
         extent={{-14.5,-11},{14.5,11}},
         rotation=270)));
