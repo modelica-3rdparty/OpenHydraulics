@@ -19,7 +19,7 @@ model Motor
   OpenHydraulics.Basic.FluidPower2MechRotConst idealMotor(Dconst=Dconst)
     annotation (Placement(transformation(extent={{-10,-10},{10,10}},
           rotation=0)));
-  OpenHydraulics.Basic.LaminarRestriction leakeage_A2B(L=.1, D=1e-4)
+  OpenHydraulics.Basic.LaminarRestriction leakeage_A2B(L=0.1,D=1e-4)
     "Laminar leakage between ports A to B"
     annotation (
     Dialog(tab="Losses"), Placement(transformation(

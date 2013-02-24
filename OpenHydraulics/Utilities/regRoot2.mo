@@ -1,6 +1,7 @@
 within OpenHydraulics.Utilities;
 function regRoot2
   "Anti-symmetric approximation of square root with discontinuous factor so that the first derivative is finite and continuous"
+  extends Modelica.Icons.Function;
 
   input Real x "abszissa value";
   input Real x_small(min=0)=0.01 "approximation of function for |x| <= x_small";

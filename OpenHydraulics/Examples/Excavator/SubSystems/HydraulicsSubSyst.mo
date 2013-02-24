@@ -94,8 +94,8 @@ model HydraulicsSubSyst
  OpenHydraulics.Examples.Excavator.SubSystems.LSValveUnit swingValve(
     sizeOfInputs=4,
     q_nom=0.01,
-    q_fraction_A2T=.6,
-    q_fraction_B2T=.6)
+    q_fraction_A2T=0.6,
+    q_fraction_B2T=0.6)
     annotation (Placement(transformation(extent={{-80,-40},{-50,-10}},
           rotation=0)));
 

@@ -1,5 +1,6 @@
 within OpenHydraulics.Examples.Excavator;
 model DigCycleSimulation
+  extends Modelica.Icons.Example;
 
   SubSystems.MechanicsBody_noFriction mechanicsBody(
     swing_phi_start=0,
@@ -38,16 +39,16 @@ equation
     annotation (Line(points={{-6,10.8},{10,10.8},{10,11.8325}}, color={0,
           127,0}));
   connect(hydraulics.BoomCylRodR, mechanicsBody.cylBoomRightRod)
-    annotation (Line(points={{-21.2,22},{-21.2,38},{2,38},{2,-26},{50.2844,
-          -26},{50.2844,-21.3475}}, color={0,127,0}));
+    annotation (Line(points={{-21.2,22},{-21.2,38},{2,38},{2,-26},{50.2844,-26},
+          {50.2844,-21.3475}},      color={0,127,0}));
   connect(hydraulics.BoomCylBaseR, mechanicsBody.cylBoomRightBase)
-    annotation (Line(points={{-17.2,22},{-18,22},{-18,34},{0,34},{0,-30},{
-          46,-30},{46,-21.3475},{46.3733,-21.3475}}, color={0,127,0}));
+    annotation (Line(points={{-17.2,22},{-18,22},{-18,34},{0,34},{0,-30},{46,
+          -30},{46,-21.3475},{46.3733,-21.3475}},    color={0,127,0}));
   connect(digCycleSeq.y1, hydraulics.Command) annotation (Line(points={{-53.9,2},
           {-50.85,2},{-47.8,2}},                     color={0,0,127}));
   connect(hydraulics.BucketCylBase, mechanicsBody.cylBucketBase)
-    annotation (Line(points={{-37.2,22},{-38,22},{-38,54},{77.4667,54},{
-          77.4667,33.9525}}, color={0,127,0}));
+    annotation (Line(points={{-37.2,22},{-38,22},{-38,54},{77.4667,54},{77.4667,
+          33.9525}},         color={0,127,0}));
   connect(hydraulics.BucketCylRod, mechanicsBody.cylBucketRod) annotation (Line(
         points={{-41.2,22},{-42,22},{-42,58},{81.3778,58},{81.3778,33.9525}},
         color={0,127,0}));

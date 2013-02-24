@@ -15,7 +15,7 @@ model PumpTestSimple
         extent={{10,10},{-10,-10}},
         rotation=180)));
   Modelica.Blocks.Sources.Sine sine(
-    freqHz=.01,
+    freqHz=0.01,
     amplitude=0.4,
     offset=0.6)
             annotation (Placement(transformation(extent={{76,-28},{56,-8}},

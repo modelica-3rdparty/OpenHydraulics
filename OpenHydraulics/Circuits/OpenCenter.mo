@@ -16,7 +16,7 @@ model OpenCenter
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
     q_nom=1e-4) annotation (Placement(transformation(extent={{42,38},{62,58}},

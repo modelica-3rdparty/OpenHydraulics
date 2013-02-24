@@ -1,6 +1,7 @@
 within OpenHydraulics.Utilities;
 function evaluatePoly3_derivativeAtZero
   "Evaluate polynomial of order 3 that passes the origin with a predefined derivative"
+  extends Modelica.Icons.Function;
 
   input Real x "Value for which polynomial shall be evaluated";
   input Real x1 "Abscissa value";

@@ -9,7 +9,7 @@ model DoubleActingCylinderTestSimple1
             0)));
   Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     strokeLength=0.2,
-    pistonMass=.1,
+    pistonMass=0.1,
     s_init=0.185)     annotation (Placement(transformation(extent={{22,40},{
             42,60}}, rotation=0)));
   Basic.FluidPower2MechRotConst pump(       Dconst=5e-5) annotation (Placement(transformation(extent={{-24,-46},

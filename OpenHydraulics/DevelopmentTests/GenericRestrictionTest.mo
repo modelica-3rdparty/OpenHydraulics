@@ -8,7 +8,7 @@ model GenericRestrictionTest
                        annotation (Placement(transformation(extent={{-30,-10},
             {-10,10}}, rotation=0)));
 
-  Basic.GenericPressureLoss GenericRestriction(D_a=.01, D_b=.01,
+  Basic.GenericPressureLoss GenericRestriction(D_a=0.01,D_b=0.01,
     use_Re=true)
     annotation (Placement(transformation(
         origin={20,0},
@@ -16,7 +16,7 @@ model GenericRestrictionTest
         rotation=90)));
   Modelica.Blocks.Sources.Sine sinusoid(
     startTime=0.01,
-    freqHz=.5,
+    freqHz=0.5,
     amplitude=10)
     annotation (Placement(transformation(extent={{-94,-10},{-74,10}},
           rotation=0)));
