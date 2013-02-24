@@ -1,7 +1,6 @@
 within OpenHydraulics;
 package Types "Type definitions that are not part of SIunits"
-
-
+  extends Modelica.Icons.Package;
 
       annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>  

@@ -7,16 +7,16 @@ model AccumulatorTest2
   OpenHydraulics.Basic.FluidPower2MechRotConst idealConDispPump
     annotation (Placement(transformation(extent={{-10,0},{10,20}}, rotation=0)));
   Modelica.Mechanics.Rotational.Components.Inertia inertia(
-                                                J=.001)
+                                                J=0.001)
     annotation (Placement(transformation(extent={{24,0},{44,20}}, rotation=0)));
   Components.Volumes.Accumulator accumulator(
-    liquidVolume=.01,
-    gasVolume=.011,
+    liquidVolume=0.01,
+    gasVolume=0.011,
     p_init=1e6) annotation (Placement(transformation(extent={{-10,38},{10,58}},
           rotation=0)));
   Components.Volumes.Accumulator accumulator1(
-    liquidVolume=.01,
-    gasVolume=.011,
+    liquidVolume=0.01,
+    gasVolume=0.011,
     initType=OpenHydraulics.Types.AccInit.Pressure)
     annotation (Placement(transformation(
         origin={0,-32},

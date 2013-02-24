@@ -10,7 +10,7 @@ model DoubleActingCylinderTestSimple2
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
     strokeLength=0.2,
-    pistonMass=.1,
+    pistonMass=0.1,
     s_init=0.185,
     q_nom=1e-4)       annotation (Placement(transformation(extent={{22,40},{
             42,60}}, rotation=0)));

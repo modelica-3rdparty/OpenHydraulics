@@ -94,7 +94,7 @@ model SV6_3CCParallel "Sectional valve "
     annotation (Placement(transformation(extent={{20,6},{40,-14}},
           rotation=0)));
 
-  OpenHydraulics.Components.Valves.ShuttleValve shuttleValve(q_nom=.02)
+  OpenHydraulics.Components.Valves.ShuttleValve shuttleValve(q_nom=0.02)
     annotation (Placement(transformation(
         origin={58,-24},
         extent={{-10,-10},{10,10}},

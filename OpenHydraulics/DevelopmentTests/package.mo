@@ -1,5 +1,6 @@
 within OpenHydraulics;
 package DevelopmentTests "Models used for unit testing during development"
+  extends Modelica.Icons.Package;
 
 
 

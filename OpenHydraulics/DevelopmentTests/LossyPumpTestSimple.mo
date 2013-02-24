@@ -15,7 +15,7 @@ model LossyPumpTestSimple
         extent={{10,10},{-10,-10}},
         rotation=180)));
   Modelica.Blocks.Sources.Sine sine(
-    freqHz=.01,
+    freqHz=0.01,
     amplitude=3e5,
     offset=4e5)
             annotation (Placement(transformation(extent={{80,-40},{60,-20}},

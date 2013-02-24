@@ -18,8 +18,8 @@ model OpenCenterSectionalValveCircuit
           rotation=0)));
 
   Components.Volumes.CircuitTank circuitTank(
-    V_max=.025,
-    V_init=.02)                   annotation (Placement(transformation(extent=
+    V_max=0.025,
+    V_init=0.02)                  annotation (Placement(transformation(extent=
            {{2,-90},{-18,-70}}, rotation=0)));
 
   replaceable Components.Valves.DirectionalValves.SV6_3OCParallel Valve1
@@ -48,7 +48,7 @@ model OpenCenterSectionalValveCircuit
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
                 annotation (Placement(transformation(extent={{-48,0},{-28,20}},
@@ -65,7 +65,7 @@ model OpenCenterSectionalValveCircuit
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
                 annotation (Placement(transformation(extent={{36,0},{56,20}},
@@ -78,7 +78,7 @@ model OpenCenterSectionalValveCircuit
     annotation (Placement(transformation(extent={{64,0},{84,20}}, rotation=0)));
   Modelica.Blocks.Sources.Sine sine(
     startTime=0,
-    freqHz=.1,
+    freqHz=0.1,
     amplitude=1)
     annotation (Placement(transformation(extent={{-86,-36},{-66,-16}},
           rotation=0)));

@@ -131,7 +131,9 @@ model MechanicsBody_noFriction
     annotation (Placement(transformation(extent={{159,12},{179,32}},
           rotation=0)));
   MB.Joints.Assemblies.JointRRR jointRRR1(
-    rRod2_ib={-.67,.07,0},
+    rRod2_ib={-0.67,
+                   0.07,
+                       0},
     rRod1_ia={0.62,0.36,0},
     phi_guess=0,
     phi_offset=-45) annotation (Placement(transformation(extent={{170,-71},
@@ -179,24 +181,24 @@ model MechanicsBody_noFriction
         rotation=90)));
 
   // the actuators
-  MB.Forces.LineForceWithMass cylBoomRight(lineShapeWidth=.095)
+  MB.Forces.LineForceWithMass cylBoomRight(lineShapeWidth=0.095)
     "hydraulic force in cylinder 1 (between carriage and boom)"
     annotation (Placement(transformation(
         origin={-33,-21},
         extent={{-10,10},{10,-10}},
         rotation=90)));
-  MB.Forces.LineForceWithMass cylBoomLeft(lineShapeWidth=.095)
+  MB.Forces.LineForceWithMass cylBoomLeft(lineShapeWidth=0.095)
     "hydraulic force in cylinder 1 (between carriage and boom)"
     annotation (Placement(transformation(
         origin={-167,41},
         extent={{-10,-10},{10,10}},
         rotation=90)));
-  MB.Forces.LineForceWithMass cylArm(lineShapeType="cylinder", lineShapeWidth=.095)
+  MB.Forces.LineForceWithMass cylArm(lineShapeType="cylinder", lineShapeWidth=0.095)
     "hydraulic force in cylinder 2 (between boom and arm)"
     annotation (Placement(transformation(extent={{-21,69},{-1,89}},
           rotation=0)));
   MB.Forces.LineForceWithMass cylBucket(lineShapeType="cylinder",
-      lineShapeWidth=.095)
+      lineShapeWidth=0.095)
     "hydraulic force in cylinder 2 (between boom and arm)"
     annotation (Placement(transformation(
         origin={155.5,90},
@@ -228,23 +230,27 @@ model MechanicsBody_noFriction
     color={155,0,0}) "object model for the boom of the excavator"
     annotation (Placement(transformation(extent={{-79,7},{-20,37}},
           rotation=0)));
-  MB.Parts.FixedTranslation boom1LinkRight(r={.655,.703,.296})
+  MB.Parts.FixedTranslation boom1LinkRight(r={0.655,
+                                                   0.703,
+                                                        0.296})
     "from swing motor to lifting cylinder cap side pivot"
     annotation (Placement(transformation(
         origin={-33.5,-57},
         extent={{-20,-8.5},{20,8.5}},
         rotation=90)));
-  MB.Parts.FixedTranslation boom1LinkLeft(r={.655,.703,-.296})
+  MB.Parts.FixedTranslation boom1LinkLeft(r={0.655,
+                                                  0.703,
+                                                       -0.296})
     "from swing motor to lifting cylinder cap side pivot"
     annotation (Placement(transformation(
         origin={-167.5,-17},
         extent={{-20,-8.5},{20,8.5}},
         rotation=90)));
-  MB.Parts.FixedTranslation boom2LinkRight(r={2.85,1.18,.3})
+  MB.Parts.FixedTranslation boom2LinkRight(r={2.85,1.18,0.3})
     "from boom-lift pivot to lifting cylinder rod side pivot"
     annotation (Placement(transformation(extent={{-77,-7},{-32,12}},
           rotation=0)));
-  MB.Parts.FixedTranslation boom2LinkLeft(r={2.85,1.18,-.3})
+  MB.Parts.FixedTranslation boom2LinkLeft(r={2.85,1.18,-0.3})
     "from boom-lift pivot to lifting cylinder rod side pivot"
     annotation (Placement(transformation(
         origin={-131,75.5},
@@ -254,12 +260,14 @@ model MechanicsBody_noFriction
     "from boom-lift pivot to arm cylinder cap side pivot"
     annotation (Placement(transformation(extent={{-78,71},{-31,85}},
           rotation=0)));
-  MB.Parts.FixedTranslation boom4LinkX(r={-.920,0,0})
+  MB.Parts.FixedTranslation boom4LinkX(r={-0.920,
+                                                0,0})
     annotation (Placement(transformation(
         origin={21.5,79},
         extent={{-17.5,-9},{17.5,9}},
         rotation=180)));
-  MB.Parts.FixedTranslation boom4LinkY(r={0,.217,0})
+  MB.Parts.FixedTranslation boom4LinkY(r={0,0.217,
+                                                 0})
     annotation (Placement(transformation(
         origin={60.5,53},
         extent={{-20,-8.5},{20,8.5}},
@@ -278,7 +286,7 @@ model MechanicsBody_noFriction
     color={0,180,0},
     r={0.49,0.96,0},
     shapeType="cylinder",
-    width=.1) "object model for the arm of the excavator"
+    width=0.1) "object model for the arm of the excavator"
     annotation (Placement(transformation(extent={{91,82},{126,98}},
           rotation=0)));
   MB.Parts.FixedTranslation arm2Link(
@@ -287,13 +295,14 @@ model MechanicsBody_noFriction
     color={0,180,0},
     r={2.97,0.13,0},
     shapeType="cylinder",
-    width=.1) "object model for the arm of the excavator"
+    width=0.1) "object model for the arm of the excavator"
     annotation (Placement(transformation(extent={{86,-63},{129,-46}},
           rotation=0)));
   MB.Parts.FixedTranslation bucketLink(
     color={0,0,255},
-    width=.1,
-    r={.52,0.07,0},
+    width=0.1,
+    r={0.52,
+           0.07,0},
     shapeType="5") annotation (Placement(transformation(
         origin={231,7.5},
         extent={{-14.5,-11},{14.5,11}},
@@ -312,7 +321,8 @@ model MechanicsBody_noFriction
     annotation (Placement(transformation(extent={{-123,-59},{-103,-39}},
           rotation=0)));
   MB.Parts.Body bBoom(
-    r_CM={3.44,.65,0},
+    r_CM={3.44,0.65,
+                   0},
     I_11=390.5,
     I_22=7803,
     I_33=8060,
@@ -323,7 +333,8 @@ model MechanicsBody_noFriction
     annotation (Placement(transformation(extent={{-58,38},{-38,58}},
           rotation=0)));
   MB.Parts.Body bArm(
-    r_CM={1.176,.296,0},
+    r_CM={1.176,0.296,
+                     0},
     I_11=130.4,
     I_22=2110,
     I_33=2191,
@@ -339,12 +350,14 @@ model MechanicsBody_noFriction
   MB.Parts.Body bBucket(
     I_31=0,
     I_32=0,
-    r_CM={.5,-.6,0},
+    r_CM={0.5,
+             -0.6,
+                 0},
     m=50,
-    I_11=.1304,
+    I_11=0.1304,
     I_22=2.11,
     I_33=2.191,
-    I_21=-.214) "mass/inertia properties for arm"
+    I_21=-0.214) "mass/inertia properties for arm"
     annotation (Placement(transformation(
         origin={230,54},
         extent={{-10,-10},{10,10}},
@@ -546,7 +559,7 @@ equation
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid),
         Bitmap(extent={{-197,219},{248,-223}}, fileName=
-              "excavator.bmp"),
+              "modelica://OpenHydraulics/Resources/Images/excavator.png"),
         Line(
           points={{-190,37},{-14,-1}},
           color={0,127,0},

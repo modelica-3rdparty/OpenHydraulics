@@ -1,5 +1,6 @@
 within OpenHydraulics;
 package Interfaces "Interface definitions for the Hydraulics library"
+    extends Modelica.Icons.InterfacesPackage;
 
 
 

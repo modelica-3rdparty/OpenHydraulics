@@ -30,7 +30,7 @@ model LSValveUnit
 
   // the components
 
-  OpenHydraulics.Components.Valves.ShuttleValve shuttleValve(q_nom=.01)
+  OpenHydraulics.Components.Valves.ShuttleValve shuttleValve(q_nom=0.01)
     annotation (Placement(transformation(
         origin={0,30},
         extent={{10,-10},{-10,10}},

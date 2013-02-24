@@ -16,7 +16,7 @@ model OpenCenterForceVelocityControl
     strokeLength=1,
     closedLength=1.2,
     rodDiameter=0.03,
-    pistonMass=.3,
+    pistonMass=0.3,
     s_init=0.1,
     fixHeadPressure=true,
     fixRodPressure=true,
@@ -61,15 +61,15 @@ model OpenCenterForceVelocityControl
 
   OpenHydraulics.Components.Sensors.FVController fVController(
     VelocityProfile(smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative,
-        table=[0.0,0; 1,0; 2,0; 3,.0001; 4,.0003; 5,.0002; 6,.0005; 7,.0001; 8,
-          0; 9,-.0006; 10,-.0002; 11,-.0002; 12,-.00025; 13,-.00015; 14,-.0005;
-          15,0; 16,0; 17,.0009; 18,.0007; 19,.00005; 20,0; 21,-.0001; 22,-.00001;
+        table=[0.0,0; 1,0; 2,0; 3,0.0001;4,0.0003;5,0.0002;6,0.0005;7,0.0001;8,
+          0; 9,-0.0006;10,-0.0002;11,-0.0002;12,-0.00025;13,-0.00015;14,-0.0005;
+          15,0; 16,0; 17,0.0009;18,0.0007;19,0.00005;20,0; 21,-0.0001;22,-0.00001;
           23,0; 24,0]),
     ForceProfile(table=[0.0,0; 1,0; 2,-10; 3,-200; 4,-200; 5,-50; 6,-10; 7,-30;
           8,0; 9,0; 10,60; 11,100; 12,100; 13,120; 14,0; 15,0; 16,-20; 17,-40;
           18,-80; 19,-80; 20,-500; 21,-100; 22,10; 23,0; 24,0]),
     k=300,
-    Td=.00001)    annotation (Placement(transformation(
+    Td=0.00001)   annotation (Placement(transformation(
         origin={70,-10},
         extent={{-10,-10},{10,10}},
         rotation=270)));

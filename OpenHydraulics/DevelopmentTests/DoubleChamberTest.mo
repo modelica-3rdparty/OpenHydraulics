@@ -21,7 +21,7 @@ model DoubleChamberTest
     closedLength=3,
     damping=0,
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity,
-    v_init=-.1)     annotation (Placement(transformation(extent={{-22,40},{-2,
+    v_init=-0.1)    annotation (Placement(transformation(extent={{-22,40},{-2,
             60}}, rotation=0)));
 
 equation

@@ -14,6 +14,7 @@ model GenericOil "Generic Oil model"
 
   redeclare final function extends density
     "Return density as a function of p and T (Tait equation)"
+    extends Modelica.Icons.Function;
   protected
    SI.BulkModulus K0 "Temperature-dependent bulk modulus";
    constant SI.BulkModulus K00 = 8.4e9 "Bulk modulus at 0K";
@@ -28,6 +29,8 @@ model GenericOil "Generic Oil model"
   end density;
 
   redeclare final function extends dynamicViscosity
+    extends Modelica.Icons.Function;
+
     constant Real A = 9.32;
     constant Real B = 3.65;
     // approximately an ISO VG 46 oil
