@@ -546,7 +546,7 @@ equation
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid),
         Bitmap(extent={{-197,219},{248,-223}}, fileName=
-              "excavator.bmp"),
+              "modelica://OpenHydraulics/Resources/Images/excavator.png"),
         Line(
           points={{-190,37},{-14,-1}},
           color={0,127,0},
