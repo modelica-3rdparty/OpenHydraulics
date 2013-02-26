@@ -48,7 +48,7 @@ model VariableRestriction "Flow loss due to controllable restriction"
     "Turbulent flow if |m_flow| >= m_flow_small"
     annotation(Dialog(tab="Advanced", enable=not use_Re and not from_dp));
 
-  SI.ReynoldsNumber Re = ReynoldsNumber_m_flow(
+  SI.ReynoldsNumber Re = BaseClasses.ReynoldsNumber_m_flow(
         port_a.m_flow,
         (oil.dynamicViscosity(p_a) + oil.dynamicViscosity(p_b))/2,
         data.D_Re) if use_Re "Reynolds number at diameter D_Re";
