@@ -44,7 +44,7 @@ model VariableRestrictionSeriesValve
 
   extends BaseClasses.RestrictionInterface;
 
-  SI.ReynoldsNumber Re = ReynoldsNumber_m_flow(
+  SI.ReynoldsNumber Re = BaseClasses.ReynoldsNumber_m_flow(
         port_a.m_flow,
         (oil.dynamicViscosity(p_a) + oil.dynamicViscosity(p_b))/2,
         data.D_Re) if use_Re "Reynolds number at diameter D_Re";
