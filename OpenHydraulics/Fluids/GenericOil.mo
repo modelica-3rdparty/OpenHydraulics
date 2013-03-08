@@ -21,10 +21,10 @@ model GenericOil "Generic Oil model"
    constant Real K0prime = 10.9 "Constant in Tait equation";
    constant Real betaK(final unit="1/K")=0.0058 "Temp coefficient";
    constant Real aV(final unit="1/K")=7.7e-4 "Therm. exp. coef.";
-   constant Density d0 = 870 "Reference density at p0 and T0";
+   constant SI.Density d0 = 870 "Reference density at p0 and T0";
   algorithm
-   K0 := K00*Modelica.Math.exp(-betaK*T);
-   d  := d0/(1+aV*(T-T0))/
+   K0 := K00*Modelica.Math.exp(-betaK*Toperating);
+   d  := d0/(1+aV*(Toperating-T0))/
          (1-Modelica.Math.log(1+p*(1+K0prime)/K0)/(1+K0prime));
   end density;
 
