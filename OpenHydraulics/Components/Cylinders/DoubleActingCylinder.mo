@@ -242,16 +242,8 @@ initial equation
   end if;
 
 equation
-  when cushionRod.reliefValve.valvePositionSteadyState>0 then
-    Modelica.Utilities.Streams.print("\nWARNING: Cylinder exceeds maximum pressure at the rod end.");
-    Modelica.Utilities.Streams.print("         This could just be due to end-of-travel behavior.");
-    Modelica.Utilities.Streams.print("         (time = "+String(time)+")");
-  end when;
-  when cushionHead.reliefValve.valvePositionSteadyState>0 then
-    Modelica.Utilities.Streams.print("\nWARNING: Cylinder exceeds maximum pressure at the head end.");
-    Modelica.Utilities.Streams.print("         This could just be due to end-of-travel behavior.");
-    Modelica.Utilities.Streams.print("         (time = "+String(time)+")");
-  end when;
+  assert(cushionRod.reliefValve.valvePositionSteadyState<=0, "Cylinder exceeds maximum pressure at the rod end.\n\tThis could just be due to end-of-travel behavior.\n\t(time = "+String(time)+")", AssertionLevel.warning);
+  assert(cushionHead.reliefValve.valvePositionSteadyState<=0, "Cylinder exceeds maximum pressure at the head end.\n\tThis could just be due to end-of-travel behavior.\n\t(time = "+String(time)+")", AssertionLevel.warning);
 
   connect(cylinderChamberHead.flange_b, piston.flange_a)
     annotation (Line(points={{-30,0},{-10,0}}, color={0,127,0}));
