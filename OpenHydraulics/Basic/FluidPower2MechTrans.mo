@@ -46,7 +46,11 @@ algorithm
   assert(V>0,"Volume in fluid chamber is negative or zero.\n"+
               "Increase the residualVolume or the stopStiffness");
   assert(p_vol<maxPressure or s_rel<0,"Maxiumum pressure in chamber has been exceeded");
-  assert(not empty, "CylinderChamber has reached end of travel.\n\tThis could cause erratic behavior of the simulation.\n\t(time = "+String(time)+")", AssertionLevel.warning);
+  when empty then
+    Modelica.Utilities.Streams.print("\nWARNING: CylinderChamber has reached end of travel.");
+    Modelica.Utilities.Streams.print("         This could cause erratic behavior of the simulation.");
+    Modelica.Utilities.Streams.print("         (time = "+String(time)+")");
+  end when;
 
 equation
   // medium equations
