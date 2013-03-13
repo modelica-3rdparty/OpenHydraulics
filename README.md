@@ -20,14 +20,14 @@ sensing circuit.  To develop your own model, it is best to start from a model in
 
 ## Current release
 
-Download [OpenHydraulics v1.0.1 (2013-01-19)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.1.zip)
+Download [OpenHydraulics v1.0.1 (2013-02-26)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.1.zip)
 
 #### Release notes
 
 * [Version 1.0.1 (2013-02-26)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.1.zip):
  * Release with improved package structure
 
-* [Version 1.0 (2013-01-15)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.zip):
+* [Version 1.0 (2013-02-19)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.zip):
  * Initial release, tested with Dymola2013FD01
 
 ## License
