@@ -6,14 +6,10 @@ model ConstVolumeSource "Boundary pressure source"
     annotation (Placement(transformation(extent={{-10,90},{10,110}},
           rotation=0)));
 
-  parameter SI.VolumeFlowRate q = 0.01 "Source Volume Rate";
+  parameter SI.VolumeFlowRate q = 0.01 "Source Volume Rate" annotation(Evaluate=true);
 
 equation
-  if q == 0 then
-    port.m_flow = 0;
-  else
-    port.m_flow = -q*oil.density(port.p);
-  end if;
+  port.m_flow = -q*oil.density(port.p);
 
   annotation (defaultComponentName = "source",
     Icon(coordinateSystem(
