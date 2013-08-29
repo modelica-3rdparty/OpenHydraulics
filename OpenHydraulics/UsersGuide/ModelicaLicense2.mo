@@ -10,7 +10,7 @@ The Modelica License applies to any Original Work that contains the following li
 <p>
 <strong>Note.</strong> This is the standard Modelica License 2, except for the following changes: the parenthetical in paragraph 7., paragraph 5., and the addition of paragraph 15.d). 
 <p>
-<strong>Licensed by The Regents of the University of California, through Lawrence Berkeley National Laboratory under the Modelica License 2 </strong> 
+<strong>Licensed by the Georgia Institute of Technology under the Modelica License 2 </strong> 
  
 <h4>1. Definitions</h4>
 <ol type=\"a\"><li>
