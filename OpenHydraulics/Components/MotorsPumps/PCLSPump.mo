@@ -64,7 +64,7 @@ model PCLSPump
     k=propGain,
     Td=timeConst,
     final yMin=0,
-    initType=Modelica.Blocks.Types.Init.InitialState)
+    initType=Modelica.Blocks.Types.InitPID.InitialState)
     annotation (Placement(transformation(extent={{0,-36},{20,-16}},
           rotation=0)));
   Sensors.PressureSensor pressureSensorLS
