@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses;
-model PartialValve4_3pos "Partial class for building 4-port 3-position valves"
+partial model PartialValve4_3pos "Partial class for building 4-port 3-position valves"
 
   // sizing parameters
   parameter SI.VolumeFlowRate q_nom = 0.001 "Nominal flow rate at dp_nom"

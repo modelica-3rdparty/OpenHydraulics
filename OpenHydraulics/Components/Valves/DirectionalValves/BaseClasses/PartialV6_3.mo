@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses;
-model PartialV6_3
+partial model PartialV6_3
 
     // sizing parameters
   parameter SI.VolumeFlowRate q_nom = 0.001 "Nominal flow rate at dp_nom"

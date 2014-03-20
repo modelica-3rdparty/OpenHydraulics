@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses;
-model PartialValve4_3pos_new
+partial model PartialValve4_3pos_new
   "Partial class for building 4-port 3-position valves"
 
   // sizing parameters
