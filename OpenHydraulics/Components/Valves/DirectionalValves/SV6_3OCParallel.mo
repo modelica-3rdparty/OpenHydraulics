@@ -265,7 +265,5 @@ annotation (Diagram(graphics={Rectangle(
         Text(
           extent={{-120,-96},{120,-120}},
           lineColor={0,0,255},
-          textString="%name")}),
-    experiment(StopTime=10, Tolerance=1e-006),
-    experimentSetupOutput);
+          textString="%name")}));
 end SV6_3OCParallel;

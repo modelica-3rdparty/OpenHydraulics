@@ -356,7 +356,5 @@ annotation (Diagram(graphics={Rectangle(
         Line(points={{30,12},{30,8}}, color={0,0,0}),
         Line(points={{40,12},{40,8}}, color={0,0,0}),
         Line(points={{36,-2},{40,-2},{36,-2},{40,-4},{36,-4},{40,-6}},
-            color={0,0,0})}),
-    experiment(StopTime=10, Tolerance=1e-006),
-    experimentSetupOutput);
+            color={0,0,0})}));
 end SV6_3CCParallel;

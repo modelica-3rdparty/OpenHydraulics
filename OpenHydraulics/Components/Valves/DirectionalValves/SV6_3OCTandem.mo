@@ -272,7 +272,5 @@ equation
           lineColor={0,0,255},
           textString="%name"),
         Line(points={{-80,40},{-50,40},{-50,4},{-36,4}}, color={0,0,0}),
-        Line(points={{54,-4},{54,40},{80,40}}, color={0,0,0})}),
-    experiment(StopTime=10, Tolerance=1e-006),
-    experimentSetupOutput);
+        Line(points={{54,-4},{54,40},{80,40}}, color={0,0,0})}));
 end SV6_3OCTandem;
