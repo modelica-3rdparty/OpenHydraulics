@@ -2,11 +2,7 @@ within OpenHydraulics.Fluids.BaseClasses;
 partial model PartialFluid "Partial fluid model for FluidPower library"
 
   parameter String oilName = "PartialFluid";
-
-  parameter SI.Temperature Toperating= 293.15
-    "Operating temperature of the oil";
-//  parameter SI.
-
+  constant SI.Temperature Toperating= 293.15 "Operating temperature of the oil";
   constant SI.Temperature T0=273.15 "Reference temperature";
   constant SI.AbsolutePressure p0 = 101325 "Reference pressure";
 

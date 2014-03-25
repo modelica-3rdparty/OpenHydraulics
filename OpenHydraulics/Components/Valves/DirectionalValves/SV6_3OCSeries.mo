@@ -256,7 +256,5 @@ annotation (Diagram(graphics={Rectangle(
         Line(points={{40,80},{40,58},{24,58},{24,58}}, color={0,0,0}),
         Line(points={{-40,80},{-40,58},{6,58},{6,4},{0,4}}, color={0,0,0}),
         Line(points={{-36,-12},{-52,-12},{-52,-56}}, color={0,0,0}),
-        Line(points={{-52,-56},{54,-56},{54,-4},{54,40}}, color={0,0,0})}),
-    experiment(StopTime=10, Tolerance=1e-006),
-    experimentSetupOutput);
+        Line(points={{-52,-56},{54,-56},{54,-4},{54,40}}, color={0,0,0})}));
 end SV6_3OCSeries;

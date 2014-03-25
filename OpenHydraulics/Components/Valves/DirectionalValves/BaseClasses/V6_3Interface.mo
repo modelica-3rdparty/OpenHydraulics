@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses;
-model V6_3Interface "Interface for 6-port 3-position valve"
+partial model V6_3Interface "Interface for 6-port 3-position valve"
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
   // the ports

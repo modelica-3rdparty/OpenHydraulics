@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses;
-model PartialV6_3LS "Interface for 6-port 3-position valve"
+partial model PartialV6_3LS "Interface for 6-port 3-position valve"
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
    // dynamic response parameters
