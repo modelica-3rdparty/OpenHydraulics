@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package Valves 
+package Valves
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end Valves;

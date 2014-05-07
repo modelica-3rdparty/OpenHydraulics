@@ -15,7 +15,7 @@ The development of the OpenHydraulics library is organized by<br><br>
 
 <h4><font color=\"#008000\" size=5>Acknowledgements</font></h4>
 <p>
-The development of this library has been a collaborative effort 
+The development of this library has been a collaborative effort
 and many have contributed:
 </p>
 <ul>
@@ -24,10 +24,9 @@ and many have contributed:
 Funding for this effort was provided in part by:
 <ul>
 <li>John Deere & Co.</li>
-<li>The Center for Compact and Efficient Fluid Power, supported by the National Science Foundation 
+<li>The Center for Compact and Efficient Fluid Power, supported by the National Science Foundation
 (USA) under Grant No. EEC-0540834</li>
 </ul>
 </p>
-</html>
-"));
+</html>"));
 end Contact;

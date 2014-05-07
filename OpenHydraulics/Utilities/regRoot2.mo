@@ -86,13 +86,13 @@ protected
               y0d    = a1/x1
            _
            Solving these equations results in y0d below
-           (note, the denominator "(1-w)" is always non-zero, because w is negative) 
+           (note, the denominator "(1-w)" is always non-zero, because w is negative)
            */
            w :=x2/x1;
            y0d := ( (3*y2 - x2*y2d)/w - (3*y1 - x1*y1d)*w) /(2*x1*(1 - w));
         end if;
 
-        /* Modify derivative y0d, such that the polynomial is 
+        /* Modify derivative y0d, such that the polynomial is
            monotonically increasing. A sufficient condition is
              0 <= y0d <= sqrt(8.75*k_i/|x_i|)
         */
@@ -123,10 +123,10 @@ Approximates the function
    y = <b>if</b> x &ge; 0 <b>then</b> <b>sqrt</b>(k1*x) <b>else</b> -<b>sqrt</b>(k2*<b>abs</b>(x)), with k1, k2 > 0
 </pre>
 <p>
-in such a way that within the region -x_small &le; x &le; x_small, 
+in such a way that within the region -x_small &le; x &le; x_small,
 the function is described by two polynomials of third order
 (one in the region -x_small .. 0 and one within the region 0 .. x_small)
-such that 
+such that
 </p>
 <ul>
 <li> The derivative at x=0 is finite. </li>
@@ -136,8 +136,8 @@ such that
      are constructed such that the second derivatives at x=0
      are identical. If use_yd0 = <b>true</b>, the derivative
      at x=0 is explicitly provided via the additional argument
-     yd0. If necessary, the derivative yd0 is automatically 
-     reduced in order that the polynomials are strict monotonically  
+     yd0. If necessary, the derivative yd0 is automatically
+     reduced in order that the polynomials are strict monotonically
      increasing <i>[Fritsch and Carlson, 1980]</i>.</li>
 </ul>
 <p>
@@ -153,18 +153,18 @@ and the second one with k1=1 and k2=3:
 <p>
 <img src=\"../Images/Components/regRoot2_b.png\">
 </p>
- 
+
 <p>
 The (smooth) derivative of the function with
 k1=1, k2=3 is shown in the next figure:
 <p>
 <img src=\"../Images/Components/regRoot2_c.png\">
 </p>
- 
+
 <p>
 <b>Literature</b>
 </p>
- 
+
 <dl>
 <dt> Fritsch F.N. and Carlson R.E. (1980):</dt>
 <dd> <b>Monotone piecewise cubic interpolation</b>.

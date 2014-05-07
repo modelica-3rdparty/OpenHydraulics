@@ -52,7 +52,7 @@ protected
            y0d := ( (3*y2 - x2*y2d)/w - (3*y1 - x1*y1d)*w) /(2*x1*(1 - w));
         end if;
 
-        /* Modify derivative y0d, such that the polynomial is 
+        /* Modify derivative y0d, such that the polynomial is
            monotonically increasing. A sufficient condition is
              0 <= y0d <= sqrt(5)*k_i*|x_i|
         */
@@ -78,12 +78,12 @@ Approximates the function
    y = <b>if</b> x &ge; 0 <b>then</b> k1*x*x <b>else</b> -k2*x*x, with k1, k2 > 0
 </pre>
 <p>
-in such a way that within the region -x_small &le; x &le; x_small, 
+in such a way that within the region -x_small &le; x &le; x_small,
 the function is described by two polynomials of third order
 (one in the region -x_small .. 0 and one within the region 0 .. x_small)
 such that
 </p>
- 
+
 <ul>
 <li> The derivative at x=0 is non-zero (in order that the
      inverse of the function does not have an infinite derivative). </li>
@@ -93,8 +93,8 @@ such that
      are constructed such that the second derivatives at x=0
      are identical. If use_yd0 = <b>true</b>, the derivative
      at x=0 is explicitly provided via the additional argument
-     yd0. If necessary, the derivative yd0 is automatically 
-     reduced in order that the polynomials are strict monotonically  
+     yd0. If necessary, the derivative yd0 is automatically
+     reduced in order that the polynomials are strict monotonically
      increasing <i>[Fritsch and Carlson, 1980]</i>.</li>
 </ul>
 </ul>
@@ -104,20 +104,20 @@ A typical screenshot for k1=1, k2=3 is shown in the next figure:
 <p>
 <img src=\"../Images/Components/regSquare2_b.png\">
 </p>
- 
+
 <p>
 The (smooth, non-zero) derivative of the function with
 k1=1, k2=3 is shown in the next figure:
 </p>
- 
+
 <p>
 <img src=\"../Images/Components/regSquare2_c.png\">
 </p>
- 
+
 <p>
 <b>Literature</b>
 </p>
- 
+
 <dl>
 <dt> Fritsch F.N. and Carlson R.E. (1980):</dt>
 <dd> <b>Monotone piecewise cubic interpolation</b>.

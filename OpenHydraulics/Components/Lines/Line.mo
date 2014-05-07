@@ -112,7 +112,7 @@ equation
             fillPattern=FillPattern.Solid,
             textString="A")}),             Documentation(info="<html>
 <p>
-Simple pipe model consisting of one volume, 
+Simple pipe model consisting of one volume,
 wall friction (with different friction correlations)
 and gravity effect. This model is mostly used to demonstrate how
 to build up more detailed models from the basic components.

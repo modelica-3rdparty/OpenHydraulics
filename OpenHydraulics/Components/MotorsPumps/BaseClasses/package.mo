@@ -1,4 +1,4 @@
 within OpenHydraulics.Components.MotorsPumps;
-package BaseClasses 
+package BaseClasses
   extends Modelica.Icons.BasesPackage;
 end BaseClasses;

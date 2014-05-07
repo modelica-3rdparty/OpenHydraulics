@@ -7,7 +7,7 @@ package UsersGuide "User's Guide"
 <p>
 Library <b>Hydraulics</b> is a <b>free</b> Modelica package providing
 components describing
-<b>1-dimensional fluid flow</b> in hydraulic circuits. 
+<b>1-dimensional fluid flow</b> in hydraulic circuits.
 </p>
 <p>
 <b>Current Issues:</b>

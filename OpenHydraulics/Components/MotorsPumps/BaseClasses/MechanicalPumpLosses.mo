@@ -61,8 +61,7 @@ Part B, Vol. 198, No. 10, 1984, pp 165-174.
 The model implementation is derived from the bearing friction
 model in the standard Modelica library.
 </p>
-</HTML>
-"), Window(
+</html>"), Window(
       x=0.25,
       y=0.01,
       width=0.53,

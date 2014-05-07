@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package Cylinders 
+package Cylinders
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end Cylinders;
