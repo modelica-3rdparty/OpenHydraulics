@@ -35,11 +35,9 @@ model ReliefValve "Simple equation model for a relief valve"
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   // internal component
   OpenHydraulics.Basic.VariableRestriction variableRestriction(
@@ -51,8 +49,7 @@ model ReliefValve "Simple equation model for a relief valve"
     D_nom=0.01,
     final q_nom=q_nom,
     final dp_nom=dp_open)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
   Real valvePosition(start=0) "Normalized valve position (between 0 and 1)";
   Real valvePositionSteadyState "Steady state position of valve)";
@@ -158,6 +155,5 @@ equation
           lineColor={0,0,255},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid,
-          textString="%name")}),
-    DymolaStoredErrors);
+          textString="%name")}));
 end ReliefValve;

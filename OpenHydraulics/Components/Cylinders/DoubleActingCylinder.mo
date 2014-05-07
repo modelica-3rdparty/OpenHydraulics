@@ -99,11 +99,9 @@ model DoubleActingCylinder
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{90,-90},{70,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{90,-90},{70,-70}})));
 
   // the components
   Basic.FluidPower2MechTrans cylinderChamberHead(
@@ -113,8 +111,7 @@ model DoubleActingCylinder
     n_ports=3,
     p_init=p_init,
     maxPressure=maxPressure*10)
-    annotation (Placement(transformation(extent={{-50,-10},{-30,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-10},{-30,10}})));
 
   Basic.FluidPower2MechTrans cylinderChamberRod(
     A=pi/4*(boreDiameter^2 - rodDiameter^2),
@@ -123,53 +120,43 @@ model DoubleActingCylinder
     n_ports=3,
     p_init=p_init,
     maxPressure=maxPressure*10)
-    annotation (Placement(transformation(extent={{30,-10},{50,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-10},{50,10}})));
   BaseClasses.CylinderCushion cushionHead(
     cushionTable=if useCushionHead then cushionTableHead else [0,0.001;strokeLength/1000,1;1,1],
     smoothness=smoothnessHead,
     q_nom=q_nom,
     dp_nom=dp_nom,
     dp_relief=maxPressure*0.9)
-    annotation (Placement(transformation(extent={{-50,-60},{-30,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-60},{-30,-40}})));
   BaseClasses.CylinderCushion cushionRod(
     cushionTable=if useCushionRod then cushionTableRod else [0,0.001;strokeLength/1000,1;1,1],
     smoothness=smoothnessHead,
     q_nom=q_nom,
     dp_nom=dp_nom,
     dp_relief=maxPressure*0.9)
-    annotation (Placement(transformation(extent={{30,-60},{50,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-60},{50,-40}})));
   Basic.LaminarRestriction leakage_Head2Rod(
     L=L_A2B,
     D=D_A2B)
-    annotation (Placement(transformation(extent={{-10,-30},{10,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-30},{10,-10}})));
   Modelica.Mechanics.Translational.Components.Mass piston(
                                                       m=pistonMass)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Mechanics.Translational.Components.Rod cylinder(
                                                 L=strokeLength)
-    annotation (Placement(transformation(extent={{-10,70},{10,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,70},{10,90}})));
   Modelica.Mechanics.Translational.Components.Rod rod(
                                            L=closedLength)
-    annotation (Placement(transformation(extent={{70,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{70,-10},{90,10}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a flange_a
     "(left) driving flange (flange axis directed INTO cut plane, e. g. from left to right)"
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b flange_b
     "(right) driven flange (flange axis directed OUT OF cut plane, i. e. from right to left)"
-    annotation (Placement(transformation(extent={{90,-10},{110,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{90,-10},{110,10}})));
   Modelica.Mechanics.Translational.Components.Damper damper(
                                                  d=damping)
-    annotation (Placement(transformation(extent={{-48,58},{-28,78}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-48,58},{-28,78}})));
   Basic.ConstPressureSource envSinkA
     annotation (Placement(transformation(
         origin={-90,-20},
@@ -183,8 +170,7 @@ model DoubleActingCylinder
   Basic.LaminarRestriction leakage_Head2Env(
     L=L_A2Env,
     D=D_A2Env)
-    annotation (Placement(transformation(extent={{-74,-30},{-54,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-74,-30},{-54,-10}})));
   Basic.LaminarRestriction leakage_Rod2Env(
     L=L_B2Env,
     D=D_B2Env)
@@ -194,12 +180,10 @@ model DoubleActingCylinder
         rotation=180)));
   Lines.NJunction jA(
     n_ports=2)
-    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}})));
   Lines.NJunction jB(
     n_ports=2)
-    annotation (Placement(transformation(extent={{30,-90},{50,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-90},{50,-70}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 

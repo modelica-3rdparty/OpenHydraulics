@@ -39,15 +39,13 @@ model PCLSPump
       Dmax=Dmax,
       Dmin = Dmin,
       Dlimit = Dlimit)
-    annotation (Placement(transformation(extent={{30,-10},{50,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-10},{50,10}})));
   BaseClasses.MechanicalPumpLosses mechanicalPumpLosses(
     Cv=Cv,
     Cf=Cf,
     Dmax=Dlimit,
     mu = mu)
-    annotation (Placement(transformation(extent={{-80,-10},{-60,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-80,-10},{-60,10}})));
   Basic.VariableFlow leakage_P2T
     annotation (Placement(transformation(
         origin={60,0},
@@ -65,40 +63,30 @@ model PCLSPump
     Td=timeConst,
     final yMin=0,
     initType=Modelica.Blocks.Types.InitPID.InitialState)
-    annotation (Placement(transformation(extent={{0,-36},{20,-16}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{0,-36},{20,-16}})));
   Sensors.PressureSensor pressureSensorLS
-    annotation (Placement(transformation(extent={{-90,-42},{-70,-22}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-42},{-70,-22}})));
   Modelica.Blocks.Math.Add desiredPressure
-    annotation (Placement(transformation(extent={{-30,-36},{-10,-16}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,-36},{-10,-16}})));
   Modelica.Blocks.Sources.RealExpression pressureMargin(
     y=p_margin)
-    annotation (Placement(transformation(extent={{-60,-30},{-40,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-30},{-40,-10}})));
   Lines.NJunction j1
-    annotation (Placement(transformation(extent={{30,-50},{50,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-50},{50,-30}})));
   Lines.NJunction j2(
     n_ports=4)
-    annotation (Placement(transformation(extent={{30,30},{50,50}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{30,30},{50,50}})));
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portP
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
   OpenHydraulics.Interfaces.FluidPort portT
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
   OpenHydraulics.Interfaces.FluidPort portLS
-    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a
     "(left) driving flange (flange axis directed INTO cut plane)"
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 

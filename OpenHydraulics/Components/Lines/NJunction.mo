@@ -10,15 +10,13 @@ model NJunction
 
   OpenHydraulics.Interfaces.FluidPort port[n_ports](m_flow(each start=0), p(
         each start=p_init))
-      annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+      annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
   Basic.VolumeClosed volumeClosed(
     final n_ports=n_ports,
     final V = V,
     compressible=false)
-    annotation (Placement(transformation(extent={{-10,-40},{10,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 initial equation

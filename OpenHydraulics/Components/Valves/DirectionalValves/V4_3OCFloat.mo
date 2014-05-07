@@ -23,7 +23,7 @@ model V4_3OCFloat "4-port 3-position valve with open center 'float' style"
     table=[-1,0; 0,1; 1,0])
     annotation (
     Dialog(tab="Sizing",group="Metering"), Placement(transformation(
-          extent={{-8,-32},{8,-48}}, rotation=0)));
+          extent={{-8,-32},{8,-48}})));
 
   Basic.VariableRestriction A2B(
     D_nom=0.01,
@@ -34,7 +34,7 @@ model V4_3OCFloat "4-port 3-position valve with open center 'float' style"
     table=[-1,0; 0,1; 1,0])
     annotation (
     Dialog(tab="Sizing",group="Metering"), Placement(transformation(
-          extent={{-8,68},{8,52}}, rotation=0)));
+          extent={{-8,68},{8,52}})));
 
   //equations and connect
 equation

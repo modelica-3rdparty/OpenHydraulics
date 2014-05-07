@@ -8,40 +8,29 @@ model SV6_3OCTandem "Sectional valve "
 
     //ports
   OpenHydraulics.Interfaces.FluidPort P1_in
-    annotation (Placement(transformation(extent={{-100,30},{-80,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-100,30},{-80,50}})));
   OpenHydraulics.Interfaces.FluidPort P2_in
-    annotation (Placement(transformation(extent={{-100,-10},{-80,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-100,-10},{-80,10}})));
   OpenHydraulics.Interfaces.FluidPort T2_out
-    annotation (Placement(transformation(extent={{-100,-70},{-80,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-100,-70},{-80,-50}})));
   OpenHydraulics.Interfaces.FluidPort P1_out
-    annotation (Placement(transformation(extent={{80,30},{100,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{80,30},{100,50}})));
   OpenHydraulics.Interfaces.FluidPort P2_out
-    annotation (Placement(transformation(extent={{80,-10},{100,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{80,-10},{100,10}})));
   OpenHydraulics.Interfaces.FluidPort T2_in
-    annotation (Placement(transformation(extent={{80,-70},{100,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{80,-70},{100,-50}})));
   OpenHydraulics.Interfaces.FluidPort A
-    annotation (Placement(transformation(extent={{-50,80},{-30,100}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,80},{-30,100}})));
   OpenHydraulics.Interfaces.FluidPort B
-    annotation (Placement(transformation(extent={{30,80},{50,100}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,80},{50,100}})));
   Modelica.Blocks.Interfaces.RealInput u[sizeOfInputs]
-    annotation (Placement(transformation(extent={{-44,-100},{-26,-80}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-44,-100},{-26,-80}})));
   Modelica.Blocks.Interfaces.RealOutput y[sizeOfInputs]
-    annotation (Placement(transformation(extent={{20,-100},{40,-80}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{20,-100},{40,-80}})));
 
     //junctions
   OpenHydraulics.Components.Lines.NJunction j1
-    annotation (Placement(transformation(extent={{52,-10},{72,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{52,-10},{72,10}})));
 
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=5)
     annotation (Placement(transformation(
@@ -69,12 +58,10 @@ model SV6_3OCTandem "Sectional valve "
         rotation=270)));
 
   OpenHydraulics.Components.Valves.Anticavitation_ReliefValve AnticavRelief
-    annotation (Placement(transformation(extent={{-30,50},{-10,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,50},{-10,70}})));
 
   OpenHydraulics.Components.Valves.Anticavitation_ReliefValve AnticavRelief2
-    annotation (Placement(transformation(extent={{30,50},{10,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,50},{10,70}})));
 
     //equation and connect
 equation

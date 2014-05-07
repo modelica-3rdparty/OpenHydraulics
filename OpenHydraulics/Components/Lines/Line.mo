@@ -19,30 +19,25 @@ model Line "Short line with one volume and wall friction"
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-            rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}}, rotation=
-             0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   Basic.WallFriction wallFriction_a(
       L=L/2,
       D=D,
       roughness=roughness)
-      annotation (Placement(transformation(extent={{-60,-10},{-40,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
   Basic.VolumeClosed volumeMiddle(
     volBulkMod=lineBulkMod,
     n_ports=2,
     V=Modelica.Constants.pi*(D/2)^2*L/2)
-    annotation (Placement(transformation(extent={{-10,10},{10,-10}}, rotation=
-             0)));
+    annotation (Placement(transformation(extent={{-10,10},{10,-10}})));
   Basic.WallFriction wallFriction_b(
       L=L/2,
       D=D,
       roughness=roughness)
-      annotation (Placement(transformation(extent={{40,-10},{60,10}},
-            rotation=0)));
+      annotation (Placement(transformation(extent={{40,-10},{60,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
@@ -50,14 +45,12 @@ model Line "Short line with one volume and wall friction"
     volBulkMod=lineBulkMod,
     n_ports=2,
     V=Modelica.Constants.pi*(D/2)^2*L/4)
-    annotation (Placement(transformation(extent={{-90,10},{-70,-10}},
-            rotation=0)));
+    annotation (Placement(transformation(extent={{-90,10},{-70,-10}})));
   Basic.VolumeClosed volumeB(
     volBulkMod=lineBulkMod,
     n_ports=2,
     V=Modelica.Constants.pi*(D/2)^2*L/4)
-    annotation (Placement(transformation(extent={{70,10},{90,-10}}, rotation=
-              0)));
+    annotation (Placement(transformation(extent={{70,10},{90,-10}})));
 initial equation
   if uniformPressure then
     volumeMiddle.p_vol = port_a.p;
@@ -112,7 +105,7 @@ equation
             fillPattern=FillPattern.Solid,
             textString="A")}),             Documentation(info="<html>
 <p>
-Simple pipe model consisting of one volume, 
+Simple pipe model consisting of one volume,
 wall friction (with different friction correlations)
 and gravity effect. This model is mostly used to demonstrate how
 to build up more detailed models from the basic components.

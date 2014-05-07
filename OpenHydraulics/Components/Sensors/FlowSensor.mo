@@ -10,11 +10,9 @@ model FlowSensor
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a(p(start=p_init))
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b(p(start=p_init))
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   Modelica.Blocks.Interfaces.RealOutput y
     annotation (Placement(transformation(
@@ -28,8 +26,7 @@ model FlowSensor
     zeta1=zeta,
     zeta2=zeta,
     use_Re=true)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 equation
   y = genericPressureLoss.q_flow_a;
 

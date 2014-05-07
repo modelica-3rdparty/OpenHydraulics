@@ -104,8 +104,7 @@ model MechanicsBody_noFriction
     w(fixed=if (boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
           boom_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType
            == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=boom_w_start))
-    annotation (Placement(transformation(extent={{-133,12},{-113,32}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-133,12},{-113,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute armRevolute(
     a(start=arm_a_start, fixed=if (
           arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
@@ -115,8 +114,7 @@ model MechanicsBody_noFriction
     w(fixed=if (arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
           arm_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
           Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_w_start))
-    annotation (Placement(transformation(extent={{3,12},{23,32}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{3,12},{23,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute bucketRevolute(
     a(start=bucket_a_start, fixed=if (
           bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
@@ -128,8 +126,7 @@ model MechanicsBody_noFriction
           bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
           bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
           bucket_w_start))
-    annotation (Placement(transformation(extent={{159,12},{179,32}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{159,12},{179,32}})));
   MB.Joints.Assemblies.JointRRR jointRRR1(
     rRod2_ib={-0.67,
                    0.07,
@@ -137,43 +134,34 @@ model MechanicsBody_noFriction
     rRod1_ia={0.62,0.36,0},
     phi_guess=0,
     phi_offset=-45) annotation (Placement(transformation(extent={{170,-71},
-            {199,-40}}, rotation=0)));
+            {199,-40}})));
 
   // joint friction
 
   // the outside interface
   Modelica.Mechanics.Rotational.Interfaces.Flange_a swingFlange
     "input connector for rotation of swing function revolute joint"
-    annotation (Placement(transformation(extent={{-211,-133},{-191,-113}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-211,-133},{-191,-113}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b cylBoomRightBase
     "flange a of force in cylinder 1 (between carriage and boom)"
-    annotation (Placement(transformation(extent={{-24,-151},{-4,-131}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-24,-151},{-4,-131}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a cylBoomRightRod
     "flange b of force in cylinder 1 (between carriage and boom )"
-    annotation (Placement(transformation(extent={{-4,-151},{16,-131}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-4,-151},{16,-131}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b cylBoomLeftBase
-    annotation (Placement(transformation(extent={{-210,17},{-190,37}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-210,17},{-190,37}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a cylBoomLeftRod
-    annotation (Placement(transformation(extent={{-210,37},{-190,57}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-210,37},{-190,57}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b cylArmBase
     "flange a of force in cylinder 2 (between boom and arm)"
-    annotation (Placement(transformation(extent={{-35,129},{-15,149}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-35,129},{-15,149}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a cylArmRod
     "flange b of force in cylinder 2 (between boom and arm)"
-    annotation (Placement(transformation(extent={{-15,129},{5,149}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-15,129},{5,149}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b cylBucketBase
-    annotation (Placement(transformation(extent={{135,129},{155,149}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{135,129},{155,149}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a cylBucketRod
-    annotation (Placement(transformation(extent={{155,129},{175,149}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{155,129},{175,149}})));
   MB.Interfaces.Frame_a baseFrame
     annotation (Placement(transformation(
         origin={-72,-136},
@@ -195,8 +183,7 @@ model MechanicsBody_noFriction
         rotation=90)));
   MB.Forces.LineForceWithMass cylArm(lineShapeType="cylinder", lineShapeWidth=0.095)
     "hydraulic force in cylinder 2 (between boom and arm)"
-    annotation (Placement(transformation(extent={{-21,69},{-1,89}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-21,69},{-1,89}})));
   MB.Forces.LineForceWithMass cylBucket(lineShapeType="cylinder",
       lineShapeWidth=0.095)
     "hydraulic force in cylinder 2 (between boom and arm)"
@@ -230,8 +217,7 @@ model MechanicsBody_noFriction
     r={7.11,0,0},
     shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/boom.stl",
     color={155,0,0}) "object model for the boom of the excavator"
-    annotation (Placement(transformation(extent={{-79,7},{-20,37}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-79,7},{-20,37}})));
   MB.Parts.FixedTranslation boom1LinkRight(r={0.655,
                                                    0.703,
                                                         0.296})
@@ -250,8 +236,7 @@ model MechanicsBody_noFriction
         rotation=90)));
   MB.Parts.FixedTranslation boom2LinkRight(r={2.85,1.18,0.3})
     "from boom-lift pivot to lifting cylinder rod side pivot"
-    annotation (Placement(transformation(extent={{-77,-7},{-32,12}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-77,-7},{-32,12}})));
   MB.Parts.FixedTranslation boom2LinkLeft(r={2.85,1.18,-0.3})
     "from boom-lift pivot to lifting cylinder rod side pivot"
     annotation (Placement(transformation(
@@ -260,8 +245,7 @@ model MechanicsBody_noFriction
         rotation=180)));
   MB.Parts.FixedTranslation boom3Link(r={4.22,1.33,0})
     "from boom-lift pivot to arm cylinder cap side pivot"
-    annotation (Placement(transformation(extent={{-78,71},{-31,85}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-78,71},{-31,85}})));
   MB.Parts.FixedTranslation boom4LinkX(r={-0.920,
                                                 0,0})
     annotation (Placement(transformation(
@@ -281,8 +265,7 @@ model MechanicsBody_noFriction
     color={0,180,0},
     shapeType="modelica://OpenHydraulics/Resources/Shapes/Excavator/arm.stl")
     "object model for the arm of the excavator"
-    annotation (Placement(transformation(extent={{86,11},{129,33}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{86,11},{129,33}})));
   MB.Parts.FixedTranslation arm1Link(
     r_shape={0,0,0},
     animation=true,
@@ -290,8 +273,7 @@ model MechanicsBody_noFriction
     r={0.49,0.96,0},
     shapeType="cylinder",
     width=0.1) "object model for the arm of the excavator"
-    annotation (Placement(transformation(extent={{91,82},{126,98}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{91,82},{126,98}})));
   MB.Parts.FixedTranslation arm2Link(
     r_shape={0,0,0},
     animation=true,
@@ -299,8 +281,7 @@ model MechanicsBody_noFriction
     r={2.97,0.13,0},
     shapeType="cylinder",
     width=0.1) "object model for the arm of the excavator"
-    annotation (Placement(transformation(extent={{86,-63},{129,-46}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{86,-63},{129,-46}})));
   MB.Parts.FixedTranslation bucketLink(
     color={0,0,255},
     width=0.1,
@@ -321,8 +302,7 @@ model MechanicsBody_noFriction
     r_CM={-2.555,1.169,0},
     sphereDiameter=world.defaultBodyDiameter)
     "mass/inertia properties for carriage"
-    annotation (Placement(transformation(extent={{-123,-59},{-103,-39}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-123,-59},{-103,-39}})));
   MB.Parts.Body bBoom(
     r_CM={3.44,0.65,
                    0},
@@ -333,8 +313,7 @@ model MechanicsBody_noFriction
     I_31=0,
     I_32=0,
     m=1307) "mass/inertia properties for boom"
-    annotation (Placement(transformation(extent={{-58,38},{-38,58}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-58,38},{-38,58}})));
   MB.Parts.Body bArm(
     r_CM={1.176,0.296,
                      0},

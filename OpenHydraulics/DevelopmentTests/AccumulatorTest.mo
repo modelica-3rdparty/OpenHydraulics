@@ -5,10 +5,10 @@ model AccumulatorTest
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Components.Volumes.Accumulator accumulator(p_precharge=100000)
-    annotation (Placement(transformation(extent={{-20,20},{0,40}}, rotation=0)));
+    annotation (Placement(transformation(extent={{-20,20},{0,40}})));
   OpenHydraulics.Basic.OpenTank tank(p_const=1e5)
                                      annotation (Placement(transformation(
-          extent={{-20,-40},{0,-20}}, rotation=0)));
+          extent={{-20,-40},{0,-20}})));
   OpenHydraulics.Basic.GenericPressureLoss restriction(
     D_b=0.01,
     Re_turbulent=2000,

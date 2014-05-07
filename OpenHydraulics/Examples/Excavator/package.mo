@@ -1,5 +1,5 @@
 within OpenHydraulics.Examples;
-package Excavator 
+package Excavator
   extends Modelica.Icons.ExamplesPackage;
 
 

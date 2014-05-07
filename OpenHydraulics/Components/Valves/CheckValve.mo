@@ -20,11 +20,9 @@ model CheckValve "Simple equation model for a check valve"
   SI.Pressure dp = port_a.p - port_b.p "Pressure drop from port_a to port_b";
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   // internal component
   OpenHydraulics.Basic.VariableRestrictionSeriesValve variableRestriction(
@@ -36,8 +34,7 @@ model CheckValve "Simple equation model for a check valve"
     final dp_nom=dp_open,
     d_nom=d_nom,
     p_init=p_init)
-    annotation (Placement(transformation(extent={{10,-10},{-10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{10,-10},{-10,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
@@ -113,6 +110,5 @@ equation
           fillPattern=FillPattern.Solid,
           textString="%name"),
         Line(points={{-42,10},{-38,-10},{-34,10},{-30,-10},{-26,10},{-22,-10},
-              {-18,10},{-14,-10},{-10,10}}, color={0,0,0})}),
-    DymolaStoredErrors);
+              {-18,10},{-14,-10},{-10,10}}, color={0,0,0})}));
 end CheckValve;

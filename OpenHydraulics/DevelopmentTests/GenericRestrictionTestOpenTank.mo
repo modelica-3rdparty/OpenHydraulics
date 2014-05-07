@@ -6,7 +6,7 @@ model GenericRestrictionTestOpenTank
 
   OpenHydraulics.Basic.FluidPower2MechRotConst idealPump(port_b(p(start=2e5)))
                        annotation (Placement(transformation(extent={{-30,-10},
-            {-10,10}}, rotation=0)));
+            {-10,10}})));
 
   Basic.LaminarRestriction             GenericRestriction(L=3)
     annotation (Placement(transformation(
@@ -17,11 +17,9 @@ model GenericRestrictionTestOpenTank
     startTime=0.01,
     freqHz=0.5,
     amplitude=10)
-    annotation (Placement(transformation(extent={{-94,-10},{-74,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque
-    annotation (Placement(transformation(extent={{-60,-10},{-40,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
   Components.Volumes.Tank tank(p_const=100000)
     annotation (Placement(transformation(extent={{-30,-40},{-10,-20}})));
   Components.Volumes.Tank tank1(p_const=100000)
@@ -44,6 +42,5 @@ equation
       smooth=Smooth.None));
   annotation (
       Diagram(graphics),
-    experiment(StopTime=10),
-    experimentSetupOutput);
+    experiment(StopTime=10));
 end GenericRestrictionTestOpenTank;

@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package Sensors 
+package Sensors
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end Sensors;

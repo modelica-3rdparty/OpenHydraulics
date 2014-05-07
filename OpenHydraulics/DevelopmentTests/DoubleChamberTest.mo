@@ -6,15 +6,14 @@ model DoubleChamberTest
 
   OpenHydraulics.Basic.OpenTank tank(p_const=200000)
                         annotation (Placement(transformation(extent={{-30,-40},
-            {-10,-20}}, rotation=0)));
+            {-10,-20}})));
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-50,40},{-30,60}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-50,40},{-30,60}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=100)
-    annotation (Placement(transformation(extent={{20,40},{40,60}}, rotation=0)));
+    annotation (Placement(transformation(extent={{20,40},{40,60}})));
   OpenHydraulics.Basic.OpenTank tank1          annotation (Placement(transformation(extent={{30,0},{
-            50,20}}, rotation=0)));
+            50,20}})));
   Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     s_init=1,
     strokeLength=2,
@@ -22,7 +21,7 @@ model DoubleChamberTest
     damping=0,
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity,
     v_init=-0.1)    annotation (Placement(transformation(extent={{-22,40},{-2,
-            60}}, rotation=0)));
+            60}})));
 
 equation
   connect(fixed.flange,   doubleActingCylinder.flange_a)
@@ -33,6 +32,5 @@ equation
     annotation (Line(points={{-20,42},{-20,-20}}, color={255,0,0}));
   connect(doubleActingCylinder.port_b, tank1.port) annotation (Line(points={{
           -4,42},{-4,20},{40,20}}, color={255,0,0}));
-annotation ( Diagram(graphics),
-    experimentSetupOutput);
+annotation ( Diagram(graphics));
 end DoubleChamberTest;

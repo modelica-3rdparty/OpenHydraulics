@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package Lines 
+package Lines
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end Lines;

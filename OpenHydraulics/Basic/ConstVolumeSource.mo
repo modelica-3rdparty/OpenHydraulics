@@ -3,8 +3,7 @@ model ConstVolumeSource "Boundary pressure source"
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
   OpenHydraulics.Interfaces.FluidPort port
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
 
   parameter SI.VolumeFlowRate q = 0.01 "Source Volume Rate" annotation(Evaluate=true);
 

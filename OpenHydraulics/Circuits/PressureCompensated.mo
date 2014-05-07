@@ -5,8 +5,7 @@ model PressureCompensated
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Components.Valves.ReliefValve reliefValve
-    annotation (Placement(transformation(extent={{0,-30},{20,-10}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{0,-30},{20,-10}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     boreDiameter=0.12,
@@ -16,11 +15,10 @@ model PressureCompensated
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{0,40},{20,60}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{0,40},{20,60}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-20,38},{0,58}}, rotation=0)));
+    annotation (Placement(transformation(extent={{-20,38},{0,58}})));
   Modelica.Blocks.Sources.Sine sine(amplitude=1,
     startTime=0,
     freqHz=0.1)
@@ -30,12 +28,11 @@ model PressureCompensated
         rotation=180)));
   Components.MotorsPumps.PCLSPump PCPump(
     Dmax=1e-5)
-    annotation (Placement(transformation(extent={{-30,-60},{-10,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,-60},{-10,-40}})));
 
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{34,-70},{14,-50}}, rotation=0)));
+           {{34,-70},{14,-50}})));
 
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3CC v4_3CC(
     portA(p(start=101325, fixed=true)),
@@ -45,27 +42,23 @@ model PressureCompensated
     B2T(table=[0,0; 1,1]),
     P2B(table=[-1,1; 0,0; 1,0]),
     A2T(table=[-1,1; 0,0]))
-    annotation (Placement(transformation(extent={{0,0},{20,20}}, rotation=0)));
+    annotation (Placement(transformation(extent={{0,0},{20,20}})));
 
   OpenHydraulics.Components.Lines.NJunction j1
-    annotation (Placement(transformation(extent={{-30,-30},{-10,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,-30},{-10,-10}})));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{30,-30},{50,-10}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{30,-30},{50,-10}})));
 
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=150,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-60,-60},{-40,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-60},{-40,-40}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{28,40},{48,60}}, rotation=0)));
+    annotation (Placement(transformation(extent={{28,40},{48,60}})));
   OpenHydraulics.Components.Lines.NJunction j3
-    annotation (Placement(transformation(extent={{-10,-70},{10,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
 
 equation
   connect(doubleActingCylinder.flange_a,fixed.flange)    annotation (Line(
@@ -102,6 +95,5 @@ equation
     experiment(
       StopTime=10,
       NumberOfIntervals=5000,
-      Tolerance=1e-008),
-    experimentSetupOutput);
+      Tolerance=1e-008));
 end PressureCompensated;

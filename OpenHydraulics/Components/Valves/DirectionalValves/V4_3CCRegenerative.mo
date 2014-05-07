@@ -27,20 +27,17 @@ model V4_3CCRegenerative "Simple Regenerative valve model"
 
    //junctions
   OpenHydraulics.Components.Lines.NJunction j1
-    annotation (Placement(transformation(extent={{-50,50},{-30,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,50},{-30,70}})));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-50,-66},{-30,-46}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-66},{-30,-46}})));
 
   //components
   Basic.VariableRestriction P2B(
     min_contr=-1,
     final q_nom=q_nom*q_fraction_P2B,
     table=[-1,1; 0,0; 1,1])
-    annotation (Placement(transformation(extent={{-20,-30},{0,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-20,-30},{0,-50}})));
 
   Basic.VariableRestriction P2A(
     table=[-1,0; 0,0; 1,1],
@@ -64,8 +61,7 @@ model V4_3CCRegenerative "Simple Regenerative valve model"
     w=bandwidth*2*Modelica.Constants.pi,
     D=dampCoeff,
     initType=Modelica.Blocks.Types.Init.SteadyState)
-    annotation (Placement(transformation(extent={{82,-10},{62,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{82,-10},{62,10}})));
 initial equation
   assert(useCheckValve,"not implemented yet without serial check valve");
 

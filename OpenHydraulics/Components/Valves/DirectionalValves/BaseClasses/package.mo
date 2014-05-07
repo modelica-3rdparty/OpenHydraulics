@@ -1,5 +1,5 @@
 within OpenHydraulics.Components.Valves.DirectionalValves;
-package BaseClasses 
+package BaseClasses
   extends Modelica.Icons.BasesPackage;
 
 

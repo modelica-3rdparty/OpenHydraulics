@@ -55,12 +55,12 @@ The details are described in the
 The functional relationship of the friction loss factor &lambda; is
 displayed in the next figure. Function massFlowRate_dp() defines the \"red curve\"
 (\"Swamee and Jain\"), where as function pressureLoss_m_flow() defines the
-\"blue curve\" (\"Colebrook-White\"). The two functions are inverses from 
+\"blue curve\" (\"Colebrook-White\"). The two functions are inverses from
 each other and give slightly different results in the transition region
 between Re = 1500 .. 4000, in order to get explicit equations without
 solving a non-linear equation.
 </p>
- 
+
 <img src=\"../Images/Components/PipeFriction1.png\">
 </html>"));
 end WallFriction;

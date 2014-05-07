@@ -2,8 +2,7 @@ within OpenHydraulics.Basic;
 model OpenTank "Boundary pressure, temperature and mass fraction source"
 
   OpenHydraulics.Interfaces.FluidPort port
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
 
   parameter SI.AbsolutePressure p_const = environment.p_ambient "Tank pressure";
 
@@ -42,9 +41,5 @@ Defines constant values for boundary conditions:
 Note, that boundary temperature only has an effect if the mass flow
 is out of the tank. If mass is flowing into the tank, the temperature is free.
 </p>
-</html>"),
-    Diagram(coordinateSystem(
-        preserveAspectRatio=false,
-        extent={{-100,-100},{100,100}},
-        grid={2,2}), graphics));
+</html>"));
 end OpenTank;

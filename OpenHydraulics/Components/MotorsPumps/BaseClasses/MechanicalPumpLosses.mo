@@ -19,8 +19,7 @@ protected
   parameter Real b = Cv*Dmax*mu "Viscous friction constant";
 public
   Modelica.Blocks.Interfaces.RealInput dp
-    annotation (Placement(transformation(extent={{-120,-80},{-80,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-120,-80},{-80,-40}})));
 equation
   // Constant auxiliary variables
   tau0 = Cf*dp*Dmax;
@@ -61,13 +60,7 @@ Part B, Vol. 198, No. 10, 1984, pp 165-174.
 The model implementation is derived from the bearing friction
 model in the standard Modelica library.
 </p>
-</HTML>
-"), Window(
-      x=0.25,
-      y=0.01,
-      width=0.53,
-      height=0.61),
-    Icon(coordinateSystem(
+</html>"),    Icon(coordinateSystem(
         preserveAspectRatio=false,
         extent={{-100,-100},{100,100}},
         grid={1,1}), graphics={

@@ -15,7 +15,7 @@ algorithm
    dp = 0.5*zeta*d*v*|v|
       = 0.5*zeta*d*1/(d*A)^2 * m_flow * |m_flow|
       = 0.5*zeta/A^2 *1/d * m_flow * |m_flow|
-      = k/d * m_flow * |m_flow| 
+      = k/d * m_flow * |m_flow|
    k  = 0.5*zeta/A^2
       = 0.5*zeta/(pi*(D/2)^2)^2
       = 8*zeta/(pi*D^2)^2
@@ -28,7 +28,7 @@ dp := OpenHydraulics.Utilities.regSquare2(
   annotation (smoothOrder=1, Documentation(info="<html>
 <p>
 Compute pressure drop from constant loss factor and mass flow rate (dp = f(m_flow)).
-For small mass flow rates(|m_flow| &lt; m_flow_small), the characteristic is approximated by 
+For small mass flow rates(|m_flow| &lt; m_flow_small), the characteristic is approximated by
 a polynomial in order to have a finite derivative at zero mass flow rate.
 </p>
 </html>"));

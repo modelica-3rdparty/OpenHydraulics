@@ -26,14 +26,11 @@ public
     "Pressure drop from port_a to port_b";
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_LS
-    annotation (Placement(transformation(extent={{-10,-100},{10,-80}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-100},{10,-80}})));
 
   OpenHydraulics.Basic.VariableRestriction variableRestriction(
     smoothness=Modelica.Blocks.Types.Smoothness.LinearSegments,
@@ -45,8 +42,7 @@ public
     min_contr=0,
     max_contr=1,
     table=[0.0,0.0; 1,1])
-    annotation (Placement(transformation(extent={{0,-10},{20,10}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{0,-10},{20,10}})));
 protected
   Real valvePosition(start=0) "Input for controller"
                                                 annotation (Dialog(tab="Sizing"));
@@ -145,6 +141,5 @@ annotation (
           points={{8,72},{8,80},{64,80},{64,0}},
           color={0,0,0},
           pattern=LinePattern.Dot),
-        Line(points={{-30,22},{48,22}}, color={0,0,0})}),
-    DymolaStoredErrors);
+        Line(points={{-30,22},{48,22}}, color={0,0,0})}));
 end PostPCValve;

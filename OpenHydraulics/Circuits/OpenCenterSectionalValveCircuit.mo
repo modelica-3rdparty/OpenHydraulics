@@ -6,29 +6,24 @@ model OpenCenterSectionalValveCircuit
 
   Components.Lines.NJunction j1(
      n_ports=4)
-    annotation (Placement(transformation(extent={{52,-90},{72,-70}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{52,-90},{72,-70}})));
   Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-68,-50},{-48,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-68,-50},{-48,-30}})));
 
   Components.MotorsPumps.ConstantDisplacementPump constantDisplacementPump(
     Dconst=1e-4)
-    annotation (Placement(transformation(extent={{-68,-72},{-48,-52}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-68,-72},{-48,-52}})));
 
   Components.Volumes.CircuitTank circuitTank(
     V_max=0.025,
     V_init=0.02)                  annotation (Placement(transformation(extent=
-           {{2,-90},{-18,-70}}, rotation=0)));
+           {{2,-90},{-18,-70}})));
 
   replaceable Components.Valves.DirectionalValves.SV6_3OCParallel Valve1
-    annotation (Placement(transformation(extent={{-40,-58},{-4,-22}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-40,-58},{-4,-22}})));
 
   replaceable Components.Valves.DirectionalValves.SV6_3OCParallel valve2
-    annotation (Placement(transformation(extent={{12,-58},{48,-22}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{12,-58},{48,-22}})));
 
   Components.Valves.ReliefValve reliefValve(
     dp_relief=15e6,
@@ -41,8 +36,7 @@ model OpenCenterSectionalValveCircuit
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=250,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-88,-72},{-68,-52}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-88,-72},{-68,-52}})));
   Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     boreDiameter=0.12,
     strokeLength=1,
@@ -51,15 +45,13 @@ model OpenCenterSectionalValveCircuit
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{-48,0},{-28,20}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-78,0},{-58,20}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-78,0},{-58,20}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{-20,0},{0,20}}, rotation=0)));
+    annotation (Placement(transformation(extent={{-20,0},{0,20}})));
   Components.Cylinders.DoubleActingCylinder doubleActingCylinder1(
     boreDiameter=0.12,
     strokeLength=1,
@@ -68,20 +60,18 @@ model OpenCenterSectionalValveCircuit
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{36,0},{56,20}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{36,0},{56,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed1
-    annotation (Placement(transformation(extent={{6,0},{26,20}}, rotation=0)));
+    annotation (Placement(transformation(extent={{6,0},{26,20}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass1(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{64,0},{84,20}}, rotation=0)));
+    annotation (Placement(transformation(extent={{64,0},{84,20}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=0,
     freqHz=0.1,
     amplitude=1)
-    annotation (Placement(transformation(extent={{-86,-36},{-66,-16}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-86,-36},{-66,-16}})));
 equation
   connect(circuitTank.port_b,constantDisplacementPump. portT) annotation (Line(
         points={{-18,-80},{-58,-80},{-58,-72}}, color={255,0,0}));
@@ -132,6 +122,5 @@ equation
   connect(Valve1.y, valve2.u) annotation (Line(points={{-16.6,-56.2},{23.7,
           -56.2}}, color={0,0,127}));
   annotation (Diagram(graphics),
-    experiment(StopTime=250, Tolerance=1e-008),
-    __Dymola_experimentSetupOutput);
+    experiment(StopTime=250, Tolerance=1e-008));
 end OpenCenterSectionalValveCircuit;

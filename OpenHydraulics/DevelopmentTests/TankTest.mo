@@ -24,6 +24,5 @@ equation
       smooth=Smooth.None));
   annotation (
       Diagram(graphics),
-    experiment(StopTime=1000),
-    experimentSetupOutput);
+    experiment(StopTime=1000));
 end TankTest;

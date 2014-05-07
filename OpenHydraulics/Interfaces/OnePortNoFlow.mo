@@ -4,8 +4,7 @@ partial model OnePortNoFlow
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
 
 equation
   // balance equations

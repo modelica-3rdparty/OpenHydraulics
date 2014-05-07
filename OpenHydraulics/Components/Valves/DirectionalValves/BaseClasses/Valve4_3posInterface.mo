@@ -4,20 +4,15 @@ partial model Valve4_3posInterface "Interface for 4-port 3-position valve"
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portP
-    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}})));
   OpenHydraulics.Interfaces.FluidPort portA
-    annotation (Placement(transformation(extent={{-50,70},{-30,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,70},{-30,90}})));
   OpenHydraulics.Interfaces.FluidPort portT
-    annotation (Placement(transformation(extent={{30,-90},{50,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-90},{50,-70}})));
   OpenHydraulics.Interfaces.FluidPort portB
-    annotation (Placement(transformation(extent={{30,70},{50,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,70},{50,90}})));
   Modelica.Blocks.Interfaces.RealInput control
-    annotation (Placement(transformation(extent={{130,-20},{90,20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{130,-20},{90,20}})));
 
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={
             {-100,-100},{100,100}}), graphics={

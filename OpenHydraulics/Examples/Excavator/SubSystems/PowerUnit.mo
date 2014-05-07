@@ -6,39 +6,31 @@ model PowerUnit
     Dmax=0.0005,
     timeConst=0.01)
     annotation (                         Dialog, Placement(transformation(
-          extent={{-10,-10},{10,10}}, rotation=0)));
+          extent={{-10,-10},{10,10}})));
 
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank
-    annotation (Placement(transformation(extent={{40,-50},{20,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{40,-50},{20,-30}})));
 
   OpenHydraulics.Components.Valves.ReliefValve reliefValve(dp_relief=3e7,
       dp_open=3.1e7)
-    annotation (Placement(transformation(extent={{20,30},{40,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{20,30},{40,50}})));
 
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=3)
-    annotation (Placement(transformation(extent={{-10,30},{10,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,30},{10,50}})));
 
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=3)
-    annotation (Placement(transformation(extent={{50,30},{70,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{50,30},{70,50}})));
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portP
-    annotation (Placement(transformation(extent={{-6,94},{6,106}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-6,94},{6,106}})));
   OpenHydraulics.Interfaces.FluidPort portT
-    annotation (Placement(transformation(extent={{54,94},{66,106}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{54,94},{66,106}})));
   OpenHydraulics.Interfaces.FluidPort portLS
-    annotation (Placement(transformation(extent={{-66,94},{-54,106}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-66,94},{-54,106}})));
   Modelica.Mechanics.Rotational.Interfaces.Flange_a flange_a
     "(left) driving flange (flange axis directed INTO cut plane)"
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 equation

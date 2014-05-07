@@ -10,13 +10,12 @@ model AirChamberTest
     residualVolume=0.001,
     p_precharge=101325,
     p_init=2000000) annotation (Placement(transformation(extent={{-50,-10},{
-            -30,10}}, rotation=0)));
+            -30,10}})));
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-70,-10},{-50,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-70,-10},{-50,10}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=100, v(start=-10))
-    annotation (Placement(transformation(extent={{0,-10},{20,10}}, rotation=0)));
+    annotation (Placement(transformation(extent={{0,-10},{20,10}})));
 equation
   connect(fixed.flange,   airChamber.flange_a)      annotation (Line(points={
           {-60,0},{-50,0}}, color={0,127,0}));

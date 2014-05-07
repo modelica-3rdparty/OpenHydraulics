@@ -65,7 +65,7 @@ partial model PartialValve4_3pos_old
     max_contr=0)
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{-34,-20},{-18,-36}}, rotation=0)));
+          extent={{-34,-20},{-18,-36}})));
 
   OpenHydraulics.Basic.VariableRestriction A2T(
     final q_nom=q_nom*q_fraction_A2T,
@@ -77,35 +77,30 @@ partial model PartialValve4_3pos_old
     max_contr=0)
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{-34,20},{-18,36}}, rotation=0)));
+          extent={{-34,20},{-18,36}})));
 
   // the connection junctions (with small volumes)
   Lines.NJunction j1(
     n_ports=3)
-    annotation (Placement(transformation(extent={{-50,-60},{-30,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-60},{-30,-40}})));
 
   Lines.NJunction j2(
     n_ports=3)
-    annotation (Placement(transformation(extent={{-50,50},{-30,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,50},{-30,70}})));
 
   Lines.NJunction j3(
     n_ports=3)
-    annotation (Placement(transformation(extent={{30,50},{50,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,50},{50,70}})));
 
   Lines.NJunction j4(
     n_ports=3)
-    annotation (Placement(transformation(extent={{30,-60},{50,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-60},{50,-40}})));
 
   Modelica.Blocks.Continuous.SecondOrder dynamicResponse(
     w=bandwidth*2*Modelica.Constants.pi,
     D=dampCoeff,
     initType=Modelica.Blocks.Types.Init.SteadyState)
-    annotation (Placement(transformation(extent={{86,-10},{66,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{86,-10},{66,10}})));
 equation
   connect(dynamicResponse.y, A2T.control)
     annotation (Line(points={{65,0},{50,0},{50,10},{-26,10},{-26,21.6}},

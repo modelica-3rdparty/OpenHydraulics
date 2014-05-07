@@ -5,23 +5,19 @@ model Anticavitation_ReliefValve
 
   OpenHydraulics.Components.Valves.CheckValve checkValve(q_nom=0.1)
               annotation (Placement(transformation(
-          extent={{0,-30},{20,-10}}, rotation=0)));
+          extent={{0,-30},{20,-10}})));
   OpenHydraulics.Components.Valves.ReliefValve reliefValve(q_nom=0.01)
                  annotation (Placement(transformation(
-          extent={{0,10},{20,30}}, rotation=0)));
+          extent={{0,10},{20,30}})));
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-90,-10},{-70,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-10},{-70,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{90,-10},{70,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{90,-10},{70,10}})));
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=3)
-    annotation (Placement(transformation(extent={{-50,-10},{-30,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-10},{-30,10}})));
 
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=3)
-    annotation (Placement(transformation(extent={{50,-10},{70,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{50,-10},{70,10}})));
 equation
   connect(j2.port[1], port_a) annotation (Line(points={{-40,-0.666667},{-40,
           0},{-80,0}}, color={255,0,0}));

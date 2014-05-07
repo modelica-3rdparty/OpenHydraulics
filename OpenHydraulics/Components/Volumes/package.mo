@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package Volumes 
+package Volumes
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end Volumes;

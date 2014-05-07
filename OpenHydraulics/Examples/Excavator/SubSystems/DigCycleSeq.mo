@@ -46,22 +46,17 @@ model DigCycleSeq
         rotation=180)));
 
   Modelica.Blocks.Continuous.SecondOrder swingFilter(w=2*pi*bandwidth)
-    annotation (Placement(transformation(extent={{0,50},{20,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{0,50},{20,70}})));
   Modelica.Blocks.Continuous.SecondOrder boomFilter(w=2*pi*bandwidth)
-    annotation (Placement(transformation(extent={{0,10},{20,30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{0,10},{20,30}})));
   Modelica.Blocks.Continuous.SecondOrder armFilter(w=2*pi*bandwidth)
-    annotation (Placement(transformation(extent={{0,-30},{20,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{0,-30},{20,-10}})));
   Modelica.Blocks.Continuous.SecondOrder bucketFilter(w=2*pi*bandwidth)
-    annotation (Placement(transformation(extent={{0,-70},{20,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{0,-70},{20,-50}})));
 
   // auxiliary components
   Modelica.Blocks.Routing.Multiplex4 multiplex
-    annotation (Placement(transformation(extent={{54,-16},{86,16}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{54,-16},{86,16}})));
   Modelica.Blocks.Interfaces.RealOutput y1[4]
     "Connector of Real output signals"
     annotation (Placement(transformation(

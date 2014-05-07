@@ -19,7 +19,7 @@ record LossFactorData
 This record defines the pressure loss factors of a pipe
 segment (orifice, bending etc.) with a minimum amount of data.
 If available, data should be provided for <b>both flow directions</b>,
-i.e., flow from port_a to port_b and from port_b to port_a, 
+i.e., flow from port_a to port_b and from port_b to port_a,
 as well as for the <b>laminar</b> and the <b>turbulent</b> region.
 It is also an option to provide the loss factor <b>only</b> for the
 <b>turbulent</b> region for a flow from port_a to port_b.
@@ -59,29 +59,29 @@ where
      &zeta; is constant and is given by \"zeta1\" and
      \"zeta2\" depending on the flow direction.<br>
      When the Reynolds number Re is below \"Re_turbulent\", the
-     flow is laminar for small flow velocities. For higher 
-     velocities there is a transition region from 
+     flow is laminar for small flow velocities. For higher
+     velocities there is a transition region from
      laminar to turbulent flow. The loss factor for
      laminar flow at small velocities is defined by the often occuring
      approximation c0/Re. If c0 is different for the two
-     flow directions, the mean value has to be used 
+     flow directions, the mean value has to be used
      (c0 = (c0_ab + c0_ba)/2).<li>
 <li> The equation \"&Delta;p = 0.5*&zeta;*&rho;*v*|v|\" is either with
      respect to port_a or to port_b, depending on the definition
      of the particular loss factor &zeta; (in some references loss
      factors are defined with respect to port_a, in other references
      with respect to port_b).</li>
- 
-<li> Re = |v|*D_Re*&rho;/&eta; = |m_flow|*D_Re/(A_Re*&eta;) 
+
+<li> Re = |v|*D_Re*&rho;/&eta; = |m_flow|*D_Re/(A_Re*&eta;)
      is the Reynolds number at the smallest cross
      section area. This is often at port_a or at port_b, but can
      also be between the two ports. In the record, the diameter
      D_Re of this smallest cross section area has to be provided, as
-     well, as Re_turbulent, the absolute value of the 
+     well, as Re_turbulent, the absolute value of the
      Reynolds number at which
      the turbulent flow starts. If Re_turbulent is different for
      the two flow directions, use the smaller value as Re_turbulent.</li>
-<li> D is the diameter of the pipe. If the pipe has not a 
+<li> D is the diameter of the pipe. If the pipe has not a
      circular cross section, D = 4*A/P, where A is the cross section
      area and P is the wetted perimeter.</li>
 <li> A is the cross section area with A = &pi;(D/2)^2.
@@ -92,8 +92,8 @@ The laminar and the transition region is usually of
 not much technical interest because the operating point is
 mostly in the turbulent regime. For simplification and for
 numercial reasons, this whole region is described by two
-polynomials of third order, one polynomial for m_flow &ge; 0 
-and one for m_flow &lt; 0. The polynomials start at 
+polynomials of third order, one polynomial for m_flow &ge; 0
+and one for m_flow &lt; 0. The polynomials start at
 Re = |m_flow|*4/(&pi;*D_Re*&eta;), where D_Re is the
 smallest diameter between port_a and port_b.
 The common derivative
@@ -109,12 +109,12 @@ are identical at Re = 0. The polynomials are constructed, such that
 they smoothly touch the characteristic curves in the turbulent
 regions. The whole characteristic is therefore <b>continuous</b>
 and has a <b>finite</b>, <b>continuous first derivative everywhere</b>.
-In some cases, the constructed polynomials would \"vibrate\". This is 
+In some cases, the constructed polynomials would \"vibrate\". This is
 avoided by reducing the derivative at Re=0 in such a way that
 the polynomials are guaranteed to be monotonically increasing.
 The used sufficient criteria for monotonicity follows from:
 </p>
- 
+
 <dl>
 <dt> Fritsch F.N. and Carlson R.E. (1980):</dt>
 <dd> <b>Monotone piecewise cubic interpolation</b>.

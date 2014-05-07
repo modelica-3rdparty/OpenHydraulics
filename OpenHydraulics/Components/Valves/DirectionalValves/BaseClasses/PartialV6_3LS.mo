@@ -10,37 +10,28 @@ partial model PartialV6_3LS "Interface for 6-port 3-position valve"
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portP1
-    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
   OpenHydraulics.Interfaces.FluidPort portA
-    annotation (Placement(transformation(extent={{-10,-90},{10,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-90},{10,-70}})));
   OpenHydraulics.Interfaces.FluidPort portT2
-    annotation (Placement(transformation(extent={{70,70},{90,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{70,70},{90,90}})));
   OpenHydraulics.Interfaces.FluidPort portT1
-    annotation (Placement(transformation(extent={{-90,70},{-70,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
   Modelica.Blocks.Interfaces.RealInput control
-    annotation (Placement(transformation(extent={{130,-20},{90,20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{130,-20},{90,20}})));
   OpenHydraulics.Interfaces.FluidPort portP2
-    annotation (Placement(transformation(extent={{-30,70},{-10,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,70},{-10,90}})));
   OpenHydraulics.Interfaces.FluidPort portB
-    annotation (Placement(transformation(extent={{70,-90},{90,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{70,-90},{90,-70}})));
   OpenHydraulics.Interfaces.FluidPort portLS
-    annotation (Placement(transformation(extent={{10,70},{30,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{10,70},{30,90}})));
 
   // the components
   Modelica.Blocks.Continuous.SecondOrder dynamicResponse(
     w=bandwidth*2*Modelica.Constants.pi,
     D=dampCoeff,
     initType=Modelica.Blocks.Types.Init.SteadyState)
-    annotation (Placement(transformation(extent={{100,-40},{80,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{100,-40},{80,-20}})));
 
   // equation and connect
 

@@ -1,5 +1,5 @@
 within OpenHydraulics.Components;
-package MotorsPumps 
+package MotorsPumps
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
 end MotorsPumps;

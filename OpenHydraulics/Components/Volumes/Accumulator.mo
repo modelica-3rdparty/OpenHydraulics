@@ -43,8 +43,7 @@ model Accumulator
     residualVolume=residualVolLiquid,
     maxPressure=p_max,
     n_ports=1)
-    annotation (Placement(transformation(extent={{20,-10},{40,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{20,-10},{40,10}})));
   Basic.AirChamber gasChamber(
     V_precharge=gasVolume,
     p_precharge=p_precharge,
@@ -53,29 +52,23 @@ model Accumulator
     initializePressure = initType==OpenHydraulics.Types.AccInit.Pressure,
     p_init = p_init,
     V_init = gasVolume - V_init)
-    annotation (Placement(transformation(extent={{-40,-10},{-20,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-40,-10},{-20,10}})));
   Modelica.Mechanics.Translational.Components.Fixed fixedLeft(
                                                    s0=0.0)
-    annotation (Placement(transformation(extent={{-70,-10},{-50,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-70,-10},{-50,10}})));
   Modelica.Mechanics.Translational.Components.Fixed fixedRight(
                                                     final s0=liquidVolume/A)
-    annotation (Placement(transformation(extent={{50,-10},{70,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{50,-10},{70,10}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=pistonMass, final L=0)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Modelica.Mechanics.Translational.Components.Damper damper(
                                                  d=pistonDamping)
-    annotation (Placement(transformation(extent={{-40,30},{-20,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-40,30},{-20,50}})));
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent(p_init=max(
         environment.p_ambient, p_precharge));

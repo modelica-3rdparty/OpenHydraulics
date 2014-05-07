@@ -19,26 +19,23 @@ model Regenerative "Closed center regenerative circuit"
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
     q_nom=1e-4,
     strokeLength=0.5)
-                annotation (Placement(transformation(extent={{44,30},{64,50}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{44,30},{64,50}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{0,20},{20,40}}, rotation=0)));
+    annotation (Placement(transformation(extent={{0,20},{20,40}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{70,30},{90,50}}, rotation=0)));
+    annotation (Placement(transformation(extent={{70,30},{90,50}})));
   Modelica.Blocks.Sources.Sine sine(
     freqHz=0.1,
     amplitude=1,
     startTime=0)
-    annotation (Placement(transformation(extent={{0,-80},{20,-60}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{0,-80},{20,-60}})));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{-10,-50},{-30,-30}}, rotation=0)));
+           {{-10,-50},{-30,-30}})));
   OpenHydraulics.Components.Lines.NJunction j1
     annotation (Placement(transformation(
-        origin={0,0},
         extent={{-10,-10},{10,10}},
         rotation=90)));
 
@@ -51,8 +48,7 @@ model Regenerative "Closed center regenerative circuit"
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=50,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-84,-26},{-68,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-84,-26},{-68,-10}})));
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3CCRegenerative RegenValve
     annotation (Placement(transformation(
         origin={30,-18},
@@ -60,8 +56,7 @@ model Regenerative "Closed center regenerative circuit"
         rotation=270)));
   OpenHydraulics.Components.MotorsPumps.ConstantDisplacementPump constantDisplacementPump(Dconst=
         1e-5)
-    annotation (Placement(transformation(extent={{-62,-28},{-42,-8}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-62,-28},{-42,-8}})));
 
 equation
   connect(doubleActingCylinder.flange_a,fixed.flange)    annotation (Line(
@@ -93,6 +88,5 @@ equation
   connect(constantDisplacementPump.portT, circuitTank.port_b) annotation (Line(
         points={{-52,-28},{-52,-40},{-30,-40}}, color={255,0,0}));
   annotation (Diagram(graphics),
-    experiment(StopTime=100, Tolerance=1e-006),
-    experimentSetupOutput);
+    experiment(StopTime=100, Tolerance=1e-006));
 end Regenerative;

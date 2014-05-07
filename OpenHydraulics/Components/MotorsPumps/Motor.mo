@@ -9,16 +9,13 @@ model Motor
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portB
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
   OpenHydraulics.Interfaces.FluidPort portA
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
 
   // the components
   OpenHydraulics.Basic.FluidPower2MechRotConst idealMotor(Dconst=Dconst)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   OpenHydraulics.Basic.LaminarRestriction leakeage_A2B(L=0.1,D=1e-4)
     "Laminar leakage between ports A to B"
     annotation (
@@ -49,21 +46,16 @@ model Motor
 
   Modelica.Mechanics.Rotational.Interfaces.Flange_b flange_b
     "(right) driven flange (flange axis directed OUT OF cut plane)"
-    annotation (Placement(transformation(extent={{88,-10},{108,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{88,-10},{108,10}})));
   Modelica.Mechanics.Rotational.Components.Damper damper(
                                               d=damp)
-    annotation (Placement(transformation(extent={{10,12},{30,32}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{10,12},{30,32}})));
   Modelica.Mechanics.Rotational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{34,12},{54,32}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{34,12},{54,32}})));
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=5)
-    annotation (Placement(transformation(extent={{-10,30},{10,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,30},{10,50}})));
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=5)
-    annotation (Placement(transformation(extent={{-10,-50},{10,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-50},{10,-30}})));
 
  extends OpenHydraulics.Interfaces.PartialFluidComponent;
 

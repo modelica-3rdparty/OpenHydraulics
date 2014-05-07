@@ -17,14 +17,11 @@ model ShuttleValve
     annotation(Dialog(tab="Dynamics"));
 
   OpenHydraulics.Interfaces.FluidPort PortA
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort PortB
-    annotation (Placement(transformation(extent={{90,-10},{110,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{90,-10},{110,10}})));
   OpenHydraulics.Interfaces.FluidPort PortC
-    annotation (Placement(transformation(extent={{-10,-90},{10,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-90},{10,-70}})));
   OpenHydraulics.Basic.VarPressureSource pressC
     annotation (Placement(transformation(
         origin={0,-50},
@@ -33,11 +30,9 @@ model ShuttleValve
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
   OpenHydraulics.Basic.ConstVolumeSource noFlowA(q=0)
-    annotation (Placement(transformation(extent={{-60,-40},{-40,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-40},{-40,-20}})));
   OpenHydraulics.Basic.ConstVolumeSource noFlowB(q=0)
-    annotation (Placement(transformation(extent={{40,-40},{60,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{40,-40},{60,-20}})));
 equation
   pressC.control = max(PortA.p,PortB.p);
 
