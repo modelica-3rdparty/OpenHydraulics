@@ -68,7 +68,7 @@ partial model PartialValve4_3pos "Partial class for building 4-port 3-position v
     p_init=p_init)
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{-28,-22},{-12,-38}}, rotation=0)));
+          extent={{-28,-22},{-12,-38}})));
 
   OpenHydraulics.Basic.VariableRestriction A2T(
     final q_nom=q_nom*q_fraction_A2T,
@@ -80,7 +80,7 @@ partial model PartialValve4_3pos "Partial class for building 4-port 3-position v
     p_init=p_init)
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{-28,22},{-12,38}}, rotation=0)));
+          extent={{-28,22},{-12,38}})));
 
   // configurable components
 
@@ -88,33 +88,28 @@ partial model PartialValve4_3pos "Partial class for building 4-port 3-position v
   Lines.NJunction j1(
     n_ports=3,
     p_init=p_init)
-    annotation (Placement(transformation(extent={{-50,-70},{-30,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-70},{-30,-50}})));
 
   Lines.NJunction j2(
     n_ports=3,
     p_init=p_init)
-    annotation (Placement(transformation(extent={{-50,50},{-30,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,50},{-30,70}})));
 
   Lines.NJunction j3(
     n_ports=3,
     p_init=p_init)
-    annotation (Placement(transformation(extent={{30,50},{50,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,50},{50,70}})));
 
   Lines.NJunction j4(
     n_ports=3,
     p_init=p_init)
-    annotation (Placement(transformation(extent={{30,-70},{50,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{30,-70},{50,-50}})));
 
   Modelica.Blocks.Continuous.SecondOrder dynamicResponse(
     w=bandwidth*2*Modelica.Constants.pi,
     D=dampCoeff,
     initType=Modelica.Blocks.Types.Init.SteadyState)
-    annotation (Placement(transformation(extent={{86,-10},{66,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{86,-10},{66,10}})));
 
 initial equation
   assert(useCheckValve,"not implemented yet without serial check valve");

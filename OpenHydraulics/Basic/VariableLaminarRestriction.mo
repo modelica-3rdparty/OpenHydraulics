@@ -37,8 +37,7 @@ model VariableLaminarRestriction
 
   Modelica.Blocks.Tables.CombiTable1Ds MeteringTable(
     tableOnFile=false,table=table,smoothness=smoothness)
-    annotation (Placement(transformation(extent={{18,-32},{-2,-12}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{18,-32},{-2,-12}})));
 
 protected
   Real opening = max(min(MeteringTable.y[1],1),0)

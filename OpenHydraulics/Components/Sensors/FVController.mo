@@ -12,7 +12,7 @@ model FVController
         11,10000; 12,10000; 13,12000; 14,0; 15,0; 16,-2000; 17,-4050; 18,-8000;
         19,-8000; 20,-5000; 21,-1000; 22,100; 23,0; 24,0])
     annotation (                                    Dialog, Placement(
-        transformation(extent={{0,60},{-20,80}}, rotation=0)));
+        transformation(extent={{0,60},{-20,80}})));
   Modelica.Blocks.Sources.Clock clock
     annotation (Placement(transformation(
         origin={20,90},
@@ -37,18 +37,16 @@ model FVController
     k=k,
     Ti=0.1,
     controllerType=Modelica.Blocks.Types.SimpleController.P)
-          annotation (Placement(transformation(extent={{2,-56},{-18,-76}},
-          rotation=0)));
+          annotation (Placement(transformation(extent={{2,-56},{-18,-76}})));
   Modelica.Blocks.Interfaces.RealOutput y annotation (Placement(
-        transformation(extent={{40,-40},{60,-20}}, rotation=0)));
+        transformation(extent={{40,-40},{60,-20}})));
   parameter Real Td(  final min=0)
     "Derivative time constant coefficient for PID controller";
   parameter Real k( final min=0)
     "Proportional gain coefficient for PID controller";
 
   Modelica.Mechanics.Translational.Interfaces.Flange_a flange_a
-    annotation (Placement(transformation(extent={{-60,40},{-40,60}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,40},{-40,60}})));
 equation
   connect(VelocityProfile.u, clock.y) annotation (Line(points={{20,-2},{20,
           18.25},{20,18.25},{20,38.5},{20,79},{20,79}}, color={0,0,127}));

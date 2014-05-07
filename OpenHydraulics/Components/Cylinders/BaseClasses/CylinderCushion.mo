@@ -42,7 +42,6 @@ model CylinderCushion
     final max_contr=1,
     p_init=p_init)
     annotation (Placement(transformation(
-        origin={0,0},
         extent={{10,-10},{-10,10}},
         rotation=270)));
   Valves.ReliefValve reliefValve(
@@ -57,13 +56,11 @@ model CylinderCushion
     table=cushionTable,
     columns=2:2,
     smoothness=smoothness)
-    annotation (Placement(transformation(extent={{-60,-10},{-40,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
   OpenHydraulics.Interfaces.FluidPort port_b
     annotation (Placement(transformation(
         origin={0,-100},
@@ -71,12 +68,10 @@ model CylinderCushion
         rotation=180)));
   Modelica.Mechanics.Translational.Interfaces.Flange_b flange_b
     "(right) driven flange (flange axis directed OUT OF cut plane)"
-    annotation (Placement(transformation(extent={{90,-10},{110,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{90,-10},{110,10}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a flange_a
     "(left) driving flange (flange axis directed INTO cut plane, e. g. from left to right)"
-     annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+     annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 

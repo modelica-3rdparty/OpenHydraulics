@@ -27,23 +27,17 @@ partial model PartialV6_3
     OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.V6_3Interface;
 
   OpenHydraulics.Components.Lines.NJunction j1
-    annotation (Placement(transformation(extent={{-90,-68},{-70,-48}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-68},{-70,-48}})));
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=2)
-    annotation (Placement(transformation(extent={{-20,-68},{0,-48}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-20,-68},{0,-48}})));
   OpenHydraulics.Components.Lines.NJunction j3
-    annotation (Placement(transformation(extent={{50,-68},{70,-48}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{50,-68},{70,-48}})));
   OpenHydraulics.Components.Lines.NJunction j4
-    annotation (Placement(transformation(extent={{-90,52},{-70,72}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,52},{-70,72}})));
   OpenHydraulics.Components.Lines.NJunction j5
-    annotation (Placement(transformation(extent={{-20,50},{0,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-20,50},{0,70}})));
   OpenHydraulics.Components.Lines.NJunction j6
-    annotation (Placement(transformation(extent={{50,52},{70,72}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{50,52},{70,72}})));
   Basic.VariableRestriction P22T1(
     final q_nom = q_nom*q_fraction_P22T1,
     D_nom=0.01,
@@ -96,7 +90,7 @@ partial model PartialV6_3
     table=[-1,1; 0,0])
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{30,-30},{50,-10}}, rotation=0)));
+          extent={{30,-30},{50,-10}})));
 
   Basic.VariableRestriction P12A(
     final q_nom = q_nom*q_fraction_P12A,
@@ -108,14 +102,13 @@ partial model PartialV6_3
     table=[-1,1; 0,0])
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(
-          extent={{-60,-10},{-40,-30}}, rotation=0)));
+          extent={{-60,-10},{-40,-30}})));
 
   Modelica.Blocks.Continuous.SecondOrder dynamicResponse(
     w=bandwidth*2*Modelica.Constants.pi,
     D=dampCoeff,
     initType=Modelica.Blocks.Types.Init.SteadyState)
-    annotation (Placement(transformation(extent={{100,20},{80,40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{100,20},{80,40}})));
 equation
   connect(j1.port[1], portP1) annotation (Line(points={{-80,-58.6667},{
           -80,-80}}, color={255,0,0}));
@@ -161,8 +154,5 @@ equation
           60,-80},{80,-80}}, color={255,0,0}));
   connect(j6.port[1], portB) annotation (Line(points={{60,61.3333},{60,
           80},{80,80}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
-          extent={{-100,-100},{100,100}}),
-                            graphics));
+  annotation (Diagram(graphics));
 end PartialV6_3;

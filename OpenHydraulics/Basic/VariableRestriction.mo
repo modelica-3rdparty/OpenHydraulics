@@ -64,8 +64,7 @@ model VariableRestriction "Flow loss due to controllable restriction"
   // internal blocks
   Modelica.Blocks.Tables.CombiTable1Ds MeteringTable(
     tableOnFile=false,table=table,smoothness=smoothness)
-    annotation (Placement(transformation(extent={{18,-32},{-2,-12}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{18,-32},{-2,-12}})));
 
 protected
   BaseClasses.LossFactorData data(

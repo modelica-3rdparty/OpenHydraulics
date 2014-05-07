@@ -16,24 +16,21 @@ model PressureCompensatedLoadSensing
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{44,30},{64,50}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{44,30},{64,50}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{0,20},{20,40}}, rotation=0)));
+    annotation (Placement(transformation(extent={{0,20},{20,40}})));
   Modelica.Blocks.Sources.Sine sine(amplitude=1,
     startTime=1,
     phase=0,
     freqHz=0.1)
-    annotation (Placement(transformation(extent={{10,-82},{30,-62}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{10,-82},{30,-62}})));
   OpenHydraulics.Components.MotorsPumps.PCLSPump PCLSPump(Dmax=0.00004)
-    annotation (Placement(transformation(extent={{-58,-32},{-38,-12}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-58,-32},{-38,-12}})));
 
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{-6,-50},{-26,-30}}, rotation=0)));
+           {{-6,-50},{-26,-30}})));
 
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3CCLSHydAntiCavitation
     valve4way3pos(
@@ -48,20 +45,18 @@ model PressureCompensatedLoadSensing
         rotation=270)));
 
   OpenHydraulics.Components.Lines.NJunction j1
-    annotation (Placement(transformation(extent={{-6,-6},{14,14}}, rotation=0)));
+    annotation (Placement(transformation(extent={{-6,-6},{14,14}})));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-6,-50},{14,-30}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-6,-50},{14,-30}})));
 
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=150,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-84,-30},{-68,-14}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-84,-30},{-68,-14}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{78,30},{98,50}}, rotation=0)));
+    annotation (Placement(transformation(extent={{78,30},{98,50}})));
 
 equation
   connect(doubleActingCylinder.flange_a,fixed.flange)    annotation (Line(
@@ -98,6 +93,5 @@ equation
   connect(PCLSPump.portT, circuitTank.port_b) annotation (Line(points={{-48,
           -32},{-48,-40},{-26,-40}}, color={255,0,0}));
   annotation (Diagram(graphics),
-    experiment(StopTime=100),
-    __Dymola_experimentSetupOutput);
+    experiment(StopTime=100));
 end PressureCompensatedLoadSensing;

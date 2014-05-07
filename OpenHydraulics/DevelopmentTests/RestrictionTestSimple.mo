@@ -5,7 +5,7 @@ model RestrictionTestSimple
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Basic.ConstPressureSource source(p_const=1e5)     annotation (Placement(transformation(extent={{
-            10,-40},{-10,-20}}, rotation=0)));
+            10,-40},{-10,-20}})));
   OpenHydraulics.Basic.VarPressureSource source1   annotation (Placement(transformation(
         origin={0,50},
         extent={{10,-10},{-10,10}},
@@ -14,8 +14,7 @@ model RestrictionTestSimple
     height=5e7,
     offset=1e5,
     duration=900)
-                annotation (Placement(transformation(extent={{-60,40},{-40,60}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{-60,40},{-40,60}})));
   Basic.LaminarRestriction laminarRestriction(L=3) annotation (Placement(
         transformation(
         extent={{-10,-10},{10,10}},
@@ -35,6 +34,5 @@ equation
       smooth=Smooth.None));
   annotation (
       Diagram(graphics),
-    experiment(StopTime=1000),
-    experimentSetupOutput);
+    experiment(StopTime=1000));
 end RestrictionTestSimple;

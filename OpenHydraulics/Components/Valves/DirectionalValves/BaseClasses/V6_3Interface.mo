@@ -4,23 +4,17 @@ partial model V6_3Interface "Interface for 6-port 3-position valve"
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort portP1
-    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-90},{-70,-70}})));
   OpenHydraulics.Interfaces.FluidPort portA
-    annotation (Placement(transformation(extent={{-90,70},{-70,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,70},{-70,90}})));
   OpenHydraulics.Interfaces.FluidPort portT2
-    annotation (Placement(transformation(extent={{70,-90},{90,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{70,-90},{90,-70}})));
   OpenHydraulics.Interfaces.FluidPort portT1
-    annotation (Placement(transformation(extent={{-10,70},{10,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,70},{10,90}})));
   OpenHydraulics.Interfaces.FluidPort portP
-    annotation (Placement(transformation(extent={{-10,-90},{10,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-90},{10,-70}})));
   OpenHydraulics.Interfaces.FluidPort portB
-    annotation (Placement(transformation(extent={{70,70},{90,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{70,70},{90,90}})));
   Modelica.Blocks.Interfaces.RealInput control
     annotation (Placement(transformation(
         origin={106,0},

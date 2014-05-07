@@ -23,8 +23,7 @@ model HydraulicsSubSyst
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
     fixRodPressure=true,
     strokeLength=1.25)
-    annotation (Placement(transformation(extent={{-38,50},{-18,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-38,50},{-18,70}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder boomCylLeft(
     strokeLength=1.25,
@@ -47,8 +46,7 @@ model HydraulicsSubSyst
     s_init=arm_s_init,
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
     fixHeadPressure=true)
-    annotation (Placement(transformation(extent={{16,50},{36,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{16,50},{36,70}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder bucketCyl(
     closedLength=2.30,
@@ -59,8 +57,7 @@ model HydraulicsSubSyst
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
     fixRodPressure=true,
     strokeLength=0.9)
-    annotation (Placement(transformation(extent={{56,50},{76,70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{56,50},{76,70}})));
 
  OpenHydraulics.Components.MotorsPumps.Motor swingMotor(Dconst=0.3)
     annotation (Placement(transformation(
@@ -73,50 +70,42 @@ model HydraulicsSubSyst
     sizeOfInputs=4,
     inputIndex=4,
     q_nom=0.003)
-    annotation (Placement(transformation(extent={{52,-40},{82,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{52,-40},{82,-10}})));
 
  OpenHydraulics.Examples.Excavator.SubSystems.LSValveUnit armValve(
     sizeOfInputs=4,
     inputIndex=3,
     q_nom=0.01)
-    annotation (Placement(transformation(extent={{10,-40},{40,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{10,-40},{40,-10}})));
 
  OpenHydraulics.Examples.Excavator.SubSystems.LSValveUnit boomValve(
     sizeOfInputs=4,
     inputIndex=2,
     q_nom=0.01,
     q_fraction_A2T=0.4)
-    annotation (Placement(transformation(extent={{-38,-40},{-8,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-38,-40},{-8,-10}})));
 
  OpenHydraulics.Examples.Excavator.SubSystems.LSValveUnit swingValve(
     sizeOfInputs=4,
     q_nom=0.01,
     q_fraction_A2T=0.6,
     q_fraction_B2T=0.6)
-    annotation (Placement(transformation(extent={{-80,-40},{-50,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-80,-40},{-50,-10}})));
 
   // the LoadSensing pump and control circuitry
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
       w_fixed=150,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-50,-90},{-30,-70}})));
   OpenHydraulics.Examples.Excavator.SubSystems.PowerUnit powerUnit
-    annotation (Placement(transformation(extent={{-16,-96},{16,-64}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-16,-96},{16,-64}})));
 
   // the lines and junctions
   OpenHydraulics.Components.Lines.NJunction jB
-    annotation (Placement(transformation(extent={{-24,28},{-4,48}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-24,28},{-4,48}})));
 
   OpenHydraulics.Components.Lines.NJunction jA
-    annotation (Placement(transformation(extent={{-40,36},{-20,56}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-40,36},{-20,56}})));
 
   OpenHydraulics.Components.Lines.Line boomLineB(
     L=1,
@@ -191,37 +180,27 @@ model HydraulicsSubSyst
         rotation=90)));
 
   Basic.OpenTank openTank
-    annotation (Placement(transformation(extent={{80,-60},{100,-40}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{80,-60},{100,-40}})));
 
   // the connectors
   Modelica.Mechanics.Rotational.Interfaces.Flange_b SwingFlange
-    annotation (Placement(transformation(extent={{-94,90},{-74,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-94,90},{-74,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a BoomCylBaseR
-    annotation (Placement(transformation(extent={{-54,90},{-34,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-54,90},{-34,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b BoomCylRodR
-    annotation (Placement(transformation(extent={{-34,90},{-14,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-34,90},{-14,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a BoomCylBaseL
-    annotation (Placement(transformation(extent={{-110,34},{-90,54}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,34},{-90,54}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b BoomCylRodL
-    annotation (Placement(transformation(extent={{-110,54},{-90,74}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,54},{-90,74}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a ArmCylBase
-    annotation (Placement(transformation(extent={{-6,90},{14,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-6,90},{14,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b ArmCylRod
-    annotation (Placement(transformation(extent={{14,90},{34,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{14,90},{34,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_a BucketCylBase
-    annotation (Placement(transformation(extent={{46,90},{66,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{46,90},{66,110}})));
   Modelica.Mechanics.Translational.Interfaces.Flange_b BucketCylRod
-    annotation (Placement(transformation(extent={{66,90},{86,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{66,90},{86,110}})));
   Modelica.Blocks.Interfaces.RealInput Command[4]
     annotation (Placement(transformation(
         origin={109,0},

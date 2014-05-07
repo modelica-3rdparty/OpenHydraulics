@@ -19,8 +19,7 @@ model OpenCenter
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
-    q_nom=1e-4) annotation (Placement(transformation(extent={{42,38},{62,58}},
-          rotation=0)));
+    q_nom=1e-4) annotation (Placement(transformation(extent={{42,38},{62,58}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(
@@ -29,7 +28,7 @@ model OpenCenter
         rotation=270)));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{68,38},{88,58}}, rotation=0)));
+    annotation (Placement(transformation(extent={{68,38},{88,58}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=1,
     freqHz=0.1,
@@ -40,7 +39,7 @@ model OpenCenter
         rotation=180)));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{-16,-24},{-36,-4}}, rotation=0)));
+           {{-16,-24},{-36,-4}})));
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=3)
     annotation (Placement(transformation(
         origin={0,30},
@@ -48,14 +47,12 @@ model OpenCenter
         rotation=90)));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-10,-24},{10,-4}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-10,-24},{10,-4}})));
 
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=50,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-86,0},{-70,16}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-86,0},{-70,16}})));
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3OC valve4_3posOC
     annotation (Placement(transformation(
         origin={26,8},
@@ -63,8 +60,7 @@ model OpenCenter
         rotation=270)));
   OpenHydraulics.Components.MotorsPumps.ConstantDisplacementPump constantDisplacementPump(Dconst=
         1e-5)
-    annotation (Placement(transformation(extent={{-64,-2},{-44,18}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-64,-2},{-44,18}})));
 
   Modelica.Blocks.Sources.Sine sine1(
     freqHz=0.1,
@@ -113,6 +109,5 @@ equation
   connect(circuitTank.port_b, constantDisplacementPump.portT) annotation (Line(
         points={{-36,-14},{-54,-14},{-54,-2}}, color={255,0,0}));
   annotation (Diagram(graphics),
-    experiment(StopTime=100, Tolerance=1e-008),
-    experimentSetupOutput);
+    experiment(StopTime=100, Tolerance=1e-008));
 end OpenCenter;

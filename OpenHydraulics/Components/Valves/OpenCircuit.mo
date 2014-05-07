@@ -6,18 +6,14 @@ model OpenCircuit "Open connection for use in reconfigurable components"
   SI.Pressure dp = port_a.p - port_b.p "Pressure drop from port_a to port_b";
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   OpenHydraulics.Basic.ConstVolumeSource noFlowA(q=0)
-    annotation (Placement(transformation(extent={{-60,-40},{-40,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-40},{-40,-20}})));
   OpenHydraulics.Basic.ConstVolumeSource noFlowB(q=0)
-    annotation (Placement(transformation(extent={{40,-40},{60,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{40,-40},{60,-20}})));
 equation
   // flow is zero
   port_a.m_flow = 0;
@@ -69,6 +65,5 @@ equation
           fillPattern=FillPattern.Solid,
           textString="%name"),
         Line(points={{-40,20},{-40,-20}}, color={0,0,0}),
-        Line(points={{40,20},{40,-20}}, color={0,0,0})}),
-    DymolaStoredErrors);
+        Line(points={{40,20},{40,-20}}, color={0,0,0})}));
 end OpenCircuit;

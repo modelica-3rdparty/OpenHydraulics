@@ -6,8 +6,7 @@ model OpenCenter_tandem
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Components.Valves.ReliefValve reliefValve
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     boreDiameter=0.12,
@@ -17,16 +16,13 @@ model OpenCenter_tandem
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{-68,48},{-48,68}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{-68,48},{-48,68}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-90,48},{-70,68}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-90,48},{-70,68}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{-44,48},{-24,68}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-44,48},{-24,68}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=0,
     amplitude=1,
@@ -38,29 +34,24 @@ model OpenCenter_tandem
         rotation=270)));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{10,-50},{-10,-30}}, rotation=0)));
+           {{10,-50},{-10,-30}})));
 
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=4)
-    annotation (Placement(transformation(extent={{-30,-10},{-10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,-10},{-10,10}})));
 
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=4)
-    annotation (Placement(transformation(extent={{10,-10},{30,10}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{10,-10},{30,10}})));
 
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=250,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-60,-30},{-40,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-30},{-40,-10}})));
   OpenHydraulics.Components.MotorsPumps.ConstantDisplacementPump constantDisplacementPump(Dconst=
         1e-5)
-    annotation (Placement(transformation(extent={{-30,-30},{-10,-10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,-30},{-10,-10}})));
 
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3OCTandem valve4_3posOCtandem
-    annotation (Placement(transformation(extent={{-70,18},{-50,38}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-70,18},{-50,38}})));
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder1(
     boreDiameter=0.12,
     strokeLength=1,
@@ -69,16 +60,15 @@ model OpenCenter_tandem
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{20,48},{40,68}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{20,48},{40,68}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed1
-    annotation (Placement(transformation(extent={{0,48},{20,68}}, rotation=0)));
+    annotation (Placement(transformation(extent={{0,48},{20,68}})));
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3OCTandem valve4_3posOCtandem1
-    annotation (Placement(transformation(extent={{20,18},{40,38}}, rotation=0)));
+    annotation (Placement(transformation(extent={{20,18},{40,38}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass1(
                                                            m=1000)
-    annotation (Placement(transformation(extent={{44,48},{64,68}}, rotation=0)));
+    annotation (Placement(transformation(extent={{44,48},{64,68}})));
   Modelica.Blocks.Sources.Constant const(k=0.5)
     annotation (Placement(transformation(
         origin={70,90},
@@ -127,6 +117,5 @@ equation
   connect(valve4_3posOCtandem1.portP, j1.port[4]) annotation (Line(points={{
           26,20},{20,20},{-20,8},{-20,0.75}}, color={255,0,0}));
   annotation (Diagram(graphics),
-    experiment(StopTime=250, Tolerance=1e-008),
-    experimentSetupOutput);
+    experiment(StopTime=250, Tolerance=1e-008));
 end OpenCenter_tandem;

@@ -15,11 +15,9 @@ model LineNoVolume
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   // the components
   Basic.WallFriction wallFriction(
@@ -27,8 +25,7 @@ model LineNoVolume
     D=D,
     roughness=roughness,
     from_dp = from_dp)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 equation

@@ -9,7 +9,7 @@ model DirectionalValveTest
 
   OpenHydraulics.Basic.FluidPower2MechRotConst idealPump
                        annotation (Placement(transformation(extent={{-30,-10},
-            {-10,10}}, rotation=0)));
+            {-10,10}})));
 
   OpenHydraulics.Basic.SharpEdgedOrifice restriction(
     D_pipe=0.02,
@@ -24,11 +24,9 @@ model DirectionalValveTest
 
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2000,
       V_init=1000)
-    annotation (Placement(transformation(extent={{0,-40},{-20,-20}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{0,-40},{-20,-20}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque(useSupport=false)
-    annotation (Placement(transformation(extent={{-60,-10},{-40,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
   OpenHydraulics.Components.Valves.DirectionalValves.V4_3CC valve4_3pos
                                                                     annotation (Placement(transformation(
         origin={16,4},
@@ -43,8 +41,7 @@ model DirectionalValveTest
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Modelica.Blocks.Sources.RealExpression realExpression(y=5000)
-    annotation (Placement(transformation(extent={{-96,-10},{-76,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-96,-10},{-76,10}})));
 equation
   quadratic = if restriction.dp>0 then sqrt(restriction.dp*constPos) else
                                        -sqrt(-restriction.dp*constNeg);
@@ -68,6 +65,5 @@ equation
     annotation (Line(points={{-75,0},{-62,0}}, color={0,0,127}));
   annotation (
       Diagram(graphics),
-    experiment(StopTime=10, Tolerance=1e-008),
-    experimentSetupOutput);
+    experiment(StopTime=10, Tolerance=1e-008));
 end DirectionalValveTest;

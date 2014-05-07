@@ -50,45 +50,35 @@ model LSValveUnit
     j1(V=0))
     annotation (
     Dialog(tab="Config Options"), Placement(transformation(extent={{-10,
-            -8},{10,12}}, rotation=0)));
+            -8},{10,12}})));
 
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=3)
-    annotation (Placement(transformation(extent={{-14,-50},{6,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-14,-50},{6,-30}})));
 
   OpenHydraulics.Components.Lines.NJunction j2(n_ports=3)
-    annotation (Placement(transformation(extent={{-6,-90},{14,-70}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-6,-90},{14,-70}})));
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort portA(p(start=p_init, fixed=
           fixPressureA))
-    annotation (Placement(transformation(extent={{-58,94},{-46,106}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-58,94},{-46,106}})));
 
   OpenHydraulics.Interfaces.FluidPort portB(p(start=p_init, fixed=
           fixPressureB))
-    annotation (Placement(transformation(extent={{46,94},{58,106}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{46,94},{58,106}})));
 
   OpenHydraulics.Interfaces.FluidPort portP2
-    annotation (Placement(transformation(extent={{-106,-46},{-94,-34}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-106,-46},{-94,-34}})));
   OpenHydraulics.Interfaces.FluidPort portT2
-    annotation (Placement(transformation(extent={{-106,-86},{-94,-74}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-106,-86},{-94,-74}})));
   OpenHydraulics.Interfaces.FluidPort portP1
-    annotation (Placement(transformation(extent={{94,-46},{106,-34}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{94,-46},{106,-34}})));
   OpenHydraulics.Interfaces.FluidPort portT1
-    annotation (Placement(transformation(extent={{94,-86},{106,-74}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{94,-86},{106,-74}})));
   OpenHydraulics.Interfaces.FluidPort portLS1
-    annotation (Placement(transformation(extent={{94,14},{106,26}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{94,14},{106,26}})));
   OpenHydraulics.Interfaces.FluidPort portLS2
-    annotation (Placement(transformation(extent={{-106,14},{-94,26}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-106,14},{-94,26}})));
   Modelica.Blocks.Interfaces.RealInput u[sizeOfInputs]
     annotation (Placement(transformation(
         origin={106,70},

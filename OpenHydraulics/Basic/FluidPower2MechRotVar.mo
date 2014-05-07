@@ -13,8 +13,7 @@ model FluidPower2MechRotVar
   extends BaseClasses.PartialPumpMotor;
 
   Modelica.Blocks.Interfaces.RealInput dispFraction
-    annotation (Placement(transformation(extent={{-100,-94},{-70,-64}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-100,-94},{-70,-64}})));
 equation
   D = min(max(dispFraction*Dlimit,Dmin),Dmax);
 

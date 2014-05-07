@@ -11,8 +11,7 @@ model V4_3CCLSHydAntiCavitation
     annotation(Dialog(tab="Advanced"));
 
   OpenHydraulics.Interfaces.FluidPort portLS
-    annotation (Placement(transformation(extent={{-10,70},{10,90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,70},{10,90}})));
 
   // configurable components
   replaceable OpenHydraulics.Components.Valves.CheckValve checkT2B(q_nom=
@@ -56,8 +55,7 @@ model V4_3CCLSHydAntiCavitation
         rotation=270)));
 
   Basic.VarPressureSource pressLS
-    annotation (Placement(transformation(extent={{-10,40},{10,60}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,40},{10,60}})));
 
   extends
     OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(

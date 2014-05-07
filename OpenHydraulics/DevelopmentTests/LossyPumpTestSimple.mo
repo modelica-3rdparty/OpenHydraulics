@@ -18,32 +18,28 @@ model LossyPumpTestSimple
     freqHz=0.01,
     amplitude=3e5,
     offset=4e5)
-            annotation (Placement(transformation(extent={{80,-40},{60,-20}},
-          rotation=0)));
+            annotation (Placement(transformation(extent={{80,-40},{60,-20}})));
   Basic.OpenTank tank      annotation (Placement(transformation(extent={{-10,-64},
-            {10,-44}}, rotation=0)));
+            {10,-44}})));
   Basic.OpenTank tank1(  p_const=300000)
                                    annotation (Placement(transformation(
-          extent={{-10,28},{10,48}}, rotation=0)));
+          extent={{-10,28},{10,48}})));
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=
         6.283185307, useSupport=false)
                      annotation (Placement(transformation(extent={{-60,-10},{
-            -40,10}}, rotation=0)));
+            -40,10}})));
   OpenHydraulics.Components.Sensors.PressureSensor pressureSensor
-    annotation (Placement(transformation(extent={{30,60},{50,80}}, rotation=0)));
+    annotation (Placement(transformation(extent={{30,60},{50,80}})));
   Components.Lines.NJunction j1(            n_ports=4)
-    annotation (Placement(transformation(extent={{-10,50},{10,70}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-10,50},{10,70}})));
   Components.Lines.NJunction j2(            n_ports=3)
-    annotation (Placement(transformation(extent={{-10,-40},{10,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
   OpenHydraulics.Basic.VarPressureSource varPressureSource
-    annotation (Placement(transformation(extent={{50,-40},{30,-20}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{50,-40},{30,-20}})));
   Components.Volumes.Accumulator accumulator
         annotation (Placement(transformation(
-          extent={{10,20},{30,40}}, rotation=0)));
+          extent={{10,20},{30,40}})));
 equation
   connect(idealPump.flange_b, idealPump1.flange_a)
                                                  annotation (Line(points={{-10,
@@ -71,6 +67,5 @@ equation
   connect(accumulator.port_a, idealPump1.portP)
     annotation (Line(points={{20,20},{20,10}}, color={255,0,0}));
 annotation ( Diagram(graphics),
-    experiment(StopTime=1000),
-    experimentSetupOutput);
+    experiment(StopTime=1000));
 end LossyPumpTestSimple;

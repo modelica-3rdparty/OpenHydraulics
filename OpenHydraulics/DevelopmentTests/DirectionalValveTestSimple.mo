@@ -10,7 +10,7 @@ model DirectionalValveTestSimple
         extent={{-10,-10},{10,10}},
         rotation=270)));
   OpenHydraulics.Basic.OpenTank tank          annotation (Placement(transformation(extent={{-70,-60},
-            {-50,-40}}, rotation=0)));
+            {-50,-40}})));
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     boreDiameter=0.12,
     strokeLength=1,
@@ -19,28 +19,22 @@ model DirectionalValveTestSimple
     pistonMass=0.3,
     s_init=0.1,
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration)
-                annotation (Placement(transformation(extent={{20,42},{40,62}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{20,42},{40,62}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-10,32},{10,52}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-10,32},{10,52}})));
   Modelica.Mechanics.Translational.Components.Mass slidingMass
-    annotation (Placement(transformation(extent={{60,42},{80,62}}, rotation=0)));
+    annotation (Placement(transformation(extent={{60,42},{80,62}})));
   Modelica.Blocks.Sources.Sine sine(amplitude=0.1)
-    annotation (Placement(transformation(extent={{-34,-80},{-14,-60}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-34,-80},{-14,-60}})));
   OpenHydraulics.Basic.VariableRestriction throttleValve(D_nom=0.01)
-    annotation (Placement(transformation(extent={{-8,0},{12,20}}, rotation=0)));
+    annotation (Placement(transformation(extent={{-8,0},{12,20}})));
   OpenHydraulics.Basic.ConstVolumeSource source(q=0.001)
-    annotation (Placement(transformation(extent={{-70,-20},{-50,0}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-70,-20},{-50,0}})));
   Components.Lines.NJunction j1(            n_ports=3)
-    annotation (Placement(transformation(extent={{-40,0},{-20,20}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-40,0},{-20,20}})));
   Components.Lines.NJunction j2(            n_ports=3)
-    annotation (Placement(transformation(extent={{-40,-50},{-20,-30}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-40,-50},{-20,-30}})));
 equation
   connect(doubleActingCylinder.flange_a,fixed.flange)    annotation (Line(
         points={{20,52},{0,52},{0,42}}, color={0,127,0}));
@@ -63,6 +57,5 @@ equation
   connect(doubleActingCylinder.port_b, j2.port[3]) annotation (Line(points={{38,44},
           {38,-40},{-30,-40},{-30,-39.3333}},        color={255,0,0}));
   annotation (Diagram(graphics),
-    experiment(StopTime=0.5),
-    experimentSetupOutput);
+    experiment(StopTime=0.5));
 end DirectionalValveTestSimple;

@@ -20,16 +20,13 @@ model CircuitTank "Model for a Oil Tank"
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b
-    annotation (Placement(transformation(extent={{110,-10},{90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 
   // the components
   OpenHydraulics.Basic.VolumeOpen volumeOpen(final n_ports=2)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 equation
   connect(port_a, volumeOpen.port[1]) annotation (Line(points={{-100,0},{0,
           0},{0,-0.575}}, color={255,0,0}));

@@ -21,8 +21,7 @@ model OpenCenterForceVelocityControl
     fixHeadPressure=true,
     fixRodPressure=true,
     initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity)
-                annotation (Placement(transformation(extent={{30,10},{48,30}},
-          rotation=0)));
+                annotation (Placement(transformation(extent={{30,10},{48,30}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(
@@ -31,7 +30,7 @@ model OpenCenterForceVelocityControl
         rotation=270)));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
-           {{-20,-60},{-40,-40}}, rotation=0)));
+           {{-20,-60},{-40,-40}})));
 
   OpenHydraulics.Components.Lines.NJunction j1
     annotation (Placement(transformation(
@@ -40,14 +39,12 @@ model OpenCenterForceVelocityControl
         rotation=90)));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-20,-60},{0,-40}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-20,-60},{0,-40}})));
 
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=250,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-100,-40},{-80,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-100,-40},{-80,-20}})));
   Components.Valves.DirectionalValves.V4_3CC valve4_3posOCtandem
     annotation (Placement(transformation(
         origin={22,-30},
@@ -56,8 +53,7 @@ model OpenCenterForceVelocityControl
 
   OpenHydraulics.Components.MotorsPumps.ConstantDisplacementPump constantDisplacementPump(Dconst=
         1e-4)
-    annotation (Placement(transformation(extent={{-70,-40},{-50,-20}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-70,-40},{-50,-20}})));
 
   OpenHydraulics.Components.Sensors.FVController fVController(
     VelocityProfile(smoothness=Modelica.Blocks.Types.Smoothness.ContinuousDerivative,
@@ -109,6 +105,5 @@ equation
     experiment(
       StopTime=25,
       NumberOfIntervals=5000,
-      Tolerance=1e-008),
-    experimentSetupOutput);
+      Tolerance=1e-008));
 end OpenCenterForceVelocityControl;

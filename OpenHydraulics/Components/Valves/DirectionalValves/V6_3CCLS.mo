@@ -22,12 +22,10 @@ model V6_3CCLS
 
     //junctions
   OpenHydraulics.Components.Lines.NJunction j1(n_ports=2)
-    annotation (Placement(transformation(extent={{-90,-70},{-70,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,-70},{-70,-50}})));
 
   OpenHydraulics.Components.Lines.NJunction j2
-    annotation (Placement(transformation(extent={{-10,-70},{10,-50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-70},{10,-50}})));
 
   OpenHydraulics.Components.Lines.NJunction j3
     annotation (Placement(transformation(
@@ -36,16 +34,13 @@ model V6_3CCLS
         rotation=180)));
 
   OpenHydraulics.Components.Lines.NJunction j4(n_ports=2)
-    annotation (Placement(transformation(extent={{-90,58},{-70,78}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-90,58},{-70,78}})));
 
   OpenHydraulics.Components.Lines.NJunction j5(n_ports=4)
-    annotation (Placement(transformation(extent={{-30,30},{-10,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-30,30},{-10,50}})));
 
   OpenHydraulics.Components.Lines.NJunction j6(n_ports=4)
-    annotation (Placement(transformation(extent={{64,30},{84,50}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{64,30},{84,50}})));
 
     //components
   Basic.VariableRestriction P12T1(
@@ -128,14 +123,14 @@ model V6_3CCLS
     max_contr=1)
     annotation (
     Dialog(tab="Metering",group="Spool"), Placement(transformation(extent=
-           {{22,32},{38,48}}, rotation=0)));
+           {{22,32},{38,48}})));
 
 extends
     OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialV6_3LS;
 
   OpenHydraulics.Basic.VarPressureSource varPressureSource
       annotation (Placement(transformation(
-          extent={{10,50},{30,70}}, rotation=0)));
+          extent={{10,50},{30,70}})));
 
  //equations and connect
 equation

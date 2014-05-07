@@ -5,21 +5,18 @@ model DoubleActingCylinderTestSimple1
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
-    annotation (Placement(transformation(extent={{-22,40},{-2,60}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{-22,40},{-2,60}})));
   Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
     strokeLength=0.2,
     pistonMass=0.1,
     s_init=0.185)     annotation (Placement(transformation(extent={{22,40},{
-            42,60}}, rotation=0)));
+            42,60}})));
   Basic.FluidPower2MechRotConst pump(       Dconst=5e-5) annotation (Placement(transformation(extent={{-24,-46},
-            {-4,-26}}, rotation=0)));
+            {-4,-26}})));
   Components.Volumes.CircuitTank circuitTank
-    annotation (Placement(transformation(extent={{30,-90},{10,-70}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{30,-90},{10,-70}})));
   Modelica.Blocks.Sources.Ramp ramp(height=1000, duration=100)
-    annotation (Placement(transformation(extent={{-74,-46},{-54,-26}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-74,-46},{-54,-26}})));
   Components.Valves.ReliefValve reliefValve
     annotation (Placement(transformation(
         origin={10,-46},
@@ -27,8 +24,7 @@ model DoubleActingCylinderTestSimple1
         rotation=270)));
   Modelica.Mechanics.Rotational.Sources.Position position(
                                                   f_crit=1, useSupport=false)
-    annotation (Placement(transformation(extent={{-46,-46},{-26,-26}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-46,-46},{-26,-26}})));
   Components.Lines.Line lineA(
     L=2,
     D=0.01) annotation (Placement(transformation(
@@ -42,11 +38,9 @@ model DoubleActingCylinderTestSimple1
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Components.Lines.NJunction j1
-            annotation (Placement(transformation(extent={{0,-26},{20,-6}},
-          rotation=0)));
+            annotation (Placement(transformation(extent={{0,-26},{20,-6}})));
   Components.Lines.NJunction j2
-            annotation (Placement(transformation(extent={{30,-66},{50,-46}},
-          rotation=0)));
+            annotation (Placement(transformation(extent={{30,-66},{50,-46}})));
 initial equation
   //reliefValve.port_a.p = 101325;
 
@@ -77,6 +71,5 @@ equation
   connect(lineB.port_a, j2.port[3]) annotation (Line(points={{40,0},{40,
           -55.3333}}, color={255,0,0}));
 annotation ( Diagram(graphics),
-    experiment(StopTime=10, Tolerance=1e-006),
-    experimentSetupOutput);
+    experiment(StopTime=10, Tolerance=1e-006));
 end DoubleActingCylinderTestSimple1;

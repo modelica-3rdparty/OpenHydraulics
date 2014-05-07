@@ -3,11 +3,10 @@ model VarVolumeSource "Boundary volume flow and temperature source"
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
   OpenHydraulics.Interfaces.FluidPort port
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
 
   Modelica.Blocks.Interfaces.RealInput control annotation (Placement(
-        transformation(extent={{-120,-20},{-80,20}}, rotation=0)));
+        transformation(extent={{-120,-20},{-80,20}})));
 equation
   port.m_flow = -oil.density(port.p)*control;
 

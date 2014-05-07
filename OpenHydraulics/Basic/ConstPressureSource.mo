@@ -3,8 +3,7 @@ model ConstPressureSource "Boundary pressure and temperature source"
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 
   OpenHydraulics.Interfaces.FluidPort port
-    annotation (Placement(transformation(extent={{-10,90},{10,110}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,90},{10,110}})));
 
   parameter SI.AbsolutePressure p_const = environment.p_ambient "Tank pressure";
 equation

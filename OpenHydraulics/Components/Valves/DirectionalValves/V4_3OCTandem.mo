@@ -21,7 +21,7 @@ model V4_3OCTandem "4-port 3-position valve with open center"
     table=[-1,0; 0,1; 1,0])
     annotation (
     Dialog(tab="Sizing",group="Metering"), Placement(transformation(
-          extent={{-8,-32},{8,-48}}, rotation=0)));
+          extent={{-8,-32},{8,-48}})));
 
     //equations and connect
 equation

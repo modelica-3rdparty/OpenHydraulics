@@ -16,11 +16,9 @@ partial model HorizontalTwoPort "Two horizontally oriented fluid ports"
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a(p(start=p_init))
-    annotation (Placement(transformation(extent={{-110,-10},{-90,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
   OpenHydraulics.Interfaces.FluidPort port_b(p(start=p_init))
-    annotation (Placement(transformation(extent={{110,-10},{90,10}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{110,-10},{90,10}})));
 equation
   // set the fluid properties (set two state variable for each instance of medium)
   p_a = port_a.p;

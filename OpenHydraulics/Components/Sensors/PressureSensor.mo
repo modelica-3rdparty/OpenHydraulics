@@ -9,17 +9,14 @@ model PressureSensor
 
   // the ports
   OpenHydraulics.Interfaces.FluidPort port_a
-    annotation (Placement(transformation(extent={{-10,-110},{10,-90}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-110},{10,-90}})));
   Modelica.Blocks.Interfaces.RealOutput y
-    annotation (Placement(transformation(extent={{60,-10},{80,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{60,-10},{80,10}})));
 
   Basic.VolumeClosed volumeClosed(
     final V=V,
     final n_ports=1)
     annotation (Placement(transformation(
-        origin={0,0},
         extent={{-10,-10},{10,10}},
         rotation=180)));
 equation

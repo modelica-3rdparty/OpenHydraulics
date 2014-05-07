@@ -34,13 +34,11 @@ model PumpTest "AccuTest"
     Vr=Vr,
     mu=mu,
     B=B)
-    annotation (Placement(transformation(extent={{-10,-10},{10,10}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
 
   Basic.ConstPressureSource lowPressure(
        p_const=1e5)
-    annotation (Placement(transformation(extent={{-10,-52},{10,-32}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-10,-52},{10,-32}})));
   Basic.ConstPressureSource highPressure(
        p_const=346e5)
     annotation (Placement(transformation(
@@ -48,8 +46,7 @@ model PumpTest "AccuTest"
         extent={{-10,-10},{10,10}},
         rotation=180)));
   Modelica.Blocks.Sources.RealExpression realExpression(y=dispFraction)
-    annotation (Placement(transformation(extent={{-58,-38},{-38,-18}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-58,-38},{-38,-18}})));
   OpenHydraulics.Components.MotorsPumps.VariableDisplacementPump variableDisplacementPump1(
     Dmax=0.000028,
     Dmin=-0.000028,
@@ -59,13 +56,11 @@ model PumpTest "AccuTest"
     Vr=Vr,
     mu=mu,
     B=B)
-    annotation (Placement(transformation(extent={{20,-10},{40,10}}, rotation=
-            0)));
+    annotation (Placement(transformation(extent={{20,-10},{40,10}})));
 
   Basic.ConstPressureSource lowPressure1(
        p_const=1e5)
-    annotation (Placement(transformation(extent={{20,-52},{40,-32}}, rotation=
-           0)));
+    annotation (Placement(transformation(extent={{20,-52},{40,-32}})));
   Basic.ConstPressureSource highPressure1(
        p_const=171e5)
     annotation (Placement(transformation(
@@ -75,8 +70,7 @@ model PumpTest "AccuTest"
   Modelica.Mechanics.Rotational.Sources.ConstantSpeed constantSpeed(
                                                             w_fixed=250,
       useSupport=false)
-    annotation (Placement(transformation(extent={{-60,-10},{-40,10}},
-          rotation=0)));
+    annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
 equation
   // compute the efficiencies
   volumetricEfficiency5000 = (variableDisplacementPump.fluidPower2MechRot.q_flow_a-
@@ -113,6 +107,5 @@ equation
   connect(constantSpeed.flange, variableDisplacementPump1.flange_a) annotation (Line(
         points={{-40,0},{-20,0},{-20,16},{14,16},{14,0},{20,0}}, color={0,0,0}));
   annotation (Diagram(graphics),
-    experiment(StartTime=0.05, NumberOfIntervals=5000),
-    experimentSetupOutput);
+    experiment(StartTime=0.05, NumberOfIntervals=5000));
 end PumpTest;

@@ -12,8 +12,7 @@ partial model NPort "Two horizontally oriented fluid ports"
 
   OpenHydraulics.Interfaces.FluidPort port[n_ports](m_flow(each start=0), p(
         each start=p_init))
-      annotation (Placement(transformation(extent={{-10,-11},{10,10}},
-          rotation=0)));
+      annotation (Placement(transformation(extent={{-10,-11},{10,10}})));
 
         // the media properties
   SI.AbsolutePressure p[n_ports](each start=p_init)
