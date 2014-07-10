@@ -1,6 +1,7 @@
 within OpenHydraulics.Basic.BaseClasses;
 record LossFactorData
   "Data structure defining constant loss factor data for dp = zeta*rho*v*|v|/2 and functions providing the data for some loss types"
+  extends Modelica.Icons.Record;
 
   SI.Diameter D_a "Diameter at port_a" annotation (Dialog);
   SI.Diameter D_b "Diameter at port_b" annotation (Dialog);

@@ -1,6 +1,6 @@
 within OpenHydraulics;
 package UsersGuide "User's Guide"
-
+  extends Modelica.Icons.Information;
 
     annotation (DocumentationClass=true, Documentation(info="<HTML>
 <h3><font color=\"#008000\" size=5>User's guide of package Hydraulics</font></h3>

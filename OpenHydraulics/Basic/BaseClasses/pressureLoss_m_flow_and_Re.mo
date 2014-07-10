@@ -1,7 +1,7 @@
 within OpenHydraulics.Basic.BaseClasses;
 function pressureLoss_m_flow_and_Re
   "Return pressure drop from constant loss factor, mass flow rate and Re (dp = f(m_flow))"
-
+  extends Modelica.Icons.Function;
   input SI.MassFlowRate m_flow "Mass flow rate from port_a to port_b";
   input SI.Density d_a "Density at port_a";
   input SI.Density d_b "Density at port_b";

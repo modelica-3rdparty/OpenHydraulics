@@ -1,7 +1,7 @@
 within OpenHydraulics.Basic.BaseClasses;
 function ReynoldsNumber_m_flow
   "Return Reynolds number as a function of mass flow rate m_flow"
-
+  extends Modelica.Icons.Function;
   input SI.MassFlowRate m_flow "Mass flow rate";
   input SI.DynamicViscosity eta "Dynamic viscosity of medium";
   input SI.Diameter diameter "Diameter of pipe/orifice";
