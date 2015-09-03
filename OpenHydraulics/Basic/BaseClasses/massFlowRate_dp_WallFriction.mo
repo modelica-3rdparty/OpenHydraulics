@@ -23,6 +23,9 @@ protected
   SI.ReynoldsNumber Re2 = 4000 "Re entering turbulent curve";
   SI.DynamicViscosity eta "Upstream viscosity";
   SI.Density d "Upstream density";
+  SI.ReynoldsNumber Re_lam "Laminar Reynolds number";
+  SI.ReynoldsNumber Re_turb "Turbulent Reynolds number";
+  SI.ReynoldsNumber Re_trans "Transitional Reynolds number";
   SI.ReynoldsNumber Re "Reynolds number";
   Real lambda2 "Modified friction coefficient (= lambda*Re^2)";
 
@@ -70,14 +73,19 @@ algorithm
   lambda2 := abs(dp)*2*diameter^3*d/(length*eta*eta);
 
   // Determine Re under the assumption of laminar flow
-  Re := lambda2/64;
+  Re_lam := lambda2/64;
 
   // Modify Re, if turbulent flow
-  if Re > Re1 then
-     Re :=-2*sqrt(lambda2)*Modelica.Math.log10(2.51/sqrt(lambda2) + 0.27*Delta);
-     if Re < Re2 then
-        Re := interpolateInRegion2(Re, Re1, Re2, Delta, lambda2);
+  if Re_lam > Re1 then
+     Re_turb :=-2*sqrt(lambda2)*Modelica.Math.log10(2.51/sqrt(lambda2) + 0.27*Delta);
+     if Re_turb < Re2 then
+        Re_trans := interpolateInRegion2(Re, Re1, Re2, Delta, lambda2);
+        Re := Re_trans;
+     else
+        Re := Re_turb;
      end if;
+  else
+    Re := Re_lam;
   end if;
 
   // Determine mass flow rate
