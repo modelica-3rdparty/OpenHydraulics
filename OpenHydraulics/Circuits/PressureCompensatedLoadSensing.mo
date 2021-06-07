@@ -15,16 +15,15 @@ model PressureCompensatedLoadSensing
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{44,30},{64,50}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{44,30},{64,50}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{0,20},{20,40}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=1,
+  Modelica.Blocks.Sources.Sine sine(
+    amplitude=1,
     startTime=1,
     phase=0,
-    freqHz=0.1)
-    annotation (Placement(transformation(extent={{10,-82},{30,-62}})));
+    f=0.1) annotation (Placement(transformation(extent={{10,-82},{30,-62}})));
   OpenHydraulics.Components.MotorsPumps.PCLSPump PCLSPump(Dmax=0.00004)
     annotation (Placement(transformation(extent={{-58,-32},{-38,-12}})));
 

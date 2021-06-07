@@ -18,8 +18,7 @@ model DirectionalValveTestSimple
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration)
-                annotation (Placement(transformation(extent={{20,42},{40,62}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) annotation (Placement(transformation(extent={{20,42},{40,62}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-10,32},{10,52}})));

@@ -20,8 +20,7 @@ model OpenCenterForceVelocityControl
     s_init=0.1,
     fixHeadPressure=true,
     fixRodPressure=true,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity)
-                annotation (Placement(transformation(extent={{30,10},{48,30}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity) annotation (Placement(transformation(extent={{30,10},{48,30}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(

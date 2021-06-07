@@ -4,11 +4,10 @@ model DigCycleSimulation
 
   SubSystems.MechanicsBody_noFriction mechanicsBody(
     swing_phi_start=0,
-    swing_initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity,
+    swing_initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity,
     boom_phi_start=0.87266462599716,
     arm_phi_start=-1.3962634015955,
-    bucket_phi_start=0.34906585039887)
-    annotation (Placement(transformation(extent={{10,-33},{98,46}})));
+    bucket_phi_start=0.34906585039887) annotation (Placement(transformation(extent={{10,-33},{98,46}})));
   OpenHydraulics.Examples.Excavator.SubSystems.HydraulicsSubSyst hydraulics(
       redeclare OpenHydraulics.Fluids.GenericOilSimple oil)
     annotation (Placement(transformation(extent={{-6,-18},{-46,22}})));

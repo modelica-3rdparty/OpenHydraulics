@@ -62,8 +62,7 @@ model PCLSPumpSignalControlled
     k=propGain,
     Td=timeConst,
     final yMin=0,
-    initType=Modelica.Blocks.Types.InitPID.InitialState)
-    annotation (Placement(transformation(extent={{0,-36},{20,-16}})));
+    initType=Modelica.Blocks.Types.Init.InitialState) annotation (Placement(transformation(extent={{0,-36},{20,-16}})));
   Modelica.Blocks.Math.Add desiredPressure
     annotation (Placement(transformation(extent={{-30,-36},{-10,-16}})));
   Modelica.Blocks.Sources.RealExpression pressureMargin(

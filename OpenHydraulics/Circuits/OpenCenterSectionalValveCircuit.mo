@@ -44,8 +44,7 @@ model OpenCenterSectionalValveCircuit
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-78,0},{-58,20}})));
@@ -59,8 +58,7 @@ model OpenCenterSectionalValveCircuit
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{36,0},{56,20}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{36,0},{56,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed1
     annotation (Placement(transformation(extent={{6,0},{26,20}})));
@@ -69,9 +67,8 @@ model OpenCenterSectionalValveCircuit
     annotation (Placement(transformation(extent={{64,0},{84,20}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=0,
-    freqHz=0.1,
-    amplitude=1)
-    annotation (Placement(transformation(extent={{-86,-36},{-66,-16}})));
+    f=0.1,
+    amplitude=1) annotation (Placement(transformation(extent={{-86,-36},{-66,-16}})));
 equation
   connect(circuitTank.port_b,constantDisplacementPump. portT) annotation (Line(
         points={{-18,-80},{-58,-80},{-58,-72}}, color={255,0,0}));

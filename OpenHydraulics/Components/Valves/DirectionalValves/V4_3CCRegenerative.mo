@@ -14,9 +14,7 @@ model V4_3CCRegenerative "Simple Regenerative valve model"
     annotation(Dialog(tab="Sizing",group="Advanced Metering"));
   parameter Real dampCoeff = 1 "Damping coefficient of 2nd order response"
     annotation(Dialog(tab="Dynamics"));
-  parameter Modelica.SIunits.Frequency bandwidth=100
-    "Bandwidth of 2nd order response"
-    annotation(Dialog(tab="Dynamics"));
+  parameter Modelica.Units.SI.Frequency bandwidth=100 "Bandwidth of 2nd order response" annotation (Dialog(tab="Dynamics"));
 
   // configuration options
   parameter Boolean useCheckValve = true "true = use check valve on port P"

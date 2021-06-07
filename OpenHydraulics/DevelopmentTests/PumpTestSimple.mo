@@ -15,10 +15,9 @@ model PumpTestSimple
         extent={{10,10},{-10,-10}},
         rotation=180)));
   Modelica.Blocks.Sources.Sine sine(
-    freqHz=0.01,
+    f=0.01,
     amplitude=0.4,
-    offset=0.6)
-            annotation (Placement(transformation(extent={{76,-28},{56,-8}})));
+    offset=0.6) annotation (Placement(transformation(extent={{76,-28},{56,-8}})));
   Basic.OpenTank tank annotation (Placement(transformation(extent={{-10,-64},
             {10,-44}})));
   Basic.OpenTank tank1(  p_const=300000)

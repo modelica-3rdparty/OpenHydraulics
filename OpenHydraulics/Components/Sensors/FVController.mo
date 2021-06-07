@@ -13,8 +13,7 @@ model FVController
         19,-8000; 20,-5000; 21,-1000; 22,100; 23,0; 24,0])
     annotation (                                    Dialog, Placement(
         transformation(extent={{0,60},{-20,80}})));
-  Modelica.Blocks.Sources.Clock clock
-    annotation (Placement(transformation(
+  Modelica.Blocks.Sources.ContinuousClock clock annotation (Placement(transformation(
         origin={20,90},
         extent={{-10,-10},{10,10}},
         rotation=270)));

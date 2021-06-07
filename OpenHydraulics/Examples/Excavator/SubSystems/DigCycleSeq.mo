@@ -3,9 +3,8 @@ model DigCycleSeq
   import Modelica.Constants.pi;
 
   // the parameters
-  parameter Modelica.SIunits.Frequency bandwidth=10;
-  parameter Modelica.SIunits.Time startTime=1
-    "Time before excavator starts moving";
+  parameter Modelica.Units.SI.Frequency bandwidth=10;
+  parameter Modelica.Units.SI.Time startTime=1 "Time before excavator starts moving";
   parameter Real swingAmplitude = -1 "Amplitude of swing command";
   parameter Real boomAmplitude1 = -0.9 "Amplitude of first boom command";
   parameter Real boomAmplitude2 = 0.5 "Amplitude of second boom command";
@@ -17,30 +16,19 @@ model DigCycleSeq
   parameter Real bucketAmplitude3 = -1 "Amplitude of bucket command";
 
   // the components
-  Modelica.Blocks.Tables.CombiTable1D swingTimeTable(                   table=[0,
-        0; 1,0; 13,0; 14,swingAmplitude; 17,swingAmplitude; 18,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv swingTimeTable(table=[0,0; 1,0; 13,0; 14,swingAmplitude; 17,swingAmplitude; 18,0; 20,0]) annotation (Placement(transformation(
         origin={-30,60},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D boomTimeTable(
-                           table=[0,0; 1,boomAmplitude1; 2,boomAmplitude1;
-        3,0; 7,0; 8,boomAmplitude2; 11.5,boomAmplitude2; 12.5,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv boomTimeTable(table=[0,0; 1,boomAmplitude1; 2,boomAmplitude1; 3,0; 7,0; 8,boomAmplitude2; 11.5,boomAmplitude2; 12.5,0; 20,0]) annotation (Placement(transformation(
         origin={-30,20},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D armTimeTable(table=[0,0;0.5,0; 1,
-        armAmplitude1; 2,armAmplitude1; 3,0; 4.5,armAmplitude2; 6.5,
-        armAmplitude2; 7.5,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv armTimeTable(table=[0,0; 0.5,0; 1,armAmplitude1; 2,armAmplitude1; 3,0; 4.5,armAmplitude2; 6.5,armAmplitude2; 7.5,0; 20,0]) annotation (Placement(transformation(
         origin={-30,-20},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D bucketTimeTable(table=[0,0;0.5,0; 1,bucketAmplitude1; 3,bucketAmplitude1; 4,
-        0; 5,0; 6,bucketAmplitude2; 7,bucketAmplitude2; 9,0; 16,0; 16.3,
-        bucketAmplitude3; 17,bucketAmplitude3; 18,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv bucketTimeTable(table=[0,0; 0.5,0; 1,bucketAmplitude1; 3,bucketAmplitude1; 4,0; 5,0; 6,bucketAmplitude2; 7,bucketAmplitude2; 9,0; 16,0; 16.3,bucketAmplitude3; 17,bucketAmplitude3; 18,0; 20,0]) annotation (Placement(transformation(
         origin={-30,-60},
         extent={{10,-10},{-10,10}},
         rotation=180)));

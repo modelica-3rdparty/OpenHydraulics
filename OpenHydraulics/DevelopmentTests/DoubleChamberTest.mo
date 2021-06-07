@@ -19,9 +19,8 @@ model DoubleChamberTest
     strokeLength=2,
     closedLength=3,
     damping=0,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity,
-    v_init=-0.1)    annotation (Placement(transformation(extent={{-22,40},{-2,
-            60}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity,
+    v_init=-0.1) annotation (Placement(transformation(extent={{-22,40},{-2,60}})));
 
 equation
   connect(fixed.flange,   doubleActingCylinder.flange_a)

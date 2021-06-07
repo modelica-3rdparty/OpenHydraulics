@@ -15,9 +15,8 @@ model WallFrictionTest
         rotation=270)));
   Modelica.Blocks.Sources.Sine sinusoid(
     startTime=0.01,
-    freqHz=0.5,
-    amplitude=10)
-    annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
+    f=0.5,
+    amplitude=10) annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2000,
       V_init=1000)
     annotation (Placement(transformation(extent={{0,-40},{-20,-20}})));

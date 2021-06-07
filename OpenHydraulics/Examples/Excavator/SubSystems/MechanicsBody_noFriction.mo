@@ -3,10 +3,7 @@ model MechanicsBody_noFriction
   import MB = Modelica.Mechanics.MultiBody;
 
   // the swing parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init swing_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Swing",tab="Initialization"));
+  parameter ObsoleteModelica4.Mechanics.MultiBody.Types.Init swing_initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Swing", tab="Initialization"));
   parameter SI.Angle
     swing_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -21,10 +18,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Swing",tab="Initialization"));
 
   // the boom parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init boom_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Boom",tab="Initialization"));
+  parameter ObsoleteModelica4.Mechanics.MultiBody.Types.Init boom_initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Boom", tab="Initialization"));
   parameter SI.Angle
     boom_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -39,10 +33,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Boom",tab="Initialization"));
 
   // the arm parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init arm_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Arm",tab="Initialization"));
+  parameter ObsoleteModelica4.Mechanics.MultiBody.Types.Init arm_initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Arm", tab="Initialization"));
   parameter SI.Angle
     arm_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -56,10 +47,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Arm",tab="Initialization"));
 
   // the bucket parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init bucket_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Bucket",tab="Initialization"));
+  parameter ObsoleteModelica4.Mechanics.MultiBody.Types.Init bucket_initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Bucket", tab="Initialization"));
   parameter SI.Angle
     bucket_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -79,53 +67,27 @@ model MechanicsBody_noFriction
   Modelica.Mechanics.MultiBody.Joints.Revolute swingRevolute(
     n={0,1,0},
     useAxisFlange=true,
-    a(start=swing_a_start, fixed=if ((
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if ((swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.Position or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          swing_phi_start),
-    w(fixed=if ((swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.Velocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          swing_w_start))
-    "revolute joint (plus motor) representing the swing function"
-    annotation (Placement(transformation(
+    a(start=swing_a_start, fixed=if ((swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if ((swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=swing_phi_start),
+    w(fixed=if ((swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Velocity or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (swing_initType) == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
+          swing_w_start)) "revolute joint (plus motor) representing the swing function" annotation (Placement(transformation(
         origin={-110,-100},
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Modelica.Mechanics.MultiBody.Joints.Revolute boomRevolute(
-    a(start=boom_a_start, fixed=if (
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType
-           == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          boom_phi_start),
-    w(fixed=if (boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType
-           == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=boom_w_start))
+    a(start=boom_a_start, fixed=if (boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=boom_phi_start),
+    w(fixed=if (boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Velocity or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=boom_w_start))
     annotation (Placement(transformation(extent={{-133,12},{-113,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute armRevolute(
-    a(start=arm_a_start, fixed=if (
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
-          Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_phi_start),
-    w(fixed=if (arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
-          Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_w_start))
+    a(start=arm_a_start, fixed=if (arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_phi_start),
+    w(fixed=if (arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Velocity or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_w_start))
     annotation (Placement(transformation(extent={{3,12},{23,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute bucketRevolute(
-    a(start=bucket_a_start, fixed=if (
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          bucket_phi_start),
-    w(fixed=if (bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          bucket_w_start))
+    a(start=bucket_a_start, fixed=if (bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=bucket_phi_start),
+    w(fixed=if (bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Velocity or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration or bucket_initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=bucket_w_start))
     annotation (Placement(transformation(extent={{159,12},{179,32}})));
   MB.Joints.Assemblies.JointRRR jointRRR1(
     rRod2_ib={-0.67,

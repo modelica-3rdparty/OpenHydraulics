@@ -1,20 +1,15 @@
 within OpenHydraulics.Basic.BaseClasses;
 partial model PartialLaminarRestriction
   // the sizing parameters
-  parameter Modelica.SIunits.Diameter D(final min=0)= 0.01
-    "Hydraulic diameter of restriction (for computation of Re)"
-    annotation(Dialog(tab="Sizing"));
+  parameter Modelica.Units.SI.Diameter D(final min=0) = 0.01 "Hydraulic diameter of restriction (for computation of Re)" annotation (Dialog(tab="Sizing"));
 
   // advanced parameters
   parameter Boolean check_Re = false "true, check whether Re<Re_laminar"
     annotation(Evaluate=true, Dialog(tab="Advanced"));
-  parameter Modelica.SIunits.ReynoldsNumber Re_laminar=2000
-    "Boundary of laminar flow regime"
-    annotation(Dialog(tab="Advanced", enable=check_Re));
+  parameter Modelica.Units.SI.ReynoldsNumber Re_laminar=2000 "Boundary of laminar flow regime" annotation (Dialog(tab="Advanced", enable=check_Re));
 
   // since Re is used only for diagnostics, do not generate events --> noEvent
-  Modelica.SIunits.ReynoldsNumber Re=noEvent(abs(port_a.m_flow))*4/(Modelica.Constants.pi
-      *max(D, 1e-20)*eta) "Reynolds number";
+  Modelica.Units.SI.ReynoldsNumber Re=noEvent(abs(port_a.m_flow))*4/(Modelica.Constants.pi*max(D, 1e-20)*eta) "Reynolds number";
 
   SI.DynamicViscosity eta = (oil.dynamicViscosity(p_a) +
                                  oil.dynamicViscosity(p_b))/2

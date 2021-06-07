@@ -3,15 +3,9 @@ model HydraulicsSubSyst
   extends OpenHydraulics.Interfaces.PartialFluidCircuit;
 
   //parameter SI.
-  parameter Modelica.SIunits.Length boom_s_init=1.19
-    "Initial position of boom cylinder"
-    annotation(Dialog(tab="Initialization",group="Actuator Positions"));
-  parameter Modelica.SIunits.Length arm_s_init=0.71
-    "Initial position of arm cylinder"
-    annotation(Dialog(tab="Initialization",group="Actuator Positions"));
-  parameter Modelica.SIunits.Length bucket_s_init=0.77
-    "Initial position of bucket cylinder"
-    annotation(Dialog(tab="Initialization",group="Actuator Positions"));
+  parameter Modelica.Units.SI.Length boom_s_init=1.19 "Initial position of boom cylinder" annotation (Dialog(tab="Initialization", group="Actuator Positions"));
+  parameter Modelica.Units.SI.Length arm_s_init=0.71 "Initial position of arm cylinder" annotation (Dialog(tab="Initialization", group="Actuator Positions"));
+  parameter Modelica.Units.SI.Length bucket_s_init=0.77 "Initial position of bucket cylinder" annotation (Dialog(tab="Initialization", group="Actuator Positions"));
 
   // the main components
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder boomCylRight(
@@ -20,10 +14,9 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     pistonMass=10,
     s_init=boom_s_init,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
     fixRodPressure=true,
-    strokeLength=1.25)
-    annotation (Placement(transformation(extent={{-38,50},{-18,70}})));
+    strokeLength=1.25) annotation (Placement(transformation(extent={{-38,50},{-18,70}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder boomCylLeft(
     strokeLength=1.25,
@@ -44,9 +37,8 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     pistonMass=10,
     s_init=arm_s_init,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
-    fixHeadPressure=true)
-    annotation (Placement(transformation(extent={{16,50},{36,70}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    fixHeadPressure=true) annotation (Placement(transformation(extent={{16,50},{36,70}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder bucketCyl(
     closedLength=2.30,
@@ -54,10 +46,9 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     s_init=bucket_s_init,
     pistonMass=5,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
     fixRodPressure=true,
-    strokeLength=0.9)
-    annotation (Placement(transformation(extent={{56,50},{76,70}})));
+    strokeLength=0.9) annotation (Placement(transformation(extent={{56,50},{76,70}})));
 
  OpenHydraulics.Components.MotorsPumps.Motor swingMotor(Dconst=0.3)
     annotation (Placement(transformation(

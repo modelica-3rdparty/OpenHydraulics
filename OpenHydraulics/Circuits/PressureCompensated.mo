@@ -14,15 +14,14 @@ model PressureCompensated
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{0,40},{20,60}})));
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{0,40},{20,60}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-20,38},{0,58}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=1,
+  Modelica.Blocks.Sources.Sine sine(
+    amplitude=1,
     startTime=0,
-    freqHz=0.1)
-    annotation (Placement(transformation(
+    f=0.1) annotation (Placement(transformation(
         origin={60,10},
         extent={{-10,-10},{10,10}},
         rotation=180)));

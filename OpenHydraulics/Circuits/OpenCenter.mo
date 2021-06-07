@@ -18,7 +18,7 @@ model OpenCenter
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
+    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position,
     q_nom=1e-4) annotation (Placement(transformation(extent={{42,38},{62,58}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
@@ -31,9 +31,8 @@ model OpenCenter
     annotation (Placement(transformation(extent={{68,38},{88,58}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=1,
-    freqHz=0.1,
-    amplitude=1)
-    annotation (Placement(transformation(
+    f=0.1,
+    amplitude=1) annotation (Placement(transformation(
         origin={80,-38},
         extent={{-10,-10},{10,10}},
         rotation=180)));
@@ -63,11 +62,10 @@ model OpenCenter
     annotation (Placement(transformation(extent={{-64,-2},{-44,18}})));
 
   Modelica.Blocks.Sources.Sine sine1(
-    freqHz=0.1,
+    f=0.1,
     startTime=9,
     phase=5.02658,
-    amplitude=1)
-    annotation (Placement(transformation(
+    amplitude=1) annotation (Placement(transformation(
         origin={80,-2},
         extent={{-10,-10},{10,10}},
         rotation=180)));

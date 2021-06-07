@@ -1,9 +1,8 @@
 within OpenHydraulics.Components.Valves;
 model PostPCValve "Simple equation model for a post PC valve"
   // sizing parameters
-  parameter Modelica.SIunits.Pressure p_margin=100000;
-  parameter Modelica.SIunits.Density d_nom=850 "Nominal density"
-    annotation (Dialog(tab="Sizing"));
+  parameter Modelica.Units.SI.Pressure p_margin=100000;
+  parameter Modelica.Units.SI.Density d_nom=850 "Nominal density" annotation (Dialog(tab="Sizing"));
   extends OpenHydraulics.Interfaces.PartialFluidComponent;
 public
   parameter Real time_constant=0;
@@ -14,16 +13,11 @@ public
   parameter Boolean use_Re = false
     "= true, if turbulent region is defined by Re, otherwise by dp_small or m_flow_small"
     annotation(Evaluate=true, Dialog(tab="Advanced"));
-  parameter Modelica.SIunits.AbsolutePressure dp_small=1
-    "Turbulent flow if |dp| >= dp_small"
-    annotation(Dialog(tab="Advanced", enable=not use_Re and from_dp));
-  parameter Modelica.SIunits.MassFlowRate m_flow_small=0.01
-    "Turbulent flow if |m_flow| >= m_flow_small"
-    annotation(Dialog(tab="Advanced", enable=not use_Re and not from_dp));
+  parameter Modelica.Units.SI.AbsolutePressure dp_small=1 "Turbulent flow if |dp| >= dp_small" annotation (Dialog(tab="Advanced", enable=not use_Re and from_dp));
+  parameter Modelica.Units.SI.MassFlowRate m_flow_small=0.01 "Turbulent flow if |m_flow| >= m_flow_small" annotation (Dialog(tab="Advanced", enable=not use_Re and not from_dp));
 
   // main variables
-  Modelica.SIunits.Pressure dp=port_a.p - port_b.p
-    "Pressure drop from port_a to port_b";
+  Modelica.Units.SI.Pressure dp=port_a.p - port_b.p "Pressure drop from port_a to port_b";
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a
     annotation (Placement(transformation(extent={{-110,-10},{-90,10}})));
