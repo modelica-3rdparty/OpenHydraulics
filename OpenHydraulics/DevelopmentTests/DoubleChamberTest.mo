@@ -31,5 +31,5 @@ equation
     annotation (Line(points={{-20,42},{-20,-20}}, color={255,0,0}));
   connect(doubleActingCylinder.port_b, tank1.port) annotation (Line(points={{
           -4,42},{-4,20},{40,20}}, color={255,0,0}));
-annotation ( Diagram(graphics));
+
 end DoubleChamberTest;

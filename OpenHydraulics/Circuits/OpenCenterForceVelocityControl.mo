@@ -100,7 +100,7 @@ equation
         points={{75,-5},{75,20},{48,20}}, color={0,127,0}));
   connect(constantDisplacementPump.portT, circuitTank.port_b) annotation (Line(
         points={{-60,-40},{-60,-50},{-40,-50}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(
       StopTime=25,
       NumberOfIntervals=5000,

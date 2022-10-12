@@ -49,6 +49,6 @@ equation
     annotation (Line(points={{20,6},{20,20}}, color={255,0,0}));
   connect(checkValve1.port_a, j1.port[3]) annotation (Line(points={{40,6},{40,
           20},{20,20},{20,20.6667}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=5, Tolerance=1e-006));
 end CheckValveTest2;

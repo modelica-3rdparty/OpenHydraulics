@@ -125,8 +125,7 @@ equation
           10},{4,12},{52,12},{52,100}}, color={255,0,0}));
   connect(valve4_3pos_wRelief.portP, j1.port[3]) annotation (Line(points={{-4,-6},
           {-4,-39.3333}},        color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Text(
           extent={{62,24},{96,14}},

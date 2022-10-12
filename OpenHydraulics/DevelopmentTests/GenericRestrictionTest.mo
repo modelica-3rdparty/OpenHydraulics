@@ -36,6 +36,6 @@ equation
     annotation (Line(points={{-73,0},{-62,0}}, color={0,0,127}));
   connect(torque.flange,   idealPump.flange_a)
     annotation (Line(points={{-40,0},{-30,0}}, color={0,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=10));
 end GenericRestrictionTest;

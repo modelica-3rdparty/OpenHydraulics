@@ -65,6 +65,6 @@ equation
           20.75},{36,20.75},{36,20},{60,20}}, color={255,0,0}));
   connect(ramp.y, VR100.control) annotation (Line(points={{-19,-20},{0,-20},{
           0,-50.4}}, color={0,0,127}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100));
 end ServoValveMeteringTest;

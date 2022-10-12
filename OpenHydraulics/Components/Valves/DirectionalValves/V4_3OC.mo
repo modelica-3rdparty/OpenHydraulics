@@ -1,7 +1,6 @@
 within OpenHydraulics.Components.Valves.DirectionalValves;
 model V4_3OC "4-port 3-position valve with open center"
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
     A2T(max_contr=1, table=[-1,1; 0,1; 1,0]),
     P2A(min_contr=-1, table=[-1,0; 0,1; 1,1]),
     P2B(max_contr=1, table=[-1,1; 0,1; 1,0]),
@@ -11,7 +10,7 @@ model V4_3OC "4-port 3-position valve with open center"
 
   // a regular 4-way 3-position valve to which a load sensor is attached
 
-    annotation(Dialog(tab="Advanced"), Diagram(graphics),
+    annotation(Dialog(tab="Advanced"),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics={
         Text(

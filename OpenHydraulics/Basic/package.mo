@@ -2,7 +2,6 @@ within OpenHydraulics;
 package Basic "Models of basic physical phenomena relevant to the hydraulics domain"
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
-
   annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>
 <p>The OpenHydraulics/Basic package includes models of basic physical phenomena relevant to the hydraulics domain.

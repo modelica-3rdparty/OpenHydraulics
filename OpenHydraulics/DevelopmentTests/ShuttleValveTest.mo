@@ -39,6 +39,6 @@ equation
         points={{1.83697e-015,6},{0,6},{0,12}}, color={255,0,0}));
   connect(genericPressureLoss.port_b, tank2.port) annotation (Line(points={{-1.83697e-015,
           -14},{0,-14},{0,-20}},               color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=5));
 end ShuttleValveTest;

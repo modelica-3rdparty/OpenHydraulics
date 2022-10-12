@@ -28,7 +28,5 @@ equation
 
   // energy balance
 //  0 = port_a.H_flow + port_b.H_flow + Wmech "Energy balance";
-  annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent=
-            {{-100,-100},{100,100}}),
-                      graphics));
+
 end PartialPumpMotor;

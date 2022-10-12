@@ -81,8 +81,7 @@ equation
   connect(boomFilter.y, multiplex.u2[1])   annotation (Line(points={{21,
           20},{28,20},{28,4.8},{50.8,4.8}}, color={0,0,127}));
 
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Rectangle(
           extent={{-100,100},{100,-100}},

@@ -32,6 +32,6 @@ equation
     annotation (Line(points={{26,20},{40,20}}, color={255,0,0}));
   connect(restriction.port_b, tank1.port)
     annotation (Line(points={{60,20},{60,-20}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=5));
 end ThrottleValveTest2;

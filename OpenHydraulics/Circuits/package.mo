@@ -1,9 +1,7 @@
 within OpenHydraulics;
 package Circuits "A collection of simple and complex hydraulic circuits"
 
-
   extends OpenHydraulics.Interfaces.VariantLibrary;
-
 
     annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>

@@ -64,8 +64,7 @@ equation
           {-8,10},{-50,10},{-50,50}}, color={0,127,0}));
   connect(ForceProfile.u, clock.y) annotation (Line(points={{2,70},{20,70},
           {20,79}}, color={0,0,127}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Text(
           extent={{-130,104},{124,74}},

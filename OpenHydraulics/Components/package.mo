@@ -2,7 +2,6 @@ within OpenHydraulics;
 package Components "Models for typical hydraulic components"
   extends OpenHydraulics.Interfaces.VariantLibrary;
 
-
     annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>
 <p>The OpenHydraulics/Components package includes models for typical hydraulic components.</p>

@@ -56,6 +56,6 @@ equation
           {40,-55.3333}},        color={255,0,0}));
   connect(doubleActingCylinder.port_a, j1.port[3]) annotation (Line(points={{24,42},
           {24,-16},{10,-16},{10,-15.3333}},        color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=10, Tolerance=1e-008));
 end DoubleActingCylinderTestSimple2;

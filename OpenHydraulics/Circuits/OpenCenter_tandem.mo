@@ -113,6 +113,6 @@ equation
           34,20},{34,0.75},{20,0.75}}, color={255,0,0}));
   connect(valve4_3posOCtandem1.portP, j1.port[4]) annotation (Line(points={{
           26,20},{20,20},{-20,8},{-20,0.75}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=250, Tolerance=1e-008));
 end OpenCenter_tandem;

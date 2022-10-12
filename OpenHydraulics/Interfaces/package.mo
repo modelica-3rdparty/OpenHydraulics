@@ -2,14 +2,6 @@ within OpenHydraulics;
 package Interfaces "Interface definitions for the Hydraulics library"
     extends Modelica.Icons.InterfacesPackage;
 
-
-
-
-
-
-
-
-
       annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>
 <p>The OpenHydraulics/Interfaces package includes interface definitions for the Hydraulics library.</p>

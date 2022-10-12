@@ -91,6 +91,6 @@ equation
           -20},{54,-20},{54,-56},{-56,-56},{-56,-30}}, color={255,0,0}));
   connect(PCLSPump.portT, circuitTank.port_b) annotation (Line(points={{-48,
           -32},{-48,-40},{-26,-40}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100));
 end PressureCompensatedLoadSensing;

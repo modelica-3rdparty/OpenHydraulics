@@ -65,6 +65,6 @@ equation
           {12,-20},{12,-8}},           color={255,0,0}));
   connect(accumulator.port_a, idealPump1.portP)
     annotation (Line(points={{20,20},{20,10}}, color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=1000));
 end LossyPumpTestSimple;

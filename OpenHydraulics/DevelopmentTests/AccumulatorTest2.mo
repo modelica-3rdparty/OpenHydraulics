@@ -28,5 +28,5 @@ equation
     annotation (Line(points={{0,38},{0,20}}, color={255,0,0}));
   connect(accumulator1.port_a, idealConDispPump.port_a) annotation (Line(
         points={{1.22465e-015,-22},{0,-22},{0,0}}, color={255,0,0}));
-  annotation (Diagram(graphics));
+
 end AccumulatorTest2;

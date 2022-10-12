@@ -11,6 +11,4 @@ partial model PartialFluidComponent
 protected
   outer OpenHydraulics.Circuits.Environment environment;
 
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-            -100},{100,100}}), graphics));
 end PartialFluidComponent;

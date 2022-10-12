@@ -34,6 +34,6 @@ equation
   connect(realExpression.y, leakage.control) annotation (Line(points={{-39,10},
           {-39,10},{-24,10},{-8,10}},
                     color={0,0,127}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=1000));
 end VariableRestrictionTestSimple;

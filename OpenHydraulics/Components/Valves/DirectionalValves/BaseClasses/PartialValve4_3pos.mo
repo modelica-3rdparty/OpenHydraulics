@@ -26,8 +26,7 @@ partial model PartialValve4_3pos "Partial class for building 4-port 3-position v
   parameter Boolean useCheckValve = true "true = use check valve on port P"
     annotation (Dialog(tab="Config Options"));
 
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
 
   // the spool models
   OpenHydraulics.Basic.VariableRestrictionSeriesValve P2A(

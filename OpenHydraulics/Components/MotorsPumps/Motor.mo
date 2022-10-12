@@ -123,5 +123,5 @@ annotation (     Icon(coordinateSystem(preserveAspectRatio=false, extent={{
           lineColor={0,0,0},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid,
-          textString="B")}),                         Diagram(graphics));
+          textString="B")}));
 end Motor;

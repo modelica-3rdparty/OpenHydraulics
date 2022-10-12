@@ -70,6 +70,6 @@ equation
           0,0}));
   connect(lineB.port_a, j2.port[3]) annotation (Line(points={{40,0},{40,
           -55.3333}}, color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=10, Tolerance=1e-006));
 end DoubleActingCylinderTestSimple1;

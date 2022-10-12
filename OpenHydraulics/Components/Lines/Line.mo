@@ -113,6 +113,5 @@ Note, if the \"thermalPort\" is not connected, then the pipe
 is totally insulated (= no thermal flow from the fluid to the
 pipe wall/environment).
 </p>
-</html>"),
-    Diagram(graphics));
+</html>"));
 end Line;

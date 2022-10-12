@@ -33,7 +33,6 @@ equation
   connect(port_b, volumeOpen.port[2]) annotation (Line(points={{100,0},{0,0},
           {0,0.475}}, color={255,0,0}));
   annotation (
-    Diagram(graphics),
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{
             100,100}}), graphics={
         Line(points={{-60,20},{-60,-80},{60,-80},{60,20}}, color={0,0,0}),

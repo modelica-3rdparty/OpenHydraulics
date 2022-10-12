@@ -57,8 +57,7 @@ model V4_3CCLSHydAntiCavitation
   Basic.VarPressureSource pressLS
     annotation (Placement(transformation(extent={{-10,40},{10,60}})));
 
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
     j2(n_ports=5),
     j4(n_ports=7),
     j3(n_ports=5));
@@ -148,6 +147,5 @@ equation
           lineColor={0,0,0},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid,
-          textString="LS")}),
-                            Diagram(graphics));
+          textString="LS")}));
 end V4_3CCLSHydAntiCavitation;

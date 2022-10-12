@@ -346,8 +346,7 @@ equation
           -64},{0,-54},{-40,-54}}, color={255,0,0}));
   connect(pumpLine.port_b, swingValve.portP2) annotation (Line(points={{
           -60,-54},{-90,-54},{-90,-31},{-80,-31}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={Rectangle(
           extent={{-100,100},{100,-100}},
           lineColor={0,0,255},

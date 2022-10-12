@@ -59,6 +59,6 @@ equation
           -20,-30},{0,-30},{0,-30.6667}}, color={255,0,0}));
   connect(idealPump1.port_a, j2.port[3]) annotation (Line(points={{20,-10},{
           20,-30},{0,-30},{0,-29.3333}}, color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=1000));
 end PumpTestSimple;

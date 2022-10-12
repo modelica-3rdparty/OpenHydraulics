@@ -1,7 +1,6 @@
 within OpenHydraulics.Components.Valves.DirectionalValves;
 model V4_3OCTandem "4-port 3-position valve with open center"
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
     A2T(max_contr=1, table=[-1,1; 0,0; 1,0]),
     P2A(min_contr=-1, table=[-1,0; 0,0; 1,1]),
     P2B(max_contr=1, table=[-1,1; 0,0; 1,0]),
@@ -33,7 +32,7 @@ equation
           -40},{-8,-40}}, color={255,0,0}));
 
 annotation(Dialog(tab="Advanced"),
-    Diagram(graphics),
+
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},
             {100,100}}), graphics={
         Line(points={{18,30},{18,12}}, color={0,0,0}),

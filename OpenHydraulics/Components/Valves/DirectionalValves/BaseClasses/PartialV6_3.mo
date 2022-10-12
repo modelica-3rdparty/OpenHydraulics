@@ -23,8 +23,7 @@ partial model PartialV6_3
     annotation(Dialog(tab="Dynamics"));
   parameter Real dampCoeff = 1 "Damping coefficient of 2nd order response"
     annotation(Dialog(tab="Dynamics"));
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.V6_3Interface;
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.V6_3Interface;
 
   OpenHydraulics.Components.Lines.NJunction j1
     annotation (Placement(transformation(extent={{-90,-68},{-70,-48}})));
@@ -154,5 +153,5 @@ equation
           60,-80},{80,-80}}, color={255,0,0}));
   connect(j6.port[1], portB) annotation (Line(points={{60,61.3333},{60,
           80},{80,80}}, color={255,0,0}));
-  annotation (Diagram(graphics));
+
 end PartialV6_3;

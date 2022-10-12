@@ -106,6 +106,6 @@ equation
     annotation (Line(points={{-40,0},{-10,0}}, color={0,0,0}));
   connect(constantSpeed.flange, variableDisplacementPump1.flange_a) annotation (Line(
         points={{-40,0},{-20,0},{-20,16},{14,16},{14,0},{20,0}}, color={0,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StartTime=0.05, NumberOfIntervals=5000));
 end PumpTest;

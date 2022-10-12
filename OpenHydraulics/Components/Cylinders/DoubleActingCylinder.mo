@@ -293,8 +293,7 @@ equation
           0,0}));
   connect(leakage_Rod2Env.port_b, cylinderChamberRod.port[3]) annotation (Line(
         points={{54,-20},{42,-20},{42,0},{40,0},{40,0.65}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Rectangle(
           extent={{-90,80},{90,-90}},

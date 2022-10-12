@@ -55,6 +55,6 @@ equation
           {-30,-33.025},{-30,-40},{-30,-40}}, color={255,0,0}));
   connect(doubleActingCylinder.port_b, j2.port[3]) annotation (Line(points={{38,44},
           {38,-40},{-30,-40},{-30,-39.3333}},        color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=0.5));
 end DirectionalValveTestSimple;

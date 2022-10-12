@@ -118,6 +118,6 @@ equation
           {-5.8,-32.8}}, color={255,0,0}));
   connect(Valve1.y, valve2.u) annotation (Line(points={{-16.6,-56.2},{23.7,
           -56.2}}, color={0,0,127}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=250, Tolerance=1e-008));
 end OpenCenterSectionalValveCircuit;

@@ -2,31 +2,6 @@ within OpenHydraulics;
 package DevelopmentTests "Models used for unit testing during development"
   extends Modelica.Icons.Package;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>
 <p>The OpenHydraulics/DevelopmentTests package includes models used for unit testing during development.</p>

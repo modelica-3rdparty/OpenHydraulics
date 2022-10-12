@@ -90,7 +90,7 @@ equation
         color={255,0,0}));
   connect(PCPump.portLS, j3.port[1]) annotation (Line(points={{-28,-58},{-28,-66},{0,-66},{0,-60}},
                                       color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(
       StopTime=10,
       NumberOfIntervals=5000,

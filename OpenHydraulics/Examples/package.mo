@@ -2,7 +2,6 @@ within OpenHydraulics;
 package Examples "Comprehensive examples of how the Hydraulics library can be used"
   extends Modelica.Icons.ExamplesPackage;
 
-
   annotation (Documentation(info="<html>
 <h4><font color=\"#008000\" size=5>Overview</font></h4>
 <p>The OpenHydraulics/Examples package includes comprehensive examples of how the Hydraulics library can be used.</p>

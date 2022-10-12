@@ -85,6 +85,6 @@ equation
           -70},{30,-29}}, color={0,0,127}));
   connect(constantDisplacementPump.portT, circuitTank.port_b) annotation (Line(
         points={{-52,-28},{-52,-40},{-30,-40}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100, Tolerance=1e-006));
 end Regenerative;

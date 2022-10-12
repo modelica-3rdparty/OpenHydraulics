@@ -106,6 +106,6 @@ equation
           -20},{26,-3}}, color={0,0,127}));
   connect(circuitTank.port_b, constantDisplacementPump.portT) annotation (Line(
         points={{-36,-14},{-54,-14},{-54,-2}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100, Tolerance=1e-008));
 end OpenCenter;

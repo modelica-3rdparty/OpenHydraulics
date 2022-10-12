@@ -21,7 +21,5 @@ equation
   data.D_Re=D_a;
   data.zetaLaminarKnown=true;
   data.c0=30;
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,
-            -100},{100,100}}),
-                   graphics));
+
 end SuddenExpansion;

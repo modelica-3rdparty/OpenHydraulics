@@ -33,6 +33,5 @@ equation
       color={255,0,0},
       smooth=Smooth.None));
   annotation (
-      Diagram(graphics),
     experiment(StopTime=1000));
 end RestrictionTestSimple;

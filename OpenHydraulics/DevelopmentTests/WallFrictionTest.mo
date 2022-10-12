@@ -33,6 +33,6 @@ equation
           {-20,20},{20,20},{20,10}},         color={255,0,0}));
   connect(circuitTank.port_a, WallFriction.port_b) annotation (Line(points={{0,-30},
           {20,-30},{20,-10}},        color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=10, Tolerance=1e-008));
 end WallFrictionTest;

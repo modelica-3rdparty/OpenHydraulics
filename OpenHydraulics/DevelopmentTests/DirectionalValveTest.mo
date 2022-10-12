@@ -63,6 +63,5 @@ equation
   connect(realExpression.y, torque.tau)
     annotation (Line(points={{-75,0},{-62,0}}, color={0,0,127}));
   annotation (
-      Diagram(graphics),
     experiment(StopTime=10, Tolerance=1e-008));
 end DirectionalValveTest;

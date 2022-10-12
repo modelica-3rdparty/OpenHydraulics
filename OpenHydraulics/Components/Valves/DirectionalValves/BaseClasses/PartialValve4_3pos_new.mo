@@ -23,8 +23,7 @@ partial model PartialValve4_3pos_new
   parameter Real dampCoeff = 1 "Damping coefficient of 2nd order response"
     annotation(Dialog(tab="Dynamics"));
 
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
 
   // the spool models
   OpenHydraulics.Basic.VariableRestriction P2A(
@@ -151,5 +150,5 @@ equation
   connect(P2B.port_b, j3.port[2])
     annotation (Line(points={{-12,-30},{12,30},{40,30},{40,60}}, color=
           {255,0,0}));
-  annotation (Diagram(graphics));
+
 end PartialValve4_3pos_new;

@@ -53,8 +53,7 @@ equation
           -100,0}}, color={0,0,0}));
   connect(portLS, pclsPump.portLS) annotation (Line(points={{-60,100},{
           -60,-20},{-8,-20},{-8,-8}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Text(
           extent={{-80,92},{-40,68}},

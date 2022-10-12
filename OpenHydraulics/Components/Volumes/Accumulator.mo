@@ -104,7 +104,7 @@ equation
           -20,40},{-16,40},{-16,0},{-10,0}}, color={0,127,0}));
   connect(damper.flange_a,fixedLeft.flange)    annotation (Line(points={{
           -40,40},{-50,40},{-50,0},{-60,0}}, color={0,127,0}));
-    annotation (Diagram(graphics),            Icon(coordinateSystem(
+    annotation (            Icon(coordinateSystem(
           preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
         graphics={
         Rectangle(

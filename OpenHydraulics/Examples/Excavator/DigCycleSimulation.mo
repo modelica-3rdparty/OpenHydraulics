@@ -50,6 +50,6 @@ equation
   connect(hydraulics.SwingFlange, mechanicsBody.swingFlange) annotation (Line(
         points={{-9.2,22},{-9.2,30},{4,30},{4,-17.7925},{9.80444,-17.7925}},
         color={0,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=20, Tolerance=1e-008));
 end DigCycleSimulation;

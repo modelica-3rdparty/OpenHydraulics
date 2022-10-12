@@ -1,7 +1,6 @@
 within OpenHydraulics.Components.Valves.DirectionalValves;
 model V4_3CC "4-port 3-position closed center valve"
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos;
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos;
 
   // include just the arrows for each position
   annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{
@@ -42,7 +41,6 @@ model V4_3CC "4-port 3-position closed center valve"
         Line(points={{14,30},{14,60},{40,60},{40,80}}, color={255,0,0}),
         Line(points={{-14,-30},{-14,-60},{-40,-60},{-40,-80}}, color={255,
               0,0}),
-        Line(points={{14,-30},{14,-60},{40,-60},{40,-80}}, color={255,0,0})}),
-                            Diagram(graphics));
+        Line(points={{14,-30},{14,-60},{40,-60},{40,-80}}, color={255,0,0})}));
 
 end V4_3CC;

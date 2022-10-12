@@ -43,8 +43,7 @@ equation
           -50,-20}}, color={255,0,0}));
   connect(PortB, noFlowB.port) annotation (Line(points={{100,0},{50,0},{50,
           -20}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Rectangle(
           extent={{-88,44},{88,-48}},
