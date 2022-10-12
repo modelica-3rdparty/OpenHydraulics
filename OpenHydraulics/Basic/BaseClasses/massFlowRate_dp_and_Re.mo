@@ -55,7 +55,7 @@ Laminar region:
                    *data.Re_turbulent^2;
    yd0 :=if data.zetaLaminarKnown then
             (d_a + d_b)/(k0*(eta_a + eta_b)) else 0;
-m_flow := OpenHydraulics.Utilities.regRoot2(
+m_flow := Modelica.Fluid.Utilities.regRoot2(
         dp,
         dp_turbulent,
         d_a*data.kinv1,

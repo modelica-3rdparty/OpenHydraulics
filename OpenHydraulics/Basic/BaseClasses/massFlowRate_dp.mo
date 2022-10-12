@@ -20,7 +20,7 @@ algorithm
       = 8*zeta/(pi*D^2)^2
    kinv = 1/k;
   */
-m_flow := OpenHydraulics.Utilities.regRoot2(
+m_flow := Modelica.Fluid.Utilities.regRoot2(
         dp,
         dp_small,
         d_a*data.kinv1,
