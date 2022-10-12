@@ -16,7 +16,7 @@ model AirChamber
     final min=0) = 1e9 "stiffness when piston reaches stop";
 
   parameter Boolean initializePressure = true "true = pressure; false = volume"
-    annotation(Dialog(tab="Initialization",evaluate=true));
+    annotation(Dialog(tab="Initialization"),Evaluate=true);
   parameter SI.AbsolutePressure p_init "Initial pressure"
     annotation(Dialog(tab="Initialization",enable=initializePressure));
   parameter SI.Volume V_init = V_precharge "Initial volume"

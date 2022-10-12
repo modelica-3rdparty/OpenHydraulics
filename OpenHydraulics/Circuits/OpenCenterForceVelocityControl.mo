@@ -103,6 +103,6 @@ equation
   annotation (
     experiment(
       StopTime=25,
-      NumberOfIntervals=5000,
+      Interval=0.005,
       Tolerance=1e-008));
 end OpenCenterForceVelocityControl;

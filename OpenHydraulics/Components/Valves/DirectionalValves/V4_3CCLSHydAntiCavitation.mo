@@ -17,7 +17,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.CheckValve checkT2B(q_nom=
         0.02)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={56,44},
@@ -27,7 +26,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.CheckValve checkT2A(q_nom=
         0.02)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={-56,44},
@@ -37,7 +35,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.ReliefValve reliefB2T(dp_relief=
        1e7, dp_open=1e8)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={80,44},
@@ -47,7 +44,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.ReliefValve reliefA2T(dp_relief=
        1e7, dp_open=1e8)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={-80,44},

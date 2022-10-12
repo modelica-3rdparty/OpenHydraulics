@@ -93,6 +93,6 @@ equation
   annotation (
     experiment(
       StopTime=10,
-      NumberOfIntervals=5000,
-      Tolerance=1e-008));
+      Interval=0.002,
+      Tolerance=1e-08));
 end PressureCompensated;
