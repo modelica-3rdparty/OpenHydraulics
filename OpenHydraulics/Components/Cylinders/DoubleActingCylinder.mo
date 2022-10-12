@@ -22,8 +22,8 @@ model DoubleActingCylinder
   // dynamics parameters
   parameter SI.Mass pistonMass = 0 "Mass of the piston and rod"
     annotation (Dialog(tab="Dynamics"));
-  parameter Real damping( final unit="N/ (m/s)",
-    final min=0) = 1e4 "damping between piston and cylinder [N/ (m/s)]"
+  parameter SI.TranslationalDampingConstant damping(
+    final min=0) = 1e4 "damping between piston and cylinder"
     annotation (Dialog(tab="Dynamics"));
 
   parameter SI.Distance endOfTravelDistance = 0.01
