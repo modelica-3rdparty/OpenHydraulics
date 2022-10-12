@@ -14,7 +14,7 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     pistonMass=10,
     s_init=boom_s_init,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    initType=Types.RevoluteInit.PositionVelocityAcceleration,
     fixRodPressure=true,
     strokeLength=1.25) annotation (Placement(transformation(extent={{-38,50},{-18,70}})));
 
@@ -37,7 +37,7 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     pistonMass=10,
     s_init=arm_s_init,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    initType=Types.RevoluteInit.PositionVelocityAcceleration,
     fixHeadPressure=true) annotation (Placement(transformation(extent={{16,50},{36,70}})));
 
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder bucketCyl(
@@ -46,7 +46,7 @@ model HydraulicsSubSyst
     rodDiameter=0.05,
     s_init=bucket_s_init,
     pistonMass=5,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration,
+    initType=Types.RevoluteInit.PositionVelocityAcceleration,
     fixRodPressure=true,
     strokeLength=0.9) annotation (Placement(transformation(extent={{56,50},{76,70}})));
 

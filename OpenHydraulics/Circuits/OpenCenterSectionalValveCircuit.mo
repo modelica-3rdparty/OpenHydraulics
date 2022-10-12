@@ -44,7 +44,7 @@ model OpenCenterSectionalValveCircuit
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
+    initType=Types.RevoluteInit.Position) annotation (Placement(transformation(extent={{-48,0},{-28,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-78,0},{-58,20}})));
@@ -58,7 +58,7 @@ model OpenCenterSectionalValveCircuit
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{36,0},{56,20}})));
+    initType=Types.RevoluteInit.Position) annotation (Placement(transformation(extent={{36,0},{56,20}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed1
     annotation (Placement(transformation(extent={{6,0},{26,20}})));

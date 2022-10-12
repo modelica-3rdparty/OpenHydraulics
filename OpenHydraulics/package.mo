@@ -20,7 +20,7 @@ import         Modelica.Units.NonSI;
   versionDate="2013-02-19",
   preferedView="info",
   Settings(NewStateSelection=true),
-  uses(ObsoleteModelica4(version="4.0.0"), Modelica(version="4.0.0")),
+  uses(Modelica(version="4.0.0")),
   classOrder={"UsersGuide","Examples","Environment", "BasicModels","Components","Circuits","Fluids","Icons",
       "TemporaryTests", "*"});
 end OpenHydraulics;

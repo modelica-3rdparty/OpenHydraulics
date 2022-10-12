@@ -16,7 +16,7 @@ model Regenerative "Closed center regenerative circuit"
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position,
+    initType=Types.RevoluteInit.Position,
     q_nom=1e-4,
     strokeLength=0.5) annotation (Placement(transformation(extent={{44,30},{64,50}})));
 

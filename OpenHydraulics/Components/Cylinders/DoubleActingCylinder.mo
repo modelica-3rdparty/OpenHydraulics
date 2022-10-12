@@ -80,7 +80,7 @@ model DoubleActingCylinder
     annotation (Dialog(tab="Seals",group="Piston"));
 
   // initialization parameters
-  parameter ObsoleteModelica4.Mechanics.MultiBody.Types.Init initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(tab="Initialization", group="Mechanical"));
+  parameter Types.RevoluteInit initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(tab="Initialization", group="Mechanical"));
   parameter SI.Distance s_init = 0 "Initial position >0 and <stroke"
     annotation (Dialog(tab="Initialization",group="Mechanical"));
   parameter SI.Velocity v_init = 0 "Initial velocity"
@@ -192,24 +192,24 @@ initial equation
   assert(cylinderChamberRod.s_rel>=0,"Initial position is larger than strokeLength");
 
   // state initialization
-  if initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position then
+  if initType == Types.RevoluteInit.Position then
     cylinderChamberHead.s_rel = s_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Velocity then
+  elseif initType == Types.RevoluteInit.Velocity then
     cylinderChamberHead.v_rel = v_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocity then
+  elseif initType == Types.RevoluteInit.PositionVelocity then
     cylinderChamberHead.s_rel = s_init;
     cylinderChamberHead.v_rel = v_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.VelocityAcceleration then
+  elseif initType == Types.RevoluteInit.VelocityAcceleration then
     cylinderChamberHead.v_rel = v_init;
     piston.a = a_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.SteadyState then
+  elseif initType == Types.RevoluteInit.SteadyState then
     cylinderChamberHead.v_rel = 0;
     piston.a = a_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration then
+  elseif initType == Types.RevoluteInit.PositionVelocityAcceleration then
     cylinderChamberHead.s_rel = s_init;
     cylinderChamberHead.v_rel = v_init;
     piston.a = a_init;
-  elseif initType == ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Free then
+  elseif initType == Types.RevoluteInit.Free then
     // nothing
   else
     assert(true,"Invalid initialization type in FluidPower2MechTrans");

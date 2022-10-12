@@ -14,7 +14,7 @@ model PressureCompensated
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=ObsoleteModelica4.Mechanics.MultiBody.Types.Init.Position) annotation (Placement(transformation(extent={{0,40},{20,60}})));
+    initType=Types.RevoluteInit.Position) annotation (Placement(transformation(extent={{0,40},{20,60}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-20,38},{0,58}})));
@@ -70,26 +70,26 @@ equation
           {35,10},{49,10}}, color={0,0,127}));
   connect(reliefValve.port_a, j1.port[2]) annotation (Line(points={{0,-20},{0,
           -20},{-20,-20}}, color={255,0,0}));
-  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{34,-60},{
-          40,-60},{40,-20.6667}}, color={255,0,0}));
+  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{34,-60},{40,-60},{40,-20}},
+                                  color={255,0,0}));
   connect(reliefValve.port_b, j2.port[2]) annotation (Line(points={{20,-20},{
           40,-20},{40,-20}}, color={255,0,0}));
-  connect(v4_3CC.portT, j2.port[3])    annotation (Line(points={{14,2},{14,0},
-          {40,0},{40,-19.3333}}, color={255,0,0}));
-  connect(j1.port[3], v4_3CC.portP)    annotation (Line(points={{-20,-19.3333},
-          {-20,0},{6,0},{6,2}}, color={255,0,0}));
-  connect(PCPump.portP, j1.port[1])   annotation (Line(points={{-20,-40},{-20,
-          -20.6667}}, color={255,0,0}));
+  connect(v4_3CC.portT, j2.port[3])    annotation (Line(points={{14,2},{14,0},{40,0},{40,-20}},
+                                 color={255,0,0}));
+  connect(j1.port[3], v4_3CC.portP)    annotation (Line(points={{-20,-20},{-20,0},{6,0},{6,2}},
+                                color={255,0,0}));
+  connect(PCPump.portP, j1.port[1])   annotation (Line(points={{-20,-40},{-20,-20}},
+                      color={255,0,0}));
   connect(constantSpeed.flange, PCPump.flange_a)
     annotation (Line(points={{-40,-50},{-30,-50}}, color={0,0,0}));
   connect(slidingMass.flange_a, doubleActingCylinder.flange_b)
     annotation (Line(points={{28,50},{20,50}}, color={0,127,0}));
-  connect(circuitTank.port_b, j3.port[3]) annotation (Line(points={{14,-60},{
-          7,-60},{7,-59.3333},{0,-59.3333}}, color={255,0,0}));
+  connect(circuitTank.port_b, j3.port[3]) annotation (Line(points={{14,-60},{7,-60},{7,-60},{0,-60}},
+                                             color={255,0,0}));
   connect(PCPump.portT, j3.port[2]) annotation (Line(points={{-20,-60},{0,-60}},
         color={255,0,0}));
-  connect(PCPump.portLS, j3.port[1]) annotation (Line(points={{-28,-58},{-28,
-          -66},{0,-66},{0,-60.6667}}, color={255,0,0}));
+  connect(PCPump.portLS, j3.port[1]) annotation (Line(points={{-28,-58},{-28,-66},{0,-66},{0,-60}},
+                                      color={255,0,0}));
   annotation (Diagram(graphics),
     experiment(
       StopTime=10,
