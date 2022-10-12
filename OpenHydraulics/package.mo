@@ -6,11 +6,31 @@ import Cv = Modelica.Units.Conversions;
 import         Modelica.Units.NonSI;
 
   annotation (
-  version="1.1",
-  versionDate="2013-02-19",
-  preferedView="info",
-  Settings(NewStateSelection=true),
+  version="2.0.0",
+  versionDate="2022-10-12",
+  preferredView="info",
   uses(Modelica(version="4.0.0")),
-  classOrder={"UsersGuide","Examples","Environment", "BasicModels","Components","Circuits","Fluids","Icons",
-      "TemporaryTests", "*"});
+    Icon(graphics={
+        Ellipse(
+          extent={{-74,8},{6,-72}},
+          lineColor={0,0,0},
+          fillColor={255,0,0},
+          fillPattern=FillPattern.Solid),
+        Ellipse(
+          extent={{-6,22},{74,-58}},
+          lineColor={0,0,0},
+          fillColor={255,0,0},
+          fillPattern=FillPattern.Solid),
+        Polygon(
+          points={{-34,68},{-70,-14},{2,-14},{-34,68}},
+          lineColor={0,0,255},
+          pattern=LinePattern.None,
+          fillColor={255,0,0},
+          fillPattern=FillPattern.Solid),
+        Polygon(
+          points={{34,82},{-2,0},{70,0},{34,82}},
+          lineColor={0,0,255},
+          pattern=LinePattern.None,
+          fillColor={255,0,0},
+          fillPattern=FillPattern.Solid)}));
 end OpenHydraulics;
