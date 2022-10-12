@@ -22,9 +22,9 @@ model DirectionalValveTestSimple
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-10,32},{10,52}})));
-  Modelica.Mechanics.Translational.Components.Mass slidingMass
+  Modelica.Mechanics.Translational.Components.Mass slidingMass(m=1)
     annotation (Placement(transformation(extent={{60,42},{80,62}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=0.1)
+  Modelica.Blocks.Sources.Sine sine(amplitude=0.1, f=1)
     annotation (Placement(transformation(extent={{-34,-80},{-14,-60}})));
   OpenHydraulics.Basic.VariableRestriction throttleValve(D_nom=0.01)
     annotation (Placement(transformation(extent={{-8,0},{12,20}})));

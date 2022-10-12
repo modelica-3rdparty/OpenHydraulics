@@ -7,7 +7,8 @@ model ThrottleValveTest2
   OpenHydraulics.Basic.VariableRestriction throttleValve(table=[0.0,0.0; 1,0.001],
       D_nom=0.05)
             annotation (Placement(transformation(extent={{6,30},{26,10}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=0.5, offset=0.5)
+  Modelica.Blocks.Sources.Sine sine(amplitude=0.5,
+    f=1,                                           offset=0.5)
     annotation (Placement(transformation(extent={{-18,40},{2,60}})));
   Components.Volumes.Tank
                  tank(                      p_const=1e6)

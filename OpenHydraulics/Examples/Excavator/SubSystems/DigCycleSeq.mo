@@ -33,13 +33,13 @@ model DigCycleSeq
         extent={{10,-10},{-10,10}},
         rotation=180)));
 
-  Modelica.Blocks.Continuous.SecondOrder swingFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder swingFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,50},{20,70}})));
-  Modelica.Blocks.Continuous.SecondOrder boomFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder boomFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,10},{20,30}})));
-  Modelica.Blocks.Continuous.SecondOrder armFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder armFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,-30},{20,-10}})));
-  Modelica.Blocks.Continuous.SecondOrder bucketFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder bucketFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,-70},{20,-50}})));
 
   // auxiliary components

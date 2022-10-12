@@ -35,7 +35,8 @@ model FVController
     Td=Td,
     k=k,
     Ti=0.1,
-    controllerType=Modelica.Blocks.Types.SimpleController.P)
+    controllerType=Modelica.Blocks.Types.SimpleController.P,
+    yMax=1)
           annotation (Placement(transformation(extent={{2,-56},{-18,-76}})));
   Modelica.Blocks.Interfaces.RealOutput y annotation (Placement(
         transformation(extent={{40,-40},{60,-20}})));

@@ -9,11 +9,13 @@ model ShuttleValveTest
     annotation (Placement(transformation(extent={{-10,-40},{10,-20}})));
   Basic.VarPressureSource tank1
     annotation (Placement(transformation(extent={{-40,-20},{-20,0}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=1e4, offset=101325)
+  Modelica.Blocks.Sources.Sine sine(amplitude=1e4,
+    f=1,                                           offset=101325)
     annotation (Placement(transformation(extent={{-70,-20},{-50,0}})));
   Basic.VarPressureSource tank3
     annotation (Placement(transformation(extent={{40,-20},{20,0}})));
   Modelica.Blocks.Sources.Sine sine1(amplitude=1e4,
+    f=1,
     offset=101325,
     startTime=0.5)
     annotation (Placement(transformation(extent={{70,-20},{50,0}})));

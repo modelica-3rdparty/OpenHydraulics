@@ -13,7 +13,8 @@ model CheckValveTest
         origin={20,0},
         extent={{-10,-10},{10,10}},
         rotation=90)));
-  Modelica.Blocks.Sources.Sine sinusoid(startTime=0.01)
+  Modelica.Blocks.Sources.Sine sinusoid(f=1,
+                                        startTime=0.01)
     annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2000,
       V_init=1000)

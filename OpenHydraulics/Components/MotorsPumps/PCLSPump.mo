@@ -61,6 +61,7 @@ model PCLSPump
     final controllerType=Modelica.Blocks.Types.SimpleController.PD,
     k=propGain,
     Td=timeConst,
+    yMax=1,
     final yMin=0,
     initType=Modelica.Blocks.Types.Init.InitialState) annotation (Placement(transformation(extent={{0,-36},{20,-16}})));
   Sensors.PressureSensor pressureSensorLS
@@ -108,7 +109,7 @@ equation
   connect(mechanicalPumpLosses.flange_b, fluidPower2MechRotVar.flange_a)
     annotation (Line(points={{-60,0},{30,0}}, color={0,0,0}));
   connect(portT, j1.port[1])
-    annotation (Line(points={{0,-100},{40,-100},{40,-40.6667}}, color={255,
+    annotation (Line(points={{0,-100},{40,-100},{40,-40}},      color={255,
           0,0}));
   connect(portP, j2.port[1])
     annotation (Line(points={{0,100},{40,100},{40,39.25}}, color={255,0,0}));
@@ -118,8 +119,8 @@ equation
     annotation (Line(points={{40,-10},{40,-40}}, color={255,0,0}));
   connect(leakage_P2T.port_a, j2.port[3]) annotation (Line(points={{60,10},
           {60,40},{40,40},{40,40.25}}, color={255,0,0}));
-  connect(leakage_P2T.port_b, j1.port[3]) annotation (Line(points={{60,-10},
-          {60,-40},{40,-40},{40,-39.3333}}, color={255,0,0}));
+  connect(leakage_P2T.port_b, j1.port[3]) annotation (Line(points={{60,-10},{60,-40},{40,-40},{40,-40}},
+                                            color={255,0,0}));
   connect(pressureSensorP.port_a, j2.port[4]) annotation (Line(points={{70,
           40},{40,40},{40,40.75}}, color={255,0,0}));
   connect(pressureMargin.y, desiredPressure.u1) annotation (Line(points={{
