@@ -11,7 +11,7 @@ function massFlowRate_dp_and_Re
   output SI.MassFlowRate m_flow "Mass flow rate from port_a to port_b";
 
 protected
-  constant Real pi=Modelica.Constants.pi;
+  import Modelica.Constants.pi;
   Real k0= 2*data.c0/(pi*data.D_Re^3);
   Real yd0 "Derivative of m_flow=m_flow(dp) at zero, if data.zetaLaminarKnown";
   SI.AbsolutePressure dp_turbulent

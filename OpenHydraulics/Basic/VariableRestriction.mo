@@ -1,6 +1,6 @@
 within OpenHydraulics.Basic;
 model VariableRestriction "Flow loss due to controllable restriction"
-  constant Real pi = Modelica.Constants.pi;
+  import Modelica.Constants.pi;
 
   // sizing parameters
   parameter SI.VolumeFlowRate q_nom = 0.001 "Nominal flow rate at dp_nom"

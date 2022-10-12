@@ -16,7 +16,7 @@ function pressureLoss_m_flow_WallFriction
   output SI.Pressure dp "Pressure drop (dp = port_a.p - port_b.p)";
 
 protected
-    constant Real pi = Modelica.Constants.pi;
+    import Modelica.Constants.pi;
     Real Delta = roughness/diameter "Relative roughness";
     SI.ReynoldsNumber Re1 = 745*Modelica.Math.exp(if Delta <= 0.0065 then 1 else 0.0065/Delta)
     "Re leaving laminar curve";

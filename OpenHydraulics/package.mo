@@ -1,9 +1,9 @@
 within ;
 package OpenHydraulics "A free Modelica library that can be used to model hydraulic components and circuits."
   extends Modelica.Icons.Package;
-import      Modelica.Units.SI;
-import Cv = Modelica.Units.Conversions;
-import         Modelica.Units.NonSI;
+  import Modelica.Units.SI;
+  import Cv = Modelica.Units.Conversions;
+  import Modelica.Units.NonSI;
 
   annotation (
   version="2.0.0",

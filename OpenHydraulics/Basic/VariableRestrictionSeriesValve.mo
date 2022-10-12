@@ -1,7 +1,7 @@
 within OpenHydraulics.Basic;
 model VariableRestrictionSeriesValve
   "Flow loss due to controllable restriction with series check valves"
-  constant Real pi = Modelica.Constants.pi;
+  import Modelica.Constants.pi;
 
   // sizing parameters
   parameter SI.VolumeFlowRate q_nom = 0.001 "Nominal flow rate at dp_nom"

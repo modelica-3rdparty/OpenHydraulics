@@ -16,7 +16,7 @@ function massFlowRate_dp_WallFriction
   output SI.MassFlowRate m_flow "Mass flow rate from port_a to port_b";
 
 protected
-  constant Real pi = Modelica.Constants.pi;
+  import Modelica.Constants.pi;
   Real Delta = roughness/diameter "Relative roughness";
   SI.ReynoldsNumber Re1 = (745*Modelica.Math.exp(if Delta <= 0.0065 then 1 else 0.0065/Delta))^0.97
     "Re leaving laminar curve";
