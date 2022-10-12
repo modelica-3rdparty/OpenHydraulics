@@ -11,7 +11,7 @@ model Environment
     defaultComponentPrefixes="inner",
     missingInnerMessage="No \"environment\" component is defined. A default environment
 component with 15degC and 101325Pa will be used. If this is not desired,
-drag FluidPower.Environment into the top level of your model.",
+drag OpenHydraulics.Circuits.Environment into the top level of your model.",
     Icon(coordinateSystem(preserveAspectRatio=false, extent={{-100,-100},{100,
             100}}), graphics={
         Rectangle(
