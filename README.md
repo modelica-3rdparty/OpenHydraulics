@@ -36,9 +36,6 @@ Download [OpenHydraulics v2.0.0 (2022-10-14)](../../releases/tag/v2.0.0)
 * [Version 1.0 (2013-02-19)](../../releases/tag/v1.0):
   * Initial release, tested with Dymola2013FD01
 
-* [Version 1.0 (2013-02-19)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.zip):
- * Initial release, tested with Dymola2013FD01
-
 ## License
 
 ### Version 2.0.0

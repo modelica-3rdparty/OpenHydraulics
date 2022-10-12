@@ -7,7 +7,7 @@ package OpenHydraulics "A free Modelica library that can be used to model hydrau
 
   annotation (
   version="2.0.0",
-  versionDate="2022-10-12",
+  versionDate="2022-10-14",
   preferredView="info",
   uses(Modelica(version="4.0.0")),
     Icon(graphics={
@@ -33,7 +33,7 @@ package OpenHydraulics "A free Modelica library that can be used to model hydrau
           pattern=LinePattern.None,
           fillColor={255,0,0},
           fillPattern=FillPattern.Solid)}),
-  Documentation(info="<html>
+    Documentation(info="<html>
 <p>
 The <code>OpenHydraulics</code> library is a <b>free</b> Modelica package providing
 components describing <strong>1-dimensional fluid flow</strong> in hydraulic circuits.
