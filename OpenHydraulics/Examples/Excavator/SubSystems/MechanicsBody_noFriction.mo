@@ -499,7 +499,7 @@ equation
           lineColor={0,0,0},
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid),
-        Bitmap(extent={{-197,219},{248,-223}}, fileName=
+        Bitmap(extent={{-197,-223},{248,219}}, fileName=
               "modelica://OpenHydraulics/Resources/Images/excavator.png"),
         Line(
           points={{-190,37},{-14,-1}},
@@ -514,7 +514,7 @@ equation
           color={0,127,0},
           thickness=0.5),
         Line(
-          points={{-30,-10},{-4,-131}},
+          points={{-21,-16},{5,-137}},
           color={0,127,0},
           thickness=0.5),
         Ellipse(
@@ -530,25 +530,25 @@ equation
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{122,94},{132,84}},
+          extent={{119,90},{129,80}},
           lineColor={0,127,0},
           lineThickness=0.5,
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{-36,-3},{-26,-13}},
+          extent={{-26,-8},{-16,-18}},
           lineColor={0,127,0},
           lineThickness=0.5,
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{-55,-57},{-45,-67}},
+          extent={{-53,-64},{-43,-74}},
           lineColor={95,95,95},
           lineThickness=0.5,
           fillColor={95,95,95},
           fillPattern=FillPattern.Solid),
         Line(
-          points={{-200,-122},{-50,-60}},
+          points={{-202,-123},{-48,-71}},
           color={95,95,95},
           thickness=0.5),
         Line(
