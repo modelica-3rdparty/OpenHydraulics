@@ -2,18 +2,14 @@ within OpenHydraulics;
 package UsersGuide "User's Guide"
   extends Modelica.Icons.Information;
 
-    annotation (DocumentationClass=true, Documentation(info="<HTML>
-<h3><font color=\"#008000\" size=5>User's guide of package Hydraulics</font></h3>
+    annotation (DocumentationClass=true, Documentation(info="<html>
 <p>
-Library <b>Hydraulics</b> is a <b>free</b> Modelica package providing
-components describing
-<b>1-dimensional fluid flow</b> in hydraulic circuits.
+The <code>OpenHydraulics</code> library is a <b>free</b> Modelica package providing
+components describing <strong>1-dimensional fluid flow</strong> in hydraulic circuits.
 </p>
-<p>
-<b>Current Issues:</b>
-</p>
+<h5>Current Issues:</h5>
 <ul>
 <li>The oil models are very simple and need to be expanded to reflect properties of commonly uses oils</li>
 </ul>
-</HTML>"));
+</html>"));
 end UsersGuide;
