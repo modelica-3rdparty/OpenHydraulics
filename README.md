@@ -42,9 +42,9 @@ Download [OpenHydraulics v2.0.0 (2022-10-14)](../../releases/tag/v2.0.0)
 
 This Source Code Form is subject to the terms of the 3-Clause BSD license.
 
-A copy of the license is available in the [library repository](LICENSE).
+A copy of the license is available in the [library repository](../../LICENSE).
 
-Copyright &copy; 2022 Chris Paredis and contributors.
+Copyright &copy; 2022 Chris Paredis and [contributors](../../graphs/contributors).
 
 ### Version 1.0 and 1.0.1
 
