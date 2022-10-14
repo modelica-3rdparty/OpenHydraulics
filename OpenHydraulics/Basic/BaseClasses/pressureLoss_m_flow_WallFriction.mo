@@ -15,8 +15,8 @@ function pressureLoss_m_flow_WallFriction
     "Absolute roughness of pipe, with a default for a smooth steel pipe";
   output SI.Pressure dp "Pressure drop (dp = port_a.p - port_b.p)";
 
+    import Modelica.Constants.pi;
 protected
-    constant Real pi = Modelica.Constants.pi;
     Real Delta = roughness/diameter "Relative roughness";
     SI.ReynoldsNumber Re1 = 745*Modelica.Math.exp(if Delta <= 0.0065 then 1 else 0.0065/Delta)
     "Re leaving laminar curve";

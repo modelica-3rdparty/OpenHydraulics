@@ -64,5 +64,5 @@ equation
           lineColor={0,0,255},
           fillColor={255,0,0},
           fillPattern=FillPattern.Solid,
-          textString="%name")}),     Diagram(graphics));
+          textString="%name")}));
 end LineNoVolume;

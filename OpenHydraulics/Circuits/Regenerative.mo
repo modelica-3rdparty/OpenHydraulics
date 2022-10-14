@@ -16,10 +16,9 @@ model Regenerative "Closed center regenerative circuit"
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
+    initType=Types.RevoluteInit.Position,
     q_nom=1e-4,
-    strokeLength=0.5)
-                annotation (Placement(transformation(extent={{44,30},{64,50}})));
+    strokeLength=0.5) annotation (Placement(transformation(extent={{44,30},{64,50}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{0,20},{20,40}})));
@@ -27,10 +26,9 @@ model Regenerative "Closed center regenerative circuit"
                                                            m=1000)
     annotation (Placement(transformation(extent={{70,30},{90,50}})));
   Modelica.Blocks.Sources.Sine sine(
-    freqHz=0.1,
+    f=0.1,
     amplitude=1,
-    startTime=0)
-    annotation (Placement(transformation(extent={{0,-80},{20,-60}})));
+    startTime=0) annotation (Placement(transformation(extent={{0,-80},{20,-60}})));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2, V_init=1)
                                   annotation (Placement(transformation(extent=
            {{-10,-50},{-30,-30}})));
@@ -87,6 +85,6 @@ equation
           -70},{30,-29}}, color={0,0,127}));
   connect(constantDisplacementPump.portT, circuitTank.port_b) annotation (Line(
         points={{-52,-28},{-52,-40},{-30,-40}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100, Tolerance=1e-006));
 end Regenerative;

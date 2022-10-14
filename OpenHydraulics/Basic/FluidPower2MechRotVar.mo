@@ -54,12 +54,5 @@ equation
               -10,-32}},
           lineColor={0,0,0},
           fillColor={0,0,0},
-          fillPattern=FillPattern.Solid)}),
-  Icon(Rectangle(extent=[60,26; 84,12], style(
-          color=10,
-          rgbcolor={95,95,95},
-          gradient=2,
-          fillColor=10,
-          rgbfillColor={95,95,95}))),
-  Diagram);
+          fillPattern=FillPattern.Solid)}));
 end FluidPower2MechRotVar;

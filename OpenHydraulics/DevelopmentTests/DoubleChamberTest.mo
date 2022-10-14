@@ -19,9 +19,8 @@ model DoubleChamberTest
     strokeLength=2,
     closedLength=3,
     damping=0,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity,
-    v_init=-0.1)    annotation (Placement(transformation(extent={{-22,40},{-2,
-            60}})));
+    initType=Types.RevoluteInit.PositionVelocity,
+    v_init=-0.1) annotation (Placement(transformation(extent={{-22,40},{-2,60}})));
 
 equation
   connect(fixed.flange,   doubleActingCylinder.flange_a)
@@ -32,5 +31,5 @@ equation
     annotation (Line(points={{-20,42},{-20,-20}}, color={255,0,0}));
   connect(doubleActingCylinder.port_b, tank1.port) annotation (Line(points={{
           -4,42},{-4,20},{40,20}}, color={255,0,0}));
-annotation ( Diagram(graphics));
+
 end DoubleChamberTest;

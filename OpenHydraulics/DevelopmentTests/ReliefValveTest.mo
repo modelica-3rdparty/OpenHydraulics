@@ -28,6 +28,6 @@ equation
           10},{-20,20},{20,20}}, color={255,0,0}));
   connect(idealPump.portT, circuitTank.port_b) annotation (Line(points={{-20,
           -10},{-20,-20},{20,-20}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=0.05, Tolerance=1e-006));
 end ReliefValveTest;

@@ -22,8 +22,8 @@ model DoubleActingCylinder
   // dynamics parameters
   parameter SI.Mass pistonMass = 0 "Mass of the piston and rod"
     annotation (Dialog(tab="Dynamics"));
-  parameter Real damping( final unit="N/ (m/s)",
-    final min=0) = 1e4 "damping between piston and cylinder [N/ (m/s)]"
+  parameter SI.TranslationalDampingConstant damping(
+    final min=0) = 1e4 "damping between piston and cylinder"
     annotation (Dialog(tab="Dynamics"));
 
   parameter SI.Distance endOfTravelDistance = 0.01
@@ -80,10 +80,7 @@ model DoubleActingCylinder
     annotation (Dialog(tab="Seals",group="Piston"));
 
   // initialization parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(tab="Initialization",group="Mechanical"));
+  parameter Types.RevoluteInit initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(tab="Initialization", group="Mechanical"));
   parameter SI.Distance s_init = 0 "Initial position >0 and <stroke"
     annotation (Dialog(tab="Initialization",group="Mechanical"));
   parameter SI.Velocity v_init = 0 "Initial velocity"
@@ -195,24 +192,24 @@ initial equation
   assert(cylinderChamberRod.s_rel>=0,"Initial position is larger than strokeLength");
 
   // state initialization
-  if initType == Modelica.Mechanics.MultiBody.Types.Init.Position then
+  if initType == Types.RevoluteInit.Position then
     cylinderChamberHead.s_rel = s_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity then
+  elseif initType == Types.RevoluteInit.Velocity then
     cylinderChamberHead.v_rel = v_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity then
+  elseif initType == Types.RevoluteInit.PositionVelocity then
     cylinderChamberHead.s_rel = s_init;
     cylinderChamberHead.v_rel = v_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration then
+  elseif initType == Types.RevoluteInit.VelocityAcceleration then
     cylinderChamberHead.v_rel = v_init;
     piston.a = a_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState then
+  elseif initType == Types.RevoluteInit.SteadyState then
     cylinderChamberHead.v_rel = 0;
     piston.a = a_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration then
+  elseif initType == Types.RevoluteInit.PositionVelocityAcceleration then
     cylinderChamberHead.s_rel = s_init;
     cylinderChamberHead.v_rel = v_init;
     piston.a = a_init;
-  elseif initType == Modelica.Mechanics.MultiBody.Types.Init.Free then
+  elseif initType == Types.RevoluteInit.Free then
     // nothing
   else
     assert(true,"Invalid initialization type in FluidPower2MechTrans");
@@ -296,8 +293,7 @@ equation
           0,0}));
   connect(leakage_Rod2Env.port_b, cylinderChamberRod.port[3]) annotation (Line(
         points={{54,-20},{42,-20},{42,0},{40,0},{40,0.65}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Rectangle(
           extent={{-90,80},{90,-90}},

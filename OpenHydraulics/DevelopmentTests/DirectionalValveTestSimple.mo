@@ -18,14 +18,13 @@ model DirectionalValveTestSimple
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration)
-                annotation (Placement(transformation(extent={{20,42},{40,62}})));
+    initType=Types.RevoluteInit.PositionVelocityAcceleration) annotation (Placement(transformation(extent={{20,42},{40,62}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-10,32},{10,52}})));
-  Modelica.Mechanics.Translational.Components.Mass slidingMass
+  Modelica.Mechanics.Translational.Components.Mass slidingMass(m=1)
     annotation (Placement(transformation(extent={{60,42},{80,62}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=0.1)
+  Modelica.Blocks.Sources.Sine sine(amplitude=0.1, f=1)
     annotation (Placement(transformation(extent={{-34,-80},{-14,-60}})));
   OpenHydraulics.Basic.VariableRestriction throttleValve(D_nom=0.01)
     annotation (Placement(transformation(extent={{-8,0},{12,20}})));
@@ -56,6 +55,6 @@ equation
           {-30,-33.025},{-30,-40},{-30,-40}}, color={255,0,0}));
   connect(doubleActingCylinder.port_b, j2.port[3]) annotation (Line(points={{38,44},
           {38,-40},{-30,-40},{-30,-39.3333}},        color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=0.5));
 end DirectionalValveTestSimple;

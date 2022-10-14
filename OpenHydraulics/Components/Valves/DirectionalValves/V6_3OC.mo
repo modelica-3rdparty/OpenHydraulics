@@ -1,9 +1,7 @@
 within OpenHydraulics.Components.Valves.DirectionalValves;
 model V6_3OC
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialV6_3;
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialV6_3;
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Line(points={{-80,-30},{-80,30}}, color={0,0,0}),
         Line(points={{0,-30},{0,30}}, color={0,0,0}),

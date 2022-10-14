@@ -20,26 +20,37 @@ sensing circuit.  To develop your own model, it is best to start from a model in
 
 ## Current release
 
-Download [OpenHydraulics v1.0.1 (2013-02-26)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.1.zip)
+Download [OpenHydraulics v2.0.0 (2022-10-14)](../../releases/tag/v2.0.0)
 
 #### Release notes
 
-* [Version 1.0.1 (2013-02-26)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.1.zip):
- * Release with improved package structure
-
-* [Version 1.0 (2013-02-19)](https://github.com/cparedis/OpenHydraulics/archive/v1.0.zip):
- * Initial release, tested with Dymola2013FD01
+* [Version 2.0.0 (2022-10-14)](../../releases/tag/v2.0.0):
+  * This new version of OpenHydraulics is a non-backwards compatible release based on the Modelica Standard Library version 4.0.0 which contains a series of improvements and bug fixes. 
+  * Incorporated fixed provided by: xxx
+  * Fixed non-standard or illegal Modelica syntax constructs.
+  * Removed outdated annotations.
+  * Fixed faulty annotations.
+  * Removed the Utilities package since the contained functions are available from the Modelica Standard Library.
+* [Version 1.0.1 (2013-02-26)](../../releases/tag/v1.0.1):
+  * Release with improved package structure
+* [Version 1.0 (2013-02-19)](../../releases/tag/v1.0):
+  * Initial release, tested with Dymola2013FD01
 
 ## License
 
-Licensed by Georgia Institute of Technology under the Modelica License 2.
+### Version 2.0.0
 
-Copyright (C) 2008-2013, Georgia Insitute of Technology
+This Source Code Form is subject to the terms of the 3-Clause BSD license.
 
-This Modelica package is free software and the use is completely at your own risk;
-it can be redistributed and/or modified under the terms of the customised *Modelica License 2*.
+A copy of the license is available in the [library repository](../../LICENSE).
 
-For license conditions (including the disclaimer of warranty) see `OpenHydraulics.UsersGuide.ModelicaLicense2`.
+Copyright &copy; 2022 Chris Paredis and [contributors](../../graphs/contributors).
+
+### Version 1.0 and 1.0.1
+
+Licensed by Georgia Institute of Technology under a modified Modelica License 2.
+
+Copyright &copy; 2008-2013, Georgia Insitute of Technology
 
 ## Development and contribution
 

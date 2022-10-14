@@ -3,9 +3,8 @@ model DigCycleSeq
   import Modelica.Constants.pi;
 
   // the parameters
-  parameter Modelica.SIunits.Frequency bandwidth=10;
-  parameter Modelica.SIunits.Time startTime=1
-    "Time before excavator starts moving";
+  parameter Modelica.Units.SI.Frequency bandwidth=10;
+  parameter Modelica.Units.SI.Time startTime=1 "Time before excavator starts moving";
   parameter Real swingAmplitude = -1 "Amplitude of swing command";
   parameter Real boomAmplitude1 = -0.9 "Amplitude of first boom command";
   parameter Real boomAmplitude2 = 0.5 "Amplitude of second boom command";
@@ -17,41 +16,30 @@ model DigCycleSeq
   parameter Real bucketAmplitude3 = -1 "Amplitude of bucket command";
 
   // the components
-  Modelica.Blocks.Tables.CombiTable1D swingTimeTable(                   table=[0,
-        0; 1,0; 13,0; 14,swingAmplitude; 17,swingAmplitude; 18,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv swingTimeTable(table=[0,0; 1,0; 13,0; 14,swingAmplitude; 17,swingAmplitude; 18,0; 20,0]) annotation (Placement(transformation(
         origin={-30,60},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D boomTimeTable(
-                           table=[0,0; 1,boomAmplitude1; 2,boomAmplitude1;
-        3,0; 7,0; 8,boomAmplitude2; 11.5,boomAmplitude2; 12.5,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv boomTimeTable(table=[0,0; 1,boomAmplitude1; 2,boomAmplitude1; 3,0; 7,0; 8,boomAmplitude2; 11.5,boomAmplitude2; 12.5,0; 20,0]) annotation (Placement(transformation(
         origin={-30,20},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D armTimeTable(table=[0,0;0.5,0; 1,
-        armAmplitude1; 2,armAmplitude1; 3,0; 4.5,armAmplitude2; 6.5,
-        armAmplitude2; 7.5,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv armTimeTable(table=[0,0; 0.5,0; 1,armAmplitude1; 2,armAmplitude1; 3,0; 4.5,armAmplitude2; 6.5,armAmplitude2; 7.5,0; 20,0]) annotation (Placement(transformation(
         origin={-30,-20},
         extent={{10,-10},{-10,10}},
         rotation=180)));
-  Modelica.Blocks.Tables.CombiTable1D bucketTimeTable(table=[0,0;0.5,0; 1,bucketAmplitude1; 3,bucketAmplitude1; 4,
-        0; 5,0; 6,bucketAmplitude2; 7,bucketAmplitude2; 9,0; 16,0; 16.3,
-        bucketAmplitude3; 17,bucketAmplitude3; 18,0; 20,0])
-    annotation (Placement(transformation(
+  Modelica.Blocks.Tables.CombiTable1Dv bucketTimeTable(table=[0,0; 0.5,0; 1,bucketAmplitude1; 3,bucketAmplitude1; 4,0; 5,0; 6,bucketAmplitude2; 7,bucketAmplitude2; 9,0; 16,0; 16.3,bucketAmplitude3; 17,bucketAmplitude3; 18,0; 20,0]) annotation (Placement(transformation(
         origin={-30,-60},
         extent={{10,-10},{-10,10}},
         rotation=180)));
 
-  Modelica.Blocks.Continuous.SecondOrder swingFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder swingFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,50},{20,70}})));
-  Modelica.Blocks.Continuous.SecondOrder boomFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder boomFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,10},{20,30}})));
-  Modelica.Blocks.Continuous.SecondOrder armFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder armFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,-30},{20,-10}})));
-  Modelica.Blocks.Continuous.SecondOrder bucketFilter(w=2*pi*bandwidth)
+  Modelica.Blocks.Continuous.SecondOrder bucketFilter(w=2*pi*bandwidth, D=1)
     annotation (Placement(transformation(extent={{0,-70},{20,-50}})));
 
   // auxiliary components
@@ -93,8 +81,7 @@ equation
   connect(boomFilter.y, multiplex.u2[1])   annotation (Line(points={{21,
           20},{28,20},{28,4.8},{50.8,4.8}}, color={0,0,127}));
 
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Rectangle(
           extent={{-100,100},{100,-100}},

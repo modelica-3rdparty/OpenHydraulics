@@ -25,7 +25,6 @@ model VariableLaminarRestriction
     annotation(Dialog(tab="Metering Curve",group="Control"));
 
   extends BaseClasses.PartialLaminarRestriction(
-    conductance=varConductance,
     d=d_nom);
 
   Modelica.Blocks.Interfaces.RealInput control
@@ -42,11 +41,10 @@ model VariableLaminarRestriction
 protected
   Real opening = max(min(MeteringTable.y[1],1),0)
     "clip the output of the Metering table to [0,1]";
-  Real varConductance = d_nom*opening*q_nom/dp_nom
-    "Loss factor (function of control input)";
 
-algorithm
-  MeteringTable.u := max(min(control,max_contr),min_contr);
+equation
+  conductance = d_nom*opening*q_nom/dp_nom "Loss factor (function of control input)";
+  MeteringTable.u =  max(min(control,max_contr),min_contr);
   annotation (Diagram(graphics={
         Line(
           points={{0,-60},{0,-60},{40,-60},{40,-22},{22,-22}},

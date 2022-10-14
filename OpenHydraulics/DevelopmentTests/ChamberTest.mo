@@ -32,6 +32,6 @@ equation
     annotation (Line(points={{20,20},{40,20}}, color={255,0,0}));
   connect(leakage_A2B.port_a, cylinderChamber.port[2]) annotation (Line(
         points={{0,20},{-18,20},{-18,50.475},{-20,50.475}}, color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(Tolerance=1e-008));
 end ChamberTest;

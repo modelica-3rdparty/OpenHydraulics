@@ -20,8 +20,7 @@ model OpenCenterForceVelocityControl
     s_init=0.1,
     fixHeadPressure=true,
     fixRodPressure=true,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity)
-                annotation (Placement(transformation(extent={{30,10},{48,30}})));
+    initType=Types.RevoluteInit.PositionVelocity) annotation (Placement(transformation(extent={{30,10},{48,30}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(
@@ -74,8 +73,8 @@ equation
         points={{30,20},{24,20}}, color={0,127,0}));
   connect(reliefValve.port_a, j1.port[2]) annotation (Line(points={{-10,-20},
           {-10,-15},{-10,-15},{-10,-10}}, color={255,0,0}));
-  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-20,-50},
-          {-10,-50},{-10,-50.6667}}, color={255,0,0}));
+  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-20,-50},{-10,-50},{-10,-50}},
+                                     color={255,0,0}));
   connect(reliefValve.port_b, j2.port[2]) annotation (Line(points={{-10,-40},
           {-10,-45},{-10,-45},{-10,-50}}, color={255,0,0}));
   connect(valve4_3posOCtandem.portA, doubleActingCylinder.port_a)
@@ -85,15 +84,15 @@ equation
                                                             annotation (Line(
         points={{30,-34},{46,-34},{46,12},{46.2,12}}, color={255,0,0}));
   connect(valve4_3posOCtandem.portT, j2.port[3])
-                                           annotation (Line(points={{14,-34},
-          {12,-34},{12,-49.3333},{-10,-49.3333}}, color={255,0,0}));
+                                           annotation (Line(points={{14,-34},{12,-34},{12,-50},{-10,-50}},
+                                                  color={255,0,0}));
   connect(valve4_3posOCtandem.portP, j1.port[3])
-                                           annotation (Line(points={{14,-26},
-          {12,-26},{12,-10},{-10.6667,-10}}, color={255,0,0}));
+                                           annotation (Line(points={{14,-26},{12,-26},{12,-10},{-10,-10}},
+                                             color={255,0,0}));
   connect(constantSpeed.flange, constantDisplacementPump.flange_a)
     annotation (Line(points={{-80,-30},{-70,-30}}, color={0,0,0}));
-  connect(constantDisplacementPump.portP, j1.port[1]) annotation (Line(points={{-60,-20},
-          {-60,-10},{-9.33333,-10}},           color={255,0,0}));
+  connect(constantDisplacementPump.portP, j1.port[1]) annotation (Line(points={{-60,-20},{-60,-10},{-10,-10}},
+                                               color={255,0,0}));
   connect(fVController.y, valve4_3posOCtandem.control)
                                                  annotation (Line(points={{67,-15},
           {67,-46},{22,-46},{22,-41}},      color={0,0,127}));
@@ -101,9 +100,9 @@ equation
         points={{75,-5},{75,20},{48,20}}, color={0,127,0}));
   connect(constantDisplacementPump.portT, circuitTank.port_b) annotation (Line(
         points={{-60,-40},{-60,-50},{-40,-50}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(
       StopTime=25,
-      NumberOfIntervals=5000,
+      Interval=0.005,
       Tolerance=1e-008));
 end OpenCenterForceVelocityControl;

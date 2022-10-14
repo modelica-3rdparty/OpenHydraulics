@@ -7,12 +7,11 @@ model DoubleActingCylinderTestSimple2
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{-22,40},{-2,60}})));
   OpenHydraulics.Components.Cylinders.DoubleActingCylinder doubleActingCylinder(
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
+    initType=Types.RevoluteInit.Position,
     strokeLength=0.2,
     pistonMass=0.1,
     s_init=0.185,
-    q_nom=1e-4)       annotation (Placement(transformation(extent={{22,40},{
-            42,60}})));
+    q_nom=1e-4) annotation (Placement(transformation(extent={{22,40},{42,60}})));
   OpenHydraulics.Basic.FluidPower2MechRotConst pump(Dconst=5e-5)
                                                          annotation (Placement(transformation(extent={{-24,-46},
             {-4,-26}})));
@@ -57,6 +56,6 @@ equation
           {40,-55.3333}},        color={255,0,0}));
   connect(doubleActingCylinder.port_a, j1.port[3]) annotation (Line(points={{24,42},
           {24,-16},{10,-16},{10,-15.3333}},        color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=10, Tolerance=1e-008));
 end DoubleActingCylinderTestSimple2;

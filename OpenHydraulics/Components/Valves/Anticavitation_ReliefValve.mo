@@ -32,8 +32,7 @@ equation
   connect(reliefValve.port_b, j1.port[2]) annotation (Line(points={{20,20},
           {60,20},{60,5.55112e-017}}, color={255,0,0}));
 
-annotation (Diagram(graphics),
-                     Icon(coordinateSystem(preserveAspectRatio=false,
+annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Line(
           points={{2,-60},{22,-40},{2,-20}},

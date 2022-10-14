@@ -59,7 +59,6 @@ partial model Valve4_3posInterface "Interface for 4-port 3-position valve"
           extent={{30,30},{90,-30}},
           lineColor={0,0,0},
           fillColor={255,255,255},
-          fillPattern=FillPattern.Solid)}),
-                            Diagram(graphics));
+          fillPattern=FillPattern.Solid)}));
   // the connection junctions (with small volumes)
 end Valve4_3posInterface;

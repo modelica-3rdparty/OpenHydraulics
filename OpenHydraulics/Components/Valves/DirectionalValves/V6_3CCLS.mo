@@ -125,8 +125,7 @@ model V6_3CCLS
     Dialog(tab="Metering",group="Spool"), Placement(transformation(extent=
            {{22,32},{38,48}})));
 
-extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialV6_3LS;
+extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialV6_3LS;
 
   OpenHydraulics.Basic.VarPressureSource varPressureSource
       annotation (Placement(transformation(
@@ -189,8 +188,7 @@ equation
           40},{-20,40.75}}, color={255,0,0}));
   connect(varPressureSource.port, portLS) annotation (Line(points={{20,70},
           {20,80}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Line(points={{-20,-30},{-20,-16}}, color={0,0,0}),
         Line(points={{0,-30},{0,-16}}, color={0,0,0}),

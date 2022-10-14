@@ -51,7 +51,7 @@ equation
 <p>
 This component defines the complete regime of wall friction.
 The details are described in the
-<a href=\"Modelica://Modelica_Fluid.UsersGuide.ComponentDefinition.WallFriction\">UsersGuide</a>.
+<a href=\"modelica://Modelica.Fluid.UsersGuide.ComponentDefinition.WallFriction\">MSL User's Guide</a>.
 The functional relationship of the friction loss factor &lambda; is
 displayed in the next figure. Function massFlowRate_dp() defines the \"red curve\"
 (\"Swamee and Jain\"), where as function pressureLoss_m_flow() defines the
@@ -60,7 +60,8 @@ each other and give slightly different results in the transition region
 between Re = 1500 .. 4000, in order to get explicit equations without
 solving a non-linear equation.
 </p>
-
-<img src=\"../Images/Components/PipeFriction1.png\">
+<p>
+<img src=\"modelica://Modelica/Resources/Images/Fluid/Pipes/BaseClasses/PipeFriction1.png\" alt=\"PipeFriction1\">
+</p>
 </html>"));
 end WallFriction;

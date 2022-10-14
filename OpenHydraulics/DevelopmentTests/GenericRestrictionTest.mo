@@ -16,9 +16,8 @@ model GenericRestrictionTest
         rotation=90)));
   Modelica.Blocks.Sources.Sine sinusoid(
     startTime=0.01,
-    freqHz=0.5,
-    amplitude=10)
-    annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
+    f=0.5,
+    amplitude=10) annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
   OpenHydraulics.Components.Volumes.CircuitTank circuitTank(V_max=2000,
       V_init=1000)
     annotation (Placement(transformation(extent={{0,-40},{-20,-20}})));
@@ -37,6 +36,6 @@ equation
     annotation (Line(points={{-73,0},{-62,0}}, color={0,0,127}));
   connect(torque.flange,   idealPump.flange_a)
     annotation (Line(points={{-40,0},{-30,0}}, color={0,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=10));
 end GenericRestrictionTest;

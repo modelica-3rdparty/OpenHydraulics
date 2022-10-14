@@ -25,9 +25,8 @@ model Accumulator
     annotation (Dialog(tab="Advanced"));
   parameter SI.Mass pistonMass = 0.01 "Mass of bladder or piston"
     annotation (Dialog(tab="Advanced"));
-  parameter Real pistonDamping(
-    final unit="N/ (m/s)",
-    final min=0) = 1 "Damping constant [N/ (m/s)] for bladder or piston"
+  parameter SI.TranslationalDampingConstant pistonDamping(final min=0) = 1
+    "Damping constant for bladder or piston"
     annotation (Dialog(tab="Advanced"));
 
     // initialization parameters
@@ -104,7 +103,7 @@ equation
           -20,40},{-16,40},{-16,0},{-10,0}}, color={0,127,0}));
   connect(damper.flange_a,fixedLeft.flange)    annotation (Line(points={{
           -40,40},{-50,40},{-50,0},{-60,0}}, color={0,127,0}));
-    annotation (Diagram(graphics),            Icon(coordinateSystem(
+    annotation (            Icon(coordinateSystem(
           preserveAspectRatio=false, extent={{-100,-100},{100,100}}),
         graphics={
         Rectangle(

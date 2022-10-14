@@ -15,10 +15,9 @@ model LossyPumpTestSimple
         extent={{10,10},{-10,-10}},
         rotation=180)));
   Modelica.Blocks.Sources.Sine sine(
-    freqHz=0.01,
+    f=0.01,
     amplitude=3e5,
-    offset=4e5)
-            annotation (Placement(transformation(extent={{80,-40},{60,-20}})));
+    offset=4e5) annotation (Placement(transformation(extent={{80,-40},{60,-20}})));
   Basic.OpenTank tank      annotation (Placement(transformation(extent={{-10,-64},
             {10,-44}})));
   Basic.OpenTank tank1(  p_const=300000)
@@ -66,6 +65,6 @@ equation
           {12,-20},{12,-8}},           color={255,0,0}));
   connect(accumulator.port_a, idealPump1.portP)
     annotation (Line(points={{20,20},{20,10}}, color={255,0,0}));
-annotation ( Diagram(graphics),
+annotation (
     experiment(StopTime=1000));
 end LossyPumpTestSimple;

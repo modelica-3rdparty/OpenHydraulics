@@ -3,10 +3,7 @@ model MechanicsBody_noFriction
   import MB = Modelica.Mechanics.MultiBody;
 
   // the swing parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init swing_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Swing",tab="Initialization"));
+  parameter Types.RevoluteInit swing_initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Swing", tab="Initialization"));
   parameter SI.Angle
     swing_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -21,10 +18,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Swing",tab="Initialization"));
 
   // the boom parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init boom_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Boom",tab="Initialization"));
+  parameter Types.RevoluteInit boom_initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Boom", tab="Initialization"));
   parameter SI.Angle
     boom_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -39,10 +33,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Boom",tab="Initialization"));
 
   // the arm parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init arm_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Arm",tab="Initialization"));
+  parameter Types.RevoluteInit arm_initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Arm", tab="Initialization"));
   parameter SI.Angle
     arm_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -56,10 +47,7 @@ model MechanicsBody_noFriction
     annotation (Evaluate=false, Dialog(group="Arm",tab="Initialization"));
 
   // the bucket parameters
-  parameter Modelica.Mechanics.MultiBody.Types.Init bucket_initType=
-      Modelica.Mechanics.MultiBody.Types.Init.Free
-    "Type of initialization (defines usage of start values below)"
-    annotation (Dialog(group="Bucket",tab="Initialization"));
+  parameter Types.RevoluteInit bucket_initType=Types.RevoluteInit.Free "Type of initialization (defines usage of start values below)" annotation (Dialog(group="Bucket", tab="Initialization"));
   parameter SI.Angle
     bucket_phi_start=0
     "Initial value of rotation angle phi (fixed or guess value)"
@@ -79,54 +67,25 @@ model MechanicsBody_noFriction
   Modelica.Mechanics.MultiBody.Joints.Revolute swingRevolute(
     n={0,1,0},
     useAxisFlange=true,
-    a(start=swing_a_start, fixed=if ((
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if ((swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.Position or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          swing_phi_start),
-    w(fixed=if ((swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.Velocity or (swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or (
-          swing_initType) == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          swing_w_start))
-    "revolute joint (plus motor) representing the swing function"
+    a(start=swing_a_start, fixed=if ((swing_initType) == Types.RevoluteInit.SteadyState or (swing_initType) == Types.RevoluteInit.VelocityAcceleration or (swing_initType) == Types.RevoluteInit.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if ((swing_initType) == Types.RevoluteInit.PositionVelocity or (swing_initType) == Types.RevoluteInit.Position or (swing_initType) == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=swing_phi_start),
+    w(fixed=if ((swing_initType) == Types.RevoluteInit.PositionVelocity or (swing_initType) == Types.RevoluteInit.SteadyState or (swing_initType) == Types.RevoluteInit.Velocity or (swing_initType) == Types.RevoluteInit.VelocityAcceleration or (swing_initType) == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=swing_w_start)) "revolute joint (plus motor) representing the swing function"
     annotation (Placement(transformation(
         origin={-110,-100},
         extent={{-10,-10},{10,10}},
         rotation=90)));
   Modelica.Mechanics.MultiBody.Joints.Revolute boomRevolute(
-    a(start=boom_a_start, fixed=if (
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType
-           == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          boom_phi_start),
-    w(fixed=if (boom_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          boom_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or boom_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or boom_initType
-           == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=boom_w_start))
-    annotation (Placement(transformation(extent={{-133,12},{-113,32}})));
+    a(start=boom_a_start, fixed=if (boom_initType == Types.RevoluteInit.SteadyState or boom_initType == Types.RevoluteInit.VelocityAcceleration or boom_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (boom_initType == Types.RevoluteInit.PositionVelocity or boom_initType == Types.RevoluteInit.Position or boom_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=boom_phi_start),
+    w(fixed=if (boom_initType == Types.RevoluteInit.PositionVelocity or boom_initType == Types.RevoluteInit.SteadyState or boom_initType == Types.RevoluteInit.Velocity or boom_initType == Types.RevoluteInit.VelocityAcceleration or boom_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=boom_w_start)) annotation (Placement(transformation(extent={{-133,12},{-113,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute armRevolute(
-    a(start=arm_a_start, fixed=if (
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
-          Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_phi_start),
-    w(fixed=if (arm_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          arm_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or arm_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or arm_initType ==
-          Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=arm_w_start))
-    annotation (Placement(transformation(extent={{3,12},{23,32}})));
+    a(start=arm_a_start, fixed=if (arm_initType == Types.RevoluteInit.SteadyState or arm_initType == Types.RevoluteInit.VelocityAcceleration or arm_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (arm_initType == Types.RevoluteInit.PositionVelocity or arm_initType == Types.RevoluteInit.Position or arm_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=arm_phi_start),
+    w(fixed=if (arm_initType == Types.RevoluteInit.PositionVelocity or arm_initType == Types.RevoluteInit.SteadyState or arm_initType == Types.RevoluteInit.Velocity or arm_initType == Types.RevoluteInit.VelocityAcceleration or arm_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=arm_w_start)) annotation (Placement(transformation(extent={{3,12},{23,32}})));
   Modelica.Mechanics.MultiBody.Joints.Revolute bucketRevolute(
-    a(start=bucket_a_start, fixed=if (
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false),
-    phi(fixed=if (bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.Position or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          bucket_phi_start),
-    w(fixed=if (bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.SteadyState or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.Velocity or bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.VelocityAcceleration or
-          bucket_initType == Modelica.Mechanics.MultiBody.Types.Init.PositionVelocityAcceleration) then true else false, start=
-          bucket_w_start))
-    annotation (Placement(transformation(extent={{159,12},{179,32}})));
+    a(start=bucket_a_start, fixed=if (bucket_initType == Types.RevoluteInit.SteadyState or bucket_initType == Types.RevoluteInit.VelocityAcceleration or bucket_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false),
+    phi(fixed=if (bucket_initType == Types.RevoluteInit.PositionVelocity or bucket_initType == Types.RevoluteInit.Position or bucket_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=bucket_phi_start),
+    w(fixed=if (bucket_initType == Types.RevoluteInit.PositionVelocity or bucket_initType == Types.RevoluteInit.SteadyState or bucket_initType == Types.RevoluteInit.Velocity or bucket_initType == Types.RevoluteInit.VelocityAcceleration or bucket_initType == Types.RevoluteInit.PositionVelocityAcceleration) then true else false, start=bucket_w_start)) annotation (Placement(transformation(extent={{159,12},{179,32}})));
   MB.Joints.Assemblies.JointRRR jointRRR1(
     rRod2_ib={-0.67,
                    0.07,
@@ -540,7 +499,7 @@ equation
           lineColor={0,0,0},
           fillColor={255,255,255},
           fillPattern=FillPattern.Solid),
-        Bitmap(extent={{-197,219},{248,-223}}, fileName=
+        Bitmap(extent={{-197,-223},{248,219}}, fileName=
               "modelica://OpenHydraulics/Resources/Images/excavator.png"),
         Line(
           points={{-190,37},{-14,-1}},
@@ -555,7 +514,7 @@ equation
           color={0,127,0},
           thickness=0.5),
         Line(
-          points={{-30,-10},{-4,-131}},
+          points={{-21,-16},{5,-137}},
           color={0,127,0},
           thickness=0.5),
         Ellipse(
@@ -571,25 +530,25 @@ equation
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{122,94},{132,84}},
+          extent={{119,90},{129,80}},
           lineColor={0,127,0},
           lineThickness=0.5,
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{-36,-3},{-26,-13}},
+          extent={{-26,-8},{-16,-18}},
           lineColor={0,127,0},
           lineThickness=0.5,
           fillColor={0,127,0},
           fillPattern=FillPattern.Solid),
         Ellipse(
-          extent={{-55,-57},{-45,-67}},
+          extent={{-53,-64},{-43,-74}},
           lineColor={95,95,95},
           lineThickness=0.5,
           fillColor={95,95,95},
           fillPattern=FillPattern.Solid),
         Line(
-          points={{-200,-122},{-50,-60}},
+          points={{-202,-123},{-48,-71}},
           color={95,95,95},
           thickness=0.5),
         Line(

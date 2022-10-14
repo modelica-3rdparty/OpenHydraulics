@@ -10,8 +10,8 @@ function pressureLoss_m_flow_and_Re
   input LossFactorData data "Constant loss factors for both flow directions";
   output SI.Pressure dp "Pressure drop (dp = port_a.p - port_b.p)";
 
+  import Modelica.Constants.pi;
 protected
-  constant Real pi=Modelica.Constants.pi;
   Real k0 = 2*data.c0/(pi*data.D_Re^3);
   Real yd0 "Derivative of dp = f(m_flow) at zero, if data.zetaLaminarKnown";
   SI.MassFlowRate m_flow_turbulent
@@ -52,7 +52,7 @@ Laminar region:
 */
   m_flow_turbulent :=(pi/8)*data.D_Re*(eta_a + eta_b)*data.Re_turbulent;
   yd0 :=if data.zetaLaminarKnown then k0*(eta_a + eta_b)/(d_a + d_b) else 0;
-dp := OpenHydraulics.Utilities.regSquare2(
+dp := Modelica.Fluid.Utilities.regSquare2(
         m_flow,
         m_flow_turbulent,
         1/(d_a*data.kinv1),

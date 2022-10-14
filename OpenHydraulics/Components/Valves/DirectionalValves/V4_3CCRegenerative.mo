@@ -14,16 +14,13 @@ model V4_3CCRegenerative "Simple Regenerative valve model"
     annotation(Dialog(tab="Sizing",group="Advanced Metering"));
   parameter Real dampCoeff = 1 "Damping coefficient of 2nd order response"
     annotation(Dialog(tab="Dynamics"));
-  parameter Modelica.SIunits.Frequency bandwidth=100
-    "Bandwidth of 2nd order response"
-    annotation(Dialog(tab="Dynamics"));
+  parameter Modelica.Units.SI.Frequency bandwidth=100 "Bandwidth of 2nd order response" annotation (Dialog(tab="Dynamics"));
 
   // configuration options
   parameter Boolean useCheckValve = true "true = use check valve on port P"
     annotation (Dialog(tab="Config Options"));
 
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.Valve4_3posInterface;
 
    //junctions
   OpenHydraulics.Components.Lines.NJunction j1
@@ -90,8 +87,7 @@ equation
           40,40},{40,80}}, color={255,0,0}));
   connect(A2T.port_b, portT) annotation (Line(points={{0,40},{20,40},{40,
           -40},{40,-80}}, color={255,0,0}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Line(points={{-14,12},{-14,30}}, color={0,0,0}),
         Line(points={{-20,12},{-8,12}}, color={0,0,0}),

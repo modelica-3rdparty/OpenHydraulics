@@ -15,9 +15,8 @@ model GenericRestrictionTestOpenTank
         rotation=90)));
   Modelica.Blocks.Sources.Sine sinusoid(
     startTime=0.01,
-    freqHz=0.5,
-    amplitude=10)
-    annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
+    f=0.5,
+    amplitude=10) annotation (Placement(transformation(extent={{-94,-10},{-74,10}})));
   Modelica.Mechanics.Rotational.Sources.Torque torque
     annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
   Components.Volumes.Tank tank(p_const=100000)
@@ -41,6 +40,5 @@ equation
       color={255,0,0},
       smooth=Smooth.None));
   annotation (
-      Diagram(graphics),
     experiment(StopTime=10));
 end GenericRestrictionTestOpenTank;

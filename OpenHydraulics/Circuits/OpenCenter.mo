@@ -18,7 +18,7 @@ model OpenCenter
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position,
+    initType=Types.RevoluteInit.Position,
     q_nom=1e-4) annotation (Placement(transformation(extent={{42,38},{62,58}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
@@ -31,9 +31,8 @@ model OpenCenter
     annotation (Placement(transformation(extent={{68,38},{88,58}})));
   Modelica.Blocks.Sources.Sine sine(
     startTime=1,
-    freqHz=0.1,
-    amplitude=1)
-    annotation (Placement(transformation(
+    f=0.1,
+    amplitude=1) annotation (Placement(transformation(
         origin={80,-38},
         extent={{-10,-10},{10,10}},
         rotation=180)));
@@ -63,11 +62,10 @@ model OpenCenter
     annotation (Placement(transformation(extent={{-64,-2},{-44,18}})));
 
   Modelica.Blocks.Sources.Sine sine1(
-    freqHz=0.1,
+    f=0.1,
     startTime=9,
     phase=5.02658,
-    amplitude=1)
-    annotation (Placement(transformation(
+    amplitude=1) annotation (Placement(transformation(
         origin={80,-2},
         extent={{-10,-10},{10,10}},
         rotation=180)));
@@ -83,8 +81,8 @@ equation
   connect(reliefValve.port_a, j1.port[2]) annotation (Line(points={{
           1.83697e-015,16},{1.83697e-015,22},{-5.55112e-017,22},{
           -5.55112e-017,30}}, color={255,0,0}));
-  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-16,-14},
-          {0,-14},{0,-14.6667}}, color={255,0,0}));
+  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-16,-14},{0,-14},{0,-14}},
+                                 color={255,0,0}));
   connect(reliefValve.port_b, j2.port[2]) annotation (Line(points={{
           -1.83697e-015,-4},{-1.83697e-015,-10},{0,-10},{0,-14}}, color={255,
           0,0}));
@@ -92,8 +90,8 @@ equation
         points={{34,12},{44,12},{44,40}}, color={255,0,0}));
   connect(valve4_3posOC.portB, doubleActingCylinder.port_b) annotation (Line(
         points={{34,4},{60,4},{60,40}}, color={255,0,0}));
-  connect(valve4_3posOC.portT, j2.port[3]) annotation (Line(points={{18,4},{
-          18,-14},{0,-14},{0,-13.3333}}, color={255,0,0}));
+  connect(valve4_3posOC.portT, j2.port[3]) annotation (Line(points={{18,4},{18,-14},{0,-14},{0,-14}},
+                                         color={255,0,0}));
   connect(valve4_3posOC.portP, j1.port[3]) annotation (Line(points={{18,12},{
           18,30},{-0.666667,30}}, color={255,0,0}));
   connect(constantSpeed.flange, constantDisplacementPump.flange_a)
@@ -108,6 +106,6 @@ equation
           -20},{26,-3}}, color={0,0,127}));
   connect(circuitTank.port_b, constantDisplacementPump.portT) annotation (Line(
         points={{-36,-14},{-54,-14},{-54,-2}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100, Tolerance=1e-008));
 end OpenCenter;

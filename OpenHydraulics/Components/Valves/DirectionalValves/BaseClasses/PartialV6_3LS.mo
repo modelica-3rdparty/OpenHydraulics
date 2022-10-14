@@ -113,6 +113,5 @@ annotation (Icon(coordinateSystem(preserveAspectRatio=false, extent={{
           lineColor={0,0,0},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid,
-          textString="T2")}),
-                            Diagram(graphics));
+          textString="T2")}));
 end PartialV6_3LS;

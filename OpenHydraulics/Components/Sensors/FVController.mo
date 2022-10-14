@@ -13,8 +13,7 @@ model FVController
         19,-8000; 20,-5000; 21,-1000; 22,100; 23,0; 24,0])
     annotation (                                    Dialog, Placement(
         transformation(extent={{0,60},{-20,80}})));
-  Modelica.Blocks.Sources.Clock clock
-    annotation (Placement(transformation(
+  Modelica.Blocks.Sources.ContinuousClock clock annotation (Placement(transformation(
         origin={20,90},
         extent={{-10,-10},{10,10}},
         rotation=270)));
@@ -36,7 +35,8 @@ model FVController
     Td=Td,
     k=k,
     Ti=0.1,
-    controllerType=Modelica.Blocks.Types.SimpleController.P)
+    controllerType=Modelica.Blocks.Types.SimpleController.P,
+    yMax=1)
           annotation (Placement(transformation(extent={{2,-56},{-18,-76}})));
   Modelica.Blocks.Interfaces.RealOutput y annotation (Placement(
         transformation(extent={{40,-40},{60,-20}})));
@@ -64,8 +64,7 @@ equation
           {-8,10},{-50,10},{-50,50}}, color={0,127,0}));
   connect(ForceProfile.u, clock.y) annotation (Line(points={{2,70},{20,70},
           {20,79}}, color={0,0,127}));
-  annotation (Diagram(graphics),
-                       Icon(coordinateSystem(preserveAspectRatio=false,
+  annotation (         Icon(coordinateSystem(preserveAspectRatio=false,
           extent={{-100,-100},{100,100}}), graphics={
         Text(
           extent={{-130,104},{124,74}},

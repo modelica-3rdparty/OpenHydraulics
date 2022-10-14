@@ -27,5 +27,5 @@ equation
           -10,20},{-10,8}}, color={255,0,0}));
   connect(tank.port, restriction.port_a) annotation (Line(points={{-10,-20},{
           -10,-12}}, color={255,0,0}));
-  annotation (Diagram(graphics));
+
 end AccumulatorTest;

@@ -15,16 +15,15 @@ model PressureCompensatedLoadSensing
     rodDiameter=0.03,
     pistonMass=0.3,
     s_init=0.1,
-    initType=Modelica.Mechanics.MultiBody.Types.Init.Position)
-                annotation (Placement(transformation(extent={{44,30},{64,50}})));
+    initType=Types.RevoluteInit.Position) annotation (Placement(transformation(extent={{44,30},{64,50}})));
 
   Modelica.Mechanics.Translational.Components.Fixed fixed
     annotation (Placement(transformation(extent={{0,20},{20,40}})));
-  Modelica.Blocks.Sources.Sine sine(amplitude=1,
+  Modelica.Blocks.Sources.Sine sine(
+    amplitude=1,
     startTime=1,
     phase=0,
-    freqHz=0.1)
-    annotation (Placement(transformation(extent={{10,-82},{30,-62}})));
+    f=0.1) annotation (Placement(transformation(extent={{10,-82},{30,-62}})));
   OpenHydraulics.Components.MotorsPumps.PCLSPump PCLSPump(Dmax=0.00004)
     annotation (Placement(transformation(extent={{-58,-32},{-38,-12}})));
 
@@ -72,18 +71,18 @@ equation
           -72},{31,-72}}, color={0,0,127}));
   connect(reliefValve.port_a, j1.port[2]) annotation (Line(points={{4,-10},{4,
           -3.15625},{4,4},{4,4}}, color={255,0,0}));
-  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-6,-40},{
-          4,-40},{4,-40.6667}}, color={255,0,0}));
+  connect(circuitTank.port_a, j2.port[1]) annotation (Line(points={{-6,-40},{4,-40},{4,-40}},
+                                color={255,0,0}));
   connect(reliefValve.port_b, j2.port[2]) annotation (Line(points={{4,-30},{4,
           -35.025},{4,-40},{4,-40}}, color={255,0,0}));
   connect(valve4way3pos.portT, j2.port[3])
-                                       annotation (Line(points={{28,-24},{20,
-          -24},{20,-40},{4,-40},{4,-39.3333}}, color={255,0,0}));
+                                       annotation (Line(points={{28,-24},{20,-24},{20,-40},{4,-40},{4,-40}},
+                                               color={255,0,0}));
   connect(j1.port[3], valve4way3pos.portP)
-                                       annotation (Line(points={{4,4.66667},{
-          20,4.66667},{20,-16},{28,-16}}, color={255,0,0}));
-  connect(PCLSPump.portP, j1.port[1]) annotation (Line(points={{-48,-12},{-48,
-          4},{4,4},{4,3.33333}}, color={255,0,0}));
+                                       annotation (Line(points={{4,4},{20,4},{20,-16},{28,-16}},
+                                          color={255,0,0}));
+  connect(PCLSPump.portP, j1.port[1]) annotation (Line(points={{-48,-12},{-48,4},{4,4},{4,4}},
+                                 color={255,0,0}));
   connect(constantSpeed.flange, PCLSPump.flange_a)
     annotation (Line(points={{-68,-22},{-58,-22}}, color={0,0,0}));
   connect(slidingMass.flange_a, doubleActingCylinder.flange_b) annotation (Line(
@@ -92,6 +91,6 @@ equation
           -20},{54,-20},{54,-56},{-56,-56},{-56,-30}}, color={255,0,0}));
   connect(PCLSPump.portT, circuitTank.port_b) annotation (Line(points={{-48,
           -32},{-48,-40},{-26,-40}}, color={255,0,0}));
-  annotation (Diagram(graphics),
+  annotation (
     experiment(StopTime=100));
 end PressureCompensatedLoadSensing;

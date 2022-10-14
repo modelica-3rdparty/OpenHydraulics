@@ -33,10 +33,9 @@ model DirectionalValveTest
         extent={{-10,-10},{10,10}},
         rotation=270)));
   Modelica.Blocks.Sources.Sine sinusoid1(
-    freqHz=0.5,
+    f=0.5,
     amplitude=1,
-    startTime=0)
-    annotation (Placement(transformation(
+    startTime=0) annotation (Placement(transformation(
         origin={18,-56},
         extent={{-10,-10},{10,10}},
         rotation=90)));
@@ -64,6 +63,5 @@ equation
   connect(realExpression.y, torque.tau)
     annotation (Line(points={{-75,0},{-62,0}}, color={0,0,127}));
   annotation (
-      Diagram(graphics),
     experiment(StopTime=10, Tolerance=1e-008));
 end DirectionalValveTest;

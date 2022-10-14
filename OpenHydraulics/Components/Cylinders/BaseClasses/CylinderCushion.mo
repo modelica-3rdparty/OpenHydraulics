@@ -52,11 +52,10 @@ model CylinderCushion
         origin={60,-30},
         extent={{-10,-10},{10,10}},
         rotation=270)));
-  Modelica.Blocks.Tables.CombiTable1D cushionTableBlock(
+  Modelica.Blocks.Tables.CombiTable1Dv cushionTableBlock(
     table=cushionTable,
     columns=2:2,
-    smoothness=smoothness)
-    annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
+    smoothness=smoothness) annotation (Placement(transformation(extent={{-60,-10},{-40,10}})));
 
   // the connectors
   OpenHydraulics.Interfaces.FluidPort port_a

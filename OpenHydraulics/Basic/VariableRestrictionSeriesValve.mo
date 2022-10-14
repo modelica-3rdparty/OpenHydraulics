@@ -1,7 +1,7 @@
 within OpenHydraulics.Basic;
 model VariableRestrictionSeriesValve
   "Flow loss due to controllable restriction with series check valves"
-  constant Real pi = Modelica.Constants.pi;
+  import Modelica.Constants.pi;
 
   // sizing parameters
   parameter SI.VolumeFlowRate q_nom = 0.001 "Nominal flow rate at dp_nom"
@@ -35,6 +35,9 @@ model VariableRestrictionSeriesValve
   parameter Boolean use_Re = false
     "= true, if turbulent region is defined by Re, otherwise by dp_small or m_flow_small"
     annotation(Evaluate=true, Dialog(tab="Advanced"));
+  parameter Boolean from_dp = true
+    "= true, use m_flow = f(dp) else dp = f(m_flow)"
+    annotation (Evaluate=true, Dialog(tab="Advanced"));
   parameter SI.AbsolutePressure dp_small = 1
     "Turbulent flow if |dp| >= dp_small"
     annotation(Dialog(tab="Advanced", enable=not use_Re and from_dp));

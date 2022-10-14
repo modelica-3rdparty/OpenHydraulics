@@ -45,7 +45,6 @@ equation
           lineColor={0,0,0},
           fillColor={255,0,0},
           fillPattern=FillPattern.Solid)}),
-                          Diagram(graphics),
              Documentation(info="<html>
   This model is the simplest implementation for a splitting/joining component for
   N flows. Its use is not required. It just formulates the balance

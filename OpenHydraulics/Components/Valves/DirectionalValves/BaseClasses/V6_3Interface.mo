@@ -87,6 +87,6 @@ partial model V6_3Interface "Interface for 6-port 3-position valve"
         Line(points={{0,-30},{0,-60},{0,-60},{0,-60},{0,-60},{0,-60},{0,
               -78}}, color={255,0,0}),
         Line(points={{80,-78},{80,-40},{20,-40},{20,-30}}, color={255,0,
-              0})}),        Diagram(graphics));
+              0})}));
 
 end V6_3Interface;

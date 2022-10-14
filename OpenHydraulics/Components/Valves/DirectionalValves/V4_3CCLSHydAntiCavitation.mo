@@ -17,7 +17,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.CheckValve checkT2B(q_nom=
         0.02)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={56,44},
@@ -27,7 +26,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.CheckValve checkT2A(q_nom=
         0.02)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={-56,44},
@@ -37,7 +35,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.ReliefValve reliefB2T(dp_relief=
        1e7, dp_open=1e8)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={80,44},
@@ -47,7 +44,6 @@ model V4_3CCLSHydAntiCavitation
   replaceable OpenHydraulics.Components.Valves.ReliefValve reliefA2T(dp_relief=
        1e7, dp_open=1e8)
     annotation (
-    choicesFromPackage=true,
     Dialog(tab="Config Options"),
     Placement(transformation(
         origin={-80,44},
@@ -57,8 +53,7 @@ model V4_3CCLSHydAntiCavitation
   Basic.VarPressureSource pressLS
     annotation (Placement(transformation(extent={{-10,40},{10,60}})));
 
-  extends
-    OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
+  extends OpenHydraulics.Components.Valves.DirectionalValves.BaseClasses.PartialValve4_3pos(
     j2(n_ports=5),
     j4(n_ports=7),
     j3(n_ports=5));
@@ -148,6 +143,5 @@ equation
           lineColor={0,0,0},
           fillColor={0,0,0},
           fillPattern=FillPattern.Solid,
-          textString="LS")}),
-                            Diagram(graphics));
+          textString="LS")}));
 end V4_3CCLSHydAntiCavitation;
