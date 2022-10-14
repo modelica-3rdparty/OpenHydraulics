@@ -1,8 +1,8 @@
 within OpenHydraulics.Circuits;
 model OpenCenter_tandem
   "Open Center circuit with fixed displacement pump and open center tandem valve"
-
-    extends OpenHydraulics.Interfaces.PartialFluidCircuit(redeclare
+  extends Modelica.Icons.Example;
+  extends OpenHydraulics.Interfaces.PartialFluidCircuit(redeclare
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Components.Valves.ReliefValve reliefValve

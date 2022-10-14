@@ -1,6 +1,7 @@
 within OpenHydraulics.Circuits;
 model OpenCenterSectionalValveCircuit
   "Open center circuit controlled by sectional valve"
+  extends Modelica.Icons.Example;
   extends OpenHydraulics.Interfaces.PartialFluidCircuit(redeclare
       OpenHydraulics.Fluids.GenericOilSimple oil);
 

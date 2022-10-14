@@ -1,8 +1,8 @@
 within OpenHydraulics.Circuits;
 model OpenCenterForceVelocityControl
   "Open Center circuit loaded and controlled by Force / Velocity controller"
-
-    extends OpenHydraulics.Interfaces.PartialFluidCircuit(redeclare
+  extends Modelica.Icons.Example;
+  extends OpenHydraulics.Interfaces.PartialFluidCircuit(redeclare
       OpenHydraulics.Fluids.GenericOilSimple oil);
 
   OpenHydraulics.Components.Valves.ReliefValve reliefValve(timeConstant=0.01)
