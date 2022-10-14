@@ -10,8 +10,8 @@ function pressureLoss_m_flow_and_Re
   input LossFactorData data "Constant loss factors for both flow directions";
   output SI.Pressure dp "Pressure drop (dp = port_a.p - port_b.p)";
 
-protected
   import Modelica.Constants.pi;
+protected
   Real k0 = 2*data.c0/(pi*data.D_Re^3);
   Real yd0 "Derivative of dp = f(m_flow) at zero, if data.zetaLaminarKnown";
   SI.MassFlowRate m_flow_turbulent

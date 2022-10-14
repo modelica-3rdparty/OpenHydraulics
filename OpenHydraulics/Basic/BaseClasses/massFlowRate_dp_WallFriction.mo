@@ -15,8 +15,8 @@ function massFlowRate_dp_WallFriction
     "Absolute roughness of pipe, with a default for a smooth steel pipe";
   output SI.MassFlowRate m_flow "Mass flow rate from port_a to port_b";
 
-protected
   import Modelica.Constants.pi;
+protected
   Real Delta = roughness/diameter "Relative roughness";
   SI.ReynoldsNumber Re1 = (745*Modelica.Math.exp(if Delta <= 0.0065 then 1 else 0.0065/Delta))^0.97
     "Re leaving laminar curve";
