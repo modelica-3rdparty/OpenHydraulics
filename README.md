@@ -26,7 +26,7 @@ Download [OpenHydraulics v2.0.0 (2022-10-14)](../../releases/tag/v2.0.0)
 
 * [Version 2.0.0 (2022-10-14)](../../releases/tag/v2.0.0):
   * This new version of OpenHydraulics is a non-backwards compatible release based on the Modelica Standard Library version 4.0.0 which contains a series of improvements and bug fixes. 
-  * Incorporated fixed provided by: xxx
+  * Incorporated fixed provided by: @dietmarw, @harmanpa, @mtiller, @tbeu, @sjoelund, @kdavies4
   * Fixed non-standard or illegal Modelica syntax constructs.
   * Removed outdated annotations.
   * Fixed faulty annotations.

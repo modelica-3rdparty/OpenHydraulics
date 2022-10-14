@@ -11,7 +11,14 @@ Modelica Standard Library version 4.0.0</a> which contains a series of improveme
 </p>
 <h5>Highlights</h5>
 <ul>
-<li>Incorporated fixed provided by: xxx</li>
+<li>Incorporated fixed provided by:
+  <a href=\"https://github.com/dietmarw\">@dietmarw</a>,
+  <a href=\"https://github.com/harmanpa\">@harmanpa</a>,
+  <a href=\"https://github.com/mtiller\">@mtiller</a>,
+  <a href=\"https://github.com/tbeu\">@tbeu</a>,
+  <a href=\"https://github.com/sjoelund\">@sjoelund</a>,
+  <a href=\"https://github.com/kdavies4\">@kdavies4</a>.
+</li>
 <li>Fixed non-standard or illegal Modelica syntax constructs.</li>
 <li>Removed outdated annotations.</li>
 <li>Fixed faulty annotations.</li>
@@ -19,6 +26,6 @@ Modelica Standard Library version 4.0.0</a> which contains a series of improveme
 Modelica Standard Library.</li>
 </ul>
 <h5>Full Changelog</h5>
-<p><code><a href=\"https://github.com/simulatino/OpenHydraulics/compare/v1.0.1...v2.0.0\">v1.0.0...v2.0.0</a></code></p>
+<p><code><a href=\"https://github.com/modelica-3rdparty/OpenHydraulics/compare/v1.0.1...v2.0.0\">v1.0.0...v2.0.0</a></code></p>
 </html>"));
 end v200;
