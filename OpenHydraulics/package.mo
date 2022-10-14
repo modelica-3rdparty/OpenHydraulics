@@ -32,5 +32,11 @@ package OpenHydraulics "A free Modelica library that can be used to model hydrau
           lineColor={0,0,255},
           pattern=LinePattern.None,
           fillColor={255,0,0},
-          fillPattern=FillPattern.Solid)}));
+          fillPattern=FillPattern.Solid)}),
+  Documentation(info="<html>
+<p>
+The <code>OpenHydraulics</code> library is a <b>free</b> Modelica package providing
+components describing <strong>1-dimensional fluid flow</strong> in hydraulic circuits.
+</p>
+</html>"));
 end OpenHydraulics;

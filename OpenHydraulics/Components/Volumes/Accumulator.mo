@@ -25,7 +25,7 @@ model Accumulator
     annotation (Dialog(tab="Advanced"));
   parameter SI.Mass pistonMass = 0.01 "Mass of bladder or piston"
     annotation (Dialog(tab="Advanced"));
-  parameter SI.TranslationalDampingConstant pistonDamping(final min=0) = 1 
+  parameter SI.TranslationalDampingConstant pistonDamping(final min=0) = 1
     "Damping constant for bladder or piston"
     annotation (Dialog(tab="Advanced"));
 

@@ -46,10 +46,10 @@ model GenericOil "Generic Oil model"
   end dynamicViscosity;
 
 annotation (
-  Documentation(info="<HTML>
-<h3><font color=\"#008000\" size=5>Generic Oil Model</font></h3>
+  Documentation(info="<html>
+<h4>Generic Oil Model</h4>
 <p>
 Oil model that includes temperature and pressure dependence for density and dynamic viscosity.
 </p>
-</HTML>"));
+</html>"));
 end GenericOil;
