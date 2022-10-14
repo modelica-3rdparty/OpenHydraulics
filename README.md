@@ -54,6 +54,6 @@ Copyright &copy; 2008-2013, Georgia Insitute of Technology
 
 ## Development and contribution
 
-You may report any issues with using the [Issues](https://github.com/cparedis/OpenHydraulics/issues) button.
+You may report any issues with using the [Issues](../../issues) button.
 
-Contributions in shape of [Pull Requests](https://github.com/cparedis/OpenHydraulics/pulls) are always welcome.
+Contributions in shape of [Pull Requests](../../pulls) are always welcome.
